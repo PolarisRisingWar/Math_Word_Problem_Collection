@@ -48,7 +48,8 @@
 
 **2019年**  
 1. 数值推理
-    1. (EMNLP) [NumNet: Machine Reading Comprehension with Numerical Reasoning](https://aclanthology.org/D19-1251/)：comparison-aware GNN推理数值之间的相对比较关系
+    1. (EMNLP) [NumNet: Machine Reading Comprehension with Numerical Reasoning](https://aclanthology.org/D19-1251/)：数值+GNN+数值之间的比较关系→在上下文中实现数值推理
+    代码中文版：[j30206868/numnet-chinese: Modify numnet+ for chinese](https://github.com/j30206868/numnet-chinese)
     2. (NAACL) [DROP: A Reading Comprehension Benchmark Requiring Discrete Reasoning Over Paragraphs](https://aclanthology.org/N19-1246/)：实现数值之间的计数、加减等操作
 2. MWP
     1. (NAACL) [MathQA: Towards Interpretable Math Word Problem Solving with Operation-Based Formalisms](https://aclanthology.org/N19-1245/)
