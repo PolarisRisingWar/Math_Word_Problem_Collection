@@ -16,11 +16,16 @@
 
 # 数据
 简单介绍：
-|**数据集名称**|**语言**|**下载和预处理策略**|**出处**|**任务**|
-|---|---|---|-----|---|
+（由于数据可能太大所以我全都不上传Git了，但是反正全是放在datasets文件夹里，在代码中如有引用也全是从这里引用）
+|**数据集名称**|**语言**|**下载地址**|**出处**|**任务**|**统计信息**|**其他**
+|---|---|---|-----|---|----|--|--|
+|Alg514|英语|<http://groups.csail.mit.edu/rbg/code/wordprobs/questions.json>|(2014 ACL) [Learning to Automatically Solve Algebra Word Problems](https://aclanthology.org/P14-1026/)|MWP<br>（线性场景）|514个样本
+|number_word_std / Dolphin / Dophin1878||<https://www.microsoft.com/en-us/research/uploads/prod/2016/02//dolphin-number_word_std.zip>|(2015 EMNLP) [Automatically Solving Number Word Problems by Semantic Parsing and Reasoning](https://aclanthology.org/D15-1135/)|MWP||
+Dolphin18K||<https://www.microsoft.com/en-us/research/uploads/prod/2015/08/dolphin18k-v1.1.zip>|(2016 ACL) [How well do Computers Solve Math Word Problems? Large-Scale Dataset Construction and Evaluation](https://aclanthology.org/P16-1084/)|MWP|18K+样本
+DRAW-1K|英语|<https://www.microsoft.com/en-us/download/details.aspx?id=52628>|(2017 EACL) [Annotating Derivations: A New Evaluation Strategy and Dataset for Algebra Word Problems](https://aclanthology.org/E17-1047/)|MWP<br>（一元线性场景）|1000个样本
+|Math23K|中文|<https://huggingface.co/datasets/Gxg/Math23K>|(2017 EMNLP) [Deep Neural Solver for Math Word Problems](https://aclanthology.org/D17-1088/)|MWP<br>（一元线性场景）|23161个样本|腾讯人工智能实验室<br>数据来源于爬虫
 
 
-其他相关数据集介绍：  
 
 
 # 论文
@@ -60,10 +65,15 @@
 **2017年**  
 1. MWP
     1. (EMNLP) [Deep Neural Solver for Math Word Problems](https://aclanthology.org/D17-1088/)：第一篇用神经网络解决MWP问题的方法
+    2. (EACL) [Annotating Derivations: A New Evaluation Strategy and Dataset for Algebra Word Problems](https://aclanthology.org/E17-1047/)
 
 **2016年** 
 1. MWP
     1. (ACL) [How well do Computers Solve Math Word Problems? Large-Scale Dataset Construction and Evaluation](https://aclanthology.org/P16-1084/)
+
+**2015年**  
+1. MWP
+    1. (EMNLP) [Automatically Solving Number Word Problems by Semantic Parsing and Reasoning](https://aclanthology.org/D15-1135/)
 
 **2014年**  
 1. MWP
