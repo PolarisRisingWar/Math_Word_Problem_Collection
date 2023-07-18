@@ -57,9 +57,18 @@
 **2018年**  
 1. (ACL) [Numeracy for Language Models: Evaluating and Improving their Ability to Predict Numbers](https://aclanthology.org/P18-1196/)：用MAPE (median absolute percentage error) 作为损失函数
 
+**2017年**  
+1. MWP
+    1. (EMNLP) [Deep Neural Solver for Math Word Problems](https://aclanthology.org/D17-1088/)：第一篇用神经网络解决MWP问题的方法
+
 **2016年** 
 1. MWP
     1. (ACL) [How well do Computers Solve Math Word Problems? Large-Scale Dataset Construction and Evaluation](https://aclanthology.org/P16-1084/)
+
+**2014年**  
+1. MWP
+    1. (EMNLP) [Re42：读论文 ARIS Learning to Solve Arithmetic Word Problems with Verb Categorization](https://blog.csdn.net/PolarisRisingWar/article/details/131726944)：第一篇非基于模板解决MWP的方法，解决加减算术问题。预测动词类型来进行题目分类，以及考虑其他一些人工抽取的特征，抽取题目中的实体、数值等信息，根据状态转移表得到公式
+    2. (ACL) [Learning to Automatically Solve Algebra Word Problems](https://aclanthology.org/P14-1026/)：基于模版的方法
 
 **2011年**  
 1. 数值抽取
@@ -67,6 +76,10 @@
 
 **2009年**  
 1. (SIGIR) [Learning to rank for quantity consensus queries](https://dl.acm.org/doi/10.1145/1571941.1571985)：检索任务，根据数值排序
+
+**1963年**  
+1. MWP
+    1. Computers and thought
 
 # 工具
 1. 
