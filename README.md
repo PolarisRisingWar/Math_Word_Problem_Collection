@@ -5,11 +5,6 @@
 4. 数值表征
 
 
-
-超过5M的文件都存储在了百度网盘上，以方便大陆用户下载：  
-链接：  
-提取码：
-
 * [1. 数据](#数据)
 * [2. 论文](#论文)
 * [3. 工具](#工具)
@@ -24,15 +19,30 @@
 Dolphin18K||<https://www.microsoft.com/en-us/research/uploads/prod/2015/08/dolphin18k-v1.1.zip>|(2016 ACL) [How well do Computers Solve Math Word Problems? Large-Scale Dataset Construction and Evaluation](https://aclanthology.org/P16-1084/)|MWP|18K+样本
 DRAW-1K|英语|<https://www.microsoft.com/en-us/download/details.aspx?id=52628>|(2017 EACL) [Annotating Derivations: A New Evaluation Strategy and Dataset for Algebra Word Problems](https://aclanthology.org/E17-1047/)|MWP<br>（一元线性场景）|1000个样本
 |Math23K|中文|<https://huggingface.co/datasets/Gxg/Math23K>|(2017 EMNLP) [Deep Neural Solver for Math Word Problems](https://aclanthology.org/D17-1088/)|MWP<br>（一元线性场景）|23161个样本|腾讯人工智能实验室<br>数据来源于爬虫
-
+|GSM8K|英语|<https://huggingface.co/datasets/gsm8k>||MWP||介绍博文：[【搬运】GSM8K 数据集介绍_x66ccff的博客-CSDN博客](https://blog.csdn.net/qq_18846849/article/details/127547883)
 
 
 
 # 论文
+**2023年**  
+1. MWP
+    1. (ACL) [Interpretable Math Word Problem Solution Generation Via Step-by-step Planning](https://arxiv.org/abs/2306.00784)：关注步骤分（bushi）
+        1. [ ] 代码：GSM8K数据集
+    2. (ACL) [Solving Math Word Problems via Cooperative Reasoning induced Language Models](https://arxiv.org/abs/2210.16257)
+    2. (ACL Findings) [Compositional Mathematical Encoding for Math Word Problems](https://aclanthology.org/2023.findings-acl.635/)
+    2. (BEA) [Scalable and Explainable Automated Scoring for Open-Ended Constructed Response Math Word Problems](https://aclanthology.org/2023.bea-1.12/)：关注MPT问题
+    4. [Let GPT be a Math Tutor: Teaching Math Word Problem Solvers with Customized Exercise Generation](https://arxiv.org/abs/2305.14386)
+    5. [Non-Autoregressive Math Word Problem Solver with Unified Tree Structure](https://arxiv.org/abs/2305.04556)
+    6. [Solving Math Word Problems by Combining Language Models With Symbolic Solvers](https://arxiv.org/abs/2304.09102)
+
+
 **2022年**  
 1. 数值推理
     1. (ACL) [Turning Tables: Generating Examples from Semi-structured Tables for Endowing Language Models with Reasoning Skills](https://aclanthology.org/2022.acl-long.416/)：表格数据
     2. (AAAI) [Weakly Supervised Neuro-Symbolic Module Networks for Numerical Reasoning](https://arxiv.org/abs/2101.11802)
+2. MWP
+    1. (EMNLP) [Automatic Generation of Socratic Subquestions for Teaching Math Word Problems](https://arxiv.org/abs/2211.12835)
+    2. (COLING) [WARM: A Weakly (+Semi) Supervised Model for Solving Math word Problems](https://arxiv.org/abs/2104.06722)
 
 **2021年**  
 1. MWP
