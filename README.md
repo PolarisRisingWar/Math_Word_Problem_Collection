@@ -66,6 +66,7 @@
     1. (NeurIPS) [Measuring Mathematical Problem Solving With the MATH Dataset](https://arxiv.org/abs/2103.03874)
     官方GitHub项目：<https://github.com/hendrycks/math/>
     5. (ACL) [Compositional Generalization and Natural Language Variation: Can a Semantic Parsing Approach Handle Both?](https://aclanthology.org/2021.acl-long.75/)：提出NQG-T5模型，致力于解决seq2seq模型难以解决的域外compositional generalization问题，结合高精度的、基于语法的方法NQG和预训练seq2seq模型T5，在真实数据和标准评估数据上都表现良好。对于域内样本直接输出NQG，域外样本则输出T5结果。
+    6. (ACL | IJCNLP) [Measuring and Improving BERT’s Mathematical Abilities by Predicting the Order of Reasoning](https://aclanthology.org/2021.acl-short.49/)：用特殊的训练过程
     2. (NAACL) [Are NLP Models really able to Solve Simple Math Word Problems?](https://arxiv.org/abs/2103.07191)
     3. [Training Verifiers to Solve Math Word Problems](https://arxiv.org/abs/2110.14168)
 2. 数值表征
@@ -88,9 +89,10 @@
 
 **2019年**  
 1. 数值推理
-    1. (EMNLP) [NumNet: Machine Reading Comprehension with Numerical Reasoning](https://aclanthology.org/D19-1251/)：数值+GNN+数值之间的比较关系→在上下文中实现数值推理
+    1. (NAACL) [DROP: A Reading Comprehension Benchmark Requiring Discrete Reasoning Over Paragraphs](https://aclanthology.org/N19-1246/)：实现数值之间的计数、加减等操作
+    3. (EMNLP) [NumNet: Machine Reading Comprehension with Numerical Reasoning](https://aclanthology.org/D19-1251/)：数值+GNN+数值之间的比较关系→在上下文中实现数值推理
     代码中文版：[j30206868/numnet-chinese: Modify numnet+ for chinese](https://github.com/j30206868/numnet-chinese)
-    2. (NAACL) [DROP: A Reading Comprehension Benchmark Requiring Discrete Reasoning Over Paragraphs](https://aclanthology.org/N19-1246/)：实现数值之间的计数、加减等操作
+    3. (EMNLP | IJCNLP) [Giving BERT a Calculator: Finding Operations and Arguments with Reading Comprehension](https://aclanthology.org/D19-1609/)：用BERT选择可执行程序（预定义好的）
 2. MWP
     1. (NAACL) [MathQA: Towards Interpretable Math Word Problem Solving with Operation-Based Formalisms](https://aclanthology.org/N19-1245/)
     2. (NAACL) [Semantically-Aligned Equation Generation for Solving and Reasoning Math Word Problems](https://aclanthology.org/N19-1272/)：将推理过程结合进了seq2seq模型之中：先用encoder表征问题中常数的语义信息（理解问题的语义），再用decoder依次决定公式中的数值和运算符，以模拟人类的推理逻辑。在decoder中，从原文中抽取或生成的数字组合成栈，逐一输出并生成匹配的运算符。最后生成的效果优于直接使用seq2seq模型
