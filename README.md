@@ -18,12 +18,17 @@
 |AI2|英语|数据集下载地址挂了，但是可以在代码文件（<https://www.dropbox.com/s/1slbq2fi77fq7wx/Java%20code_mathproblems.zip?dl=1>）里面找到Math_Word_DS2.zip文件|(2014 EMNLP) [Re42：读论文 ARIS Learning to Solve Arithmetic Word Problems with Verb Categorization](https://blog.csdn.net/PolarisRisingWar/article/details/131726944)|MWP|395个样本|这个数据集名是MathDQN起的
 |number_word_std / Dolphin / Dophin1878||<https://www.microsoft.com/en-us/research/uploads/prod/2016/02//dolphin-number_word_std.zip>|(2015 EMNLP) [Automatically Solving Number Word Problems by Semantic Parsing and Reasoning](https://aclanthology.org/D15-1135/)|MWP||
 Dolphin18K||<https://www.microsoft.com/en-us/research/uploads/prod/2015/08/dolphin18k-v1.1.zip>|(2016 ACL) [How well do Computers Solve Math Word Problems? Large-Scale Dataset Construction and Evaluation](https://aclanthology.org/P16-1084/)|MWP|18460个样本
+MAWPS|英语|[sroy9/mawps: Code for MAWPS: A Math Word Problem Repository](https://github.com/sroy9/mawps)|(2016 NAACL) [MAWPS: A Math Word Problem Repository](https://aclanthology.org/N16-1136/)|MWP
 DRAW-1K|英语|<https://www.microsoft.com/en-us/download/details.aspx?id=52628>|(2017 EACL) [Annotating Derivations: A New Evaluation Strategy and Dataset for Algebra Word Problems](https://aclanthology.org/E17-1047/)|MWP<br>（一元线性场景）|1000个样本
 |Math23K|中文|<https://huggingface.co/datasets/Gxg/Math23K><br><https://github.com/SumbeeLei/Math_EN/tree/master/data>|(2017 EMNLP) [Deep Neural Solver for Math Word Problems](https://aclanthology.org/D17-1088/)|MWP<br>（一元线性场景）|23162个样本|腾讯人工智能实验室<br>数据来源于爬虫
 |AQUA-RAT|英语|<https://github.com/deepmind/AQuA>|(2017 ACL) [Program Induction by Rationale Generation : Learning to Solve and Explain Algebraic Word Problems](https://arxiv.org/abs/1705.04146)|MWP|100000个样本
+DROP|||(2019 NAACL) [DROP: A Reading Comprehension Benchmark Requiring Discrete Reasoning Over Paragraphs](https://aclanthology.org/N19-1246/)|数值推理
 |GSM8K|英语|<https://huggingface.co/datasets/gsm8k>||MWP||介绍博文：[【搬运】GSM8K 数据集介绍_x66ccff的博客-CSDN博客](https://blog.csdn.net/qq_18846849/article/details/127547883)
+|Academia Sinica Diverse MWP Dataset (ASDiv) V1.0|英语|[chaochun/nlu-asdiv-dataset](https://github.com/chaochun/nlu-asdiv-dataset)|(2020 ACL) [A Diverse Corpus for Evaluating and Developing English Math Word Problem Solvers](https://aclanthology.org/2020.acl-main.92/)|MWP
+|Ape210K|中文|<https://github.com/Chenny0808/ape210k>|(2020) [Ape210K: A Large-Scale and Template-Rich Dataset of Math Word Problems](https://arxiv.org/pdf/2009.11506v1.pdf)（已撤回，所以在ArXiv论文主页是看不到的）|MWP||猿辅导 AI Lab，西北大学<br>包含 210K 个中国小学水平的数学问题，每个问题都包含黄金答案和得出答案所需的方程式
 |MATH|英语|<https://people.eecs.berkeley.edu/~hendrycks/MATH.tar>|(2021 NeurIPS) [Measuring Mathematical Problem Solving With the MATH Dataset](https://arxiv.org/abs/2103.03874)|MWP
-|Ape210K|中文|<https://github.com/Chenny0808/ape210k>||MWP
+SVAMP|英语|[arkilpatel/SVAMP: NAACL 2021: Are NLP Models really able to Solve Simple Math Word Problems?](https://github.com/arkilpatel/SVAMP)|(2021 NAACL) [Are NLP Models really able to Solve Simple Math Word Problems?](https://arxiv.org/abs/2103.07191)|MWP
+符号化的MWP|英语|[vedantgaur/Symbolic-MWP-Reasoning](https://github.com/vedantgaur/Symbolic-MWP-Reasoning)|(2023 ACL Findings) [Reasoning in Large Language Models Through Symbolic Math Word Problems](https://aclanthology.org/2023.findings-acl.364/)|MWP
 
 
 # 论文
@@ -60,6 +65,7 @@ DRAW-1K|英语|<https://www.microsoft.com/en-us/download/details.aspx?id=52628>|
     官方GitHub项目：<https://github.com/hendrycks/math/>
     5. (ACL) [Compositional Generalization and Natural Language Variation: Can a Semantic Parsing Approach Handle Both?](https://aclanthology.org/2021.acl-long.75/)：提出NQG-T5模型，致力于解决seq2seq模型难以解决的域外compositional generalization问题，结合高精度的、基于语法的方法NQG和预训练seq2seq模型T5，在真实数据和标准评估数据上都表现良好。对于域内样本直接输出NQG，域外样本则输出T5结果。
     2. (NAACL) [Are NLP Models really able to Solve Simple Math Word Problems?](https://arxiv.org/abs/2103.07191)
+    3. [Training Verifiers to Solve Math Word Problems](https://arxiv.org/abs/2110.14168)
 2. 数值表征
     1. (NAACL) [Representing Numbers in NLP: a Survey and a Vision](https://aclanthology.org/2021.naacl-main.53/)
 
