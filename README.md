@@ -36,8 +36,7 @@
 # 论文
 **2023年**  
 1. 数值推理
-    1. 
-    2. [Scaling Relationship on Learning Mathematical Reasoning with Large Language Models](https://arxiv.org/abs/2308.01825)：发现微调数据量越大，模型效果越好。提出RFT技术自动采样数据
+    1. [Scaling Relationship on Learning Mathematical Reasoning with Large Language Models](https://arxiv.org/abs/2308.01825)：发现微调数据量越大，模型效果越好。提出RFT技术自动采样数据
 2. MWP
     1. (ACL) [Interpretable Math Word Problem Solution Generation Via Step-by-step Planning](https://arxiv.org/abs/2306.00784)：关注步骤分（bushi）
         1. [ ] 代码：GSM8K数据集
@@ -50,6 +49,7 @@
     5. [Non-Autoregressive Math Word Problem Solver with Unified Tree Structure](https://arxiv.org/abs/2305.04556)
     6. [Solving Math Word Problems by Combining Language Models With Symbolic Solvers](https://arxiv.org/abs/2304.09102)
     7. [Solving Challenging Math Word Problems Using GPT-4 Code Interpreter with Code-based Self-Verification](https://arxiv.org/abs/2308.07921)：大意是用GPT-4 code interpreter，结合代码与文本生成更强的MWP结果（具体的还没看）
+    8. [Exploring Equation as a Better Intermediate Meaning Representation for Numerical Reasoning](https://arxiv.org/abs/2308.10585)：通过方程而不是程序作为模型的中间输出（IMR），生成方程是通过LLM实现的
 
 
 **2022年**  
