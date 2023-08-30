@@ -13,7 +13,7 @@
 简单介绍：
 （由于数据可能太大所以我全都不上传Git了，但是反正全是放在datasets文件夹里，在代码中如有引用也全是从这里引用）
 
-| **数据集名称** | **语言** | **下载地址** | **出处** | **任务** | **统计信息** | **其他** |
+| **数据集名称** | **语言** | **下载地址** | **出处** | **任务** | **统计信息** | **其他备注** |
 |---|---|---|---|---|---|---|
 | Alg514 | 英语 | <http://groups.csail.mit.edu/rbg/code/wordprobs/questions.json> | (2014 ACL) [Learning to Automatically Solve Algebra Word Problems](https://aclanthology.org/P14-1026/) | MWP<br>（线性场景） | 514个样本 | |
 | AI2 | 英语 | 数据集下载地址挂了，但是可以在代码文件（<https://www.dropbox.com/s/1slbq2fi77fq7wx/Java%20code_mathproblems.zip?dl=1>）里面找到Math_Word_DS2.zip文件 | (2014 EMNLP) [Re42：读论文 ARIS Learning to Solve Arithmetic Word Problems with Verb Categorization](https://blog.csdn.net/PolarisRisingWar/article/details/131726944) | MWP | 395个样本 | 这个数据集名是MathDQN起的 |
@@ -24,7 +24,7 @@
 | Math23K | 中文 | <https://huggingface.co/datasets/Gxg/Math23K><br><https://github.com/SumbeeLei/Math_EN/tree/master/data> | (2017 EMNLP) [Deep Neural Solver for Math Word Problems](https://aclanthology.org/D17-1088/) | MWP<br>（一元线性场景） | 23162个样本 | 腾讯人工智能实验室<br>数据来源于爬虫 |
 | AQUA-RAT | 英语 | <https://github.com/deepmind/AQuA> | (2017 ACL) [Program Induction by Rationale Generation : Learning to Solve and Explain Algebraic Word Problems](https://arxiv.org/abs/1705.04146) | MWP | 100000个样本 | |
 | DROP | | | (2019 NAACL) [DROP: A Reading Comprehension Benchmark Requiring Discrete Reasoning Over Paragraphs](https://aclanthology.org/N19-1246/) | 数值推理 | | |
-| GSM8K | 英语 | <https://huggingface.co/datasets/gsm8k> | | MWP | | 介绍博文：[【搬运】GSM8K 数据集介绍_x66ccff的博客-CSDN博客](https://blog.csdn.net/qq_18846849/article/details/127547883) |
+| GSM8K | 英语 | <https://huggingface.co/datasets/gsm8k> | (2021) [Training Verifiers to Solve Math Word Problems](https://arxiv.org/abs/2110.14168) | MWP | |  |
 | Academia Sinica Diverse MWP Dataset (ASDiv) V1.0 | 英语 | [chaochun/nlu-asdiv-dataset](https://github.com/chaochun/nlu-asdiv-dataset) | (2020 ACL) [A Diverse Corpus for Evaluating and Developing English Math Word Problem Solvers](https://aclanthology.org/2020.acl-main.92/) | MWP | | |
 | Ape210K | 中文 | <https://github.com/Chenny0808/ape210k> | (2020) [Ape210K: A Large-Scale and Template-Rich Dataset of Math Word Problems](https://arxiv.org/pdf/2009.11506v1.pdf)（已撤回，所以在ArXiv论文主页是看不到的） | MWP | | 猿辅导 AI Lab，西北大学<br>包含 210K 个中国小学水平的数学问题，每个问题都包含黄金答案和得出答案所需的方程式 |
 | MATH | 英语 | <https://people.eecs.berkeley.edu/~hendrycks/MATH.tar> | (2021 NeurIPS) [Measuring Mathematical Problem Solving With the MATH Dataset](https://arxiv.org/abs/2103.03874) | MWP | | |
@@ -59,6 +59,7 @@
 2. MWP
     1. (EMNLP) [Automatic Generation of Socratic Subquestions for Teaching Math Word Problems](https://arxiv.org/abs/2211.12835)
     2. (COLING) [WARM: A Weakly (+Semi) Supervised Model for Solving Math word Problems](https://arxiv.org/abs/2104.06722)
+    3. (NAACL) [Practice Makes a Solver Perfect: Data Augmentation for Math Word Problem Solvers](https://aclanthology.org/2022.naacl-main.310/)
 
 **2021年**  
 1. MWP
