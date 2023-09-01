@@ -41,12 +41,13 @@
 1. 数值推理
     1. [Scaling Relationship on Learning Mathematical Reasoning with Large Language Models](https://arxiv.org/abs/2308.01825)：发现微调数据量越大，模型效果越好。提出RFT技术自动采样数据
 2. MWP
-    1. (ACL) [Interpretable Math Word Problem Solution Generation Via Step-by-step Planning](https://arxiv.org/abs/2306.00784)：关注步骤分（bushi）
+    1. (ACL OpenAI) [Interpretable Math Word Problem Solution Generation Via Step-by-step Planning](https://arxiv.org/abs/2306.00784)：关注步骤分（bushi）
         1. [ ] 代码：GSM8K数据集
     2. (ACL) [Solving Math Word Problems via Cooperative Reasoning induced Language Models](https://arxiv.org/abs/2210.16257)
     2. (ACL Findings) [Compositional Mathematical Encoding for Math Word Problems](https://aclanthology.org/2023.findings-acl.635/)
     4. (IJCNN) [Improving Math Word Problems Solver with Logical Semantic Similarity](https://ieeexplore.ieee.org/abstract/document/10191088)
     5. (IJCNN) [Solving Math Word Problems Following Logically Consistent Template](https://ieeexplore.ieee.org/abstract/document/10191776)
+    6. (NLPCC) [Solving Math Word Problem with Problem Type Classification](https://arxiv.org/abs/2308.13844)
     2. (BEA) [Scalable and Explainable Automated Scoring for Open-Ended Constructed Response Math Word Problems](https://aclanthology.org/2023.bea-1.12/)：关注MPT问题
     4. [Let GPT be a Math Tutor: Teaching Math Word Problem Solvers with Customized Exercise Generation](https://arxiv.org/abs/2305.14386)
     5. [Non-Autoregressive Math Word Problem Solver with Unified Tree Structure](https://arxiv.org/abs/2305.04556)
