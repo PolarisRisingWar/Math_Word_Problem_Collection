@@ -40,7 +40,9 @@
 # 论文
 **2023年**  
 1. 数值推理
-    1. [Scaling Relationship on Learning Mathematical Reasoning with Large Language Models](https://arxiv.org/abs/2308.01825)：发现微调数据量越大，模型效果越好。提出RFT技术自动采样数据
+    1. (KDD) [Exploiting Relation-aware Attribute Representation Learning in Knowledge Graph Embedding for Numerical Reasoning](https://dl.acm.org/doi/abs/10.1145/3580305.3599338)
+    2. [Scaling Relationship on Learning Mathematical Reasoning with Large Language Models](https://arxiv.org/abs/2308.01825)：发现微调数据量越大，模型效果越好。提出RFT技术自动采样数据
+    2. [CREATOR: Tool Creation for Disentangling Abstract and Concrete Reasoning of Large Language Models](https://blender.cs.illinois.edu/paper/creator2023.pdf)
 2. MWP
     1. (ACL OpenAI) [Interpretable Math Word Problem Solution Generation Via Step-by-step Planning](https://arxiv.org/abs/2306.00784)：关注步骤分（bushi）
         1. [ ] 代码：GSM8K数据集
@@ -57,6 +59,7 @@
     7. [Solving Challenging Math Word Problems Using GPT-4 Code Interpreter with Code-based Self-Verification](https://arxiv.org/abs/2308.07921)：大意是用GPT-4 code interpreter，结合代码与文本生成更强的MWP结果（具体的还没看）
     8. [Exploring Equation as a Better Intermediate Meaning Representation for Numerical Reasoning](https://arxiv.org/abs/2308.10585)：通过方程而不是程序作为模型的中间输出（IMR），生成方程是通过LLM实现的
     9. (清华+智谱AI) [GPT Can Solve Mathematical Problems Without a Calculator](https://arxiv.org/abs/2309.03241)：提出MathGLM（GLM-10B改）
+    10. [Solving Challenging Math Word Problems Using GPT-4 Code Interpreter with Code-based Self-Verification](https://arxiv.org/abs/2308.07921)
 
 
 **2022年**  
