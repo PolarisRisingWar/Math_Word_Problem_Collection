@@ -43,6 +43,7 @@
     1. (KDD) [Exploiting Relation-aware Attribute Representation Learning in Knowledge Graph Embedding for Numerical Reasoning](https://dl.acm.org/doi/abs/10.1145/3580305.3599338)
     2. [Scaling Relationship on Learning Mathematical Reasoning with Large Language Models](https://arxiv.org/abs/2308.01825)：发现微调数据量越大，模型效果越好。提出RFT技术自动采样数据
     2. [CREATOR: Tool Creation for Disentangling Abstract and Concrete Reasoning of Large Language Models](https://blender.cs.illinois.edu/paper/creator2023.pdf)
+    4. (港中文+腾讯) [StrategyLLM: Large Language Models as Strategy Generators, Executors, Optimizers, and Evaluators for Problem Solving](https://arxiv.org/abs/2311.08803)：这一篇应该算是通用的解决方案，但是下游任务中包含数值推理
 2. MWP
     1. (ACL OpenAI) [Interpretable Math Word Problem Solution Generation Via Step-by-step Planning](https://arxiv.org/abs/2306.00784)：关注步骤分（bushi）
         1. [ ] 代码：GSM8K数据集
