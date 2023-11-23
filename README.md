@@ -41,11 +41,16 @@
 **2023年**  
 1. 数值推理
     1. (ACL) [A Causal Framework to Quantify the Robustness of Mathematical Reasoning with Language Models](https://arxiv.org/abs/2210.12023)
+    2. (ACL Industry) [MathPrompter: Mathematical Reasoning using Large Language Models](https://arxiv.org/abs/2303.05398)
+    3. (ICLR) [Dynamic Prompt Learning via Policy Gradient for Semi-structured Mathematical Reasoning](https://arxiv.org/abs/2209.14610)
     2. (KDD) [Exploiting Relation-aware Attribute Representation Learning in Knowledge Graph Embedding for Numerical Reasoning](https://dl.acm.org/doi/abs/10.1145/3580305.3599338)
+    3. (AAAI) [An Independent Evaluation of ChatGPT on Mathematical Word Problems (MWP)](https://arxiv.org/abs/2302.13814)
+    3. (EACL) [ComSearch: Equation Searching with Combinatorial Strategy for Solving Math Word Problems with Weak Supervision](https://arxiv.org/abs/2210.07017)
     2. [Scaling Relationship on Learning Mathematical Reasoning with Large Language Models](https://arxiv.org/abs/2308.01825)：发现微调数据量越大，模型效果越好。提出RFT技术自动采样数据
     2. [CREATOR: Tool Creation for Disentangling Abstract and Concrete Reasoning of Large Language Models](https://blender.cs.illinois.edu/paper/creator2023.pdf)
     4. (港中文+腾讯) [StrategyLLM: Large Language Models as Strategy Generators, Executors, Optimizers, and Evaluators for Problem Solving](https://arxiv.org/abs/2311.08803)：这一篇应该算是通用的解决方案，但是下游任务中包含数值推理
     5. (耶鲁等多家高校) [DocMath-Eval: Evaluating Numerical Reasoning Capabilities of LLMs in Understanding Long Documents with Tabular Data](https://arxiv.org/abs/2311.09805)：这一篇主要考虑带表格长文档的数值推理场景
+    6. (人大、科大讯飞等) [Evaluating and Improving Tool-Augmented Computation-Intensive Math Reasoning](https://arxiv.org/abs/2306.02408)
 2. MWP
     1. (ACL OpenAI) [Interpretable Math Word Problem Solution Generation Via Step-by-step Planning](https://arxiv.org/abs/2306.00784)：关注步骤分（bushi）
         1. [ ] 代码：GSM8K数据集
@@ -65,7 +70,12 @@
     10. [Solving Challenging Math Word Problems Using GPT-4 Code Interpreter with Code-based Self-Verification](https://arxiv.org/abs/2308.07921)
     10. [Chatbots put to the test in math and logic problems: A preliminary comparison and assessment of ChatGPT-3.5, ChatGPT-4, and Google Bard](https://arxiv.org/abs/2305.18618)
     11. [An Empirical Study on Challenging Math Problem Solving with GPT-4](https://arxiv.org/abs/2306.01337)
+    12. (耶鲁&卡梅) [ProofNet: Autoformalizing and Formally Proving Undergraduate-Level Mathematics](https://arxiv.org/abs/2302.12433)：证明题
+3. 数值表征
+    1. (TMLR) [Semantic Representations of Mathematical Expressions in a Continuous Vector Space](https://arxiv.org/abs/2211.08142)：表征数学表达式
 3. (ACL Findings) [World Models for Math Story Problems](https://arxiv.org/abs/2306.04347)
+4. (EACL) [BERT is not The Count: Learning to Match Mathematical Statements with Proofs](https://arxiv.org/abs/2302.09350)
+5. (华师) [Math-KG: Construction and Applications of Mathematical Knowledge Graph](https://arxiv.org/abs/2205.03772)
 
 **2022年**  
 1. 数值推理
@@ -93,6 +103,7 @@
     6. (ACL | IJCNLP) [Measuring and Improving BERT’s Mathematical Abilities by Predicting the Order of Reasoning](https://aclanthology.org/2021.acl-short.49/)：用特殊的训练过程
     2. (NAACL) [Are NLP Models really able to Solve Simple Math Word Problems?](https://arxiv.org/abs/2103.07191)
     3. [Training Verifiers to Solve Math Word Problems](https://arxiv.org/abs/2110.14168)
+    4. [Pretrained Language Models are Symbolic Mathematics Solvers too!](https://arxiv.org/abs/2110.03501)
 2. 数值表征
     1. (NAACL) [Representing Numbers in NLP: a Survey and a Vision](https://aclanthology.org/2021.naacl-main.53/)
 3. 数值推理
@@ -120,6 +131,7 @@
     1. (EMNLP) [Learning Numeral Embeddings](https://arxiv.org/abs/2001.00003)
     2. (ICLR) [Neural Symbolic Reader: Scalable Integration of Distributed and Symbolic Representations for Reading Comprehension](https://openreview.net/forum?id=ryxjnREFwH)：符号表征也算数值表征吧
 4. (ACL) [Injecting Numerical Reasoning Skills into Language Models](https://aclanthology.org/2020.acl-main.89/)：logarithmic difference能够给小数字更高权重
+5. (KDD) [Self-Supervised Pretraining of Graph Neural Network for the Retrieval of Related Mathematical Expressions in Scientific Articles](https://arxiv.org/abs/2209.00446)：检索相似公式→检索相似论文
 
 **2019年**  
 1. 数值推理
