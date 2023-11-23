@@ -40,7 +40,8 @@
 # 论文
 **2023年**  
 1. 数值推理
-    1. (KDD) [Exploiting Relation-aware Attribute Representation Learning in Knowledge Graph Embedding for Numerical Reasoning](https://dl.acm.org/doi/abs/10.1145/3580305.3599338)
+    1. (ACL) [A Causal Framework to Quantify the Robustness of Mathematical Reasoning with Language Models](https://arxiv.org/abs/2210.12023)
+    2. (KDD) [Exploiting Relation-aware Attribute Representation Learning in Knowledge Graph Embedding for Numerical Reasoning](https://dl.acm.org/doi/abs/10.1145/3580305.3599338)
     2. [Scaling Relationship on Learning Mathematical Reasoning with Large Language Models](https://arxiv.org/abs/2308.01825)：发现微调数据量越大，模型效果越好。提出RFT技术自动采样数据
     2. [CREATOR: Tool Creation for Disentangling Abstract and Concrete Reasoning of Large Language Models](https://blender.cs.illinois.edu/paper/creator2023.pdf)
     4. (港中文+腾讯) [StrategyLLM: Large Language Models as Strategy Generators, Executors, Optimizers, and Evaluators for Problem Solving](https://arxiv.org/abs/2311.08803)：这一篇应该算是通用的解决方案，但是下游任务中包含数值推理
@@ -62,7 +63,9 @@
     8. [Exploring Equation as a Better Intermediate Meaning Representation for Numerical Reasoning](https://arxiv.org/abs/2308.10585)：通过方程而不是程序作为模型的中间输出（IMR），生成方程是通过LLM实现的
     9. (清华+智谱AI) [GPT Can Solve Mathematical Problems Without a Calculator](https://arxiv.org/abs/2309.03241)：提出MathGLM（GLM-10B改）
     10. [Solving Challenging Math Word Problems Using GPT-4 Code Interpreter with Code-based Self-Verification](https://arxiv.org/abs/2308.07921)
-
+    10. [Chatbots put to the test in math and logic problems: A preliminary comparison and assessment of ChatGPT-3.5, ChatGPT-4, and Google Bard](https://arxiv.org/abs/2305.18618)
+    11. [An Empirical Study on Challenging Math Problem Solving with GPT-4](https://arxiv.org/abs/2306.01337)
+3. (ACL Findings) [World Models for Math Story Problems](https://arxiv.org/abs/2306.04347)
 
 **2022年**  
 1. 数值推理
