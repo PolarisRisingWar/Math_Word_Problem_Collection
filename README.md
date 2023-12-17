@@ -38,6 +38,10 @@
 
 
 # 论文
+**2024年**  
+1. MWP
+    1. (AAAI) [Get an A in Math: Progressive Rectification Prompting](https://arxiv.org/abs/2312.06867)
+
 **2023年**  
 1. 数值推理
     1. (ACL) [A Causal Framework to Quantify the Robustness of Mathematical Reasoning with Language Models](https://arxiv.org/abs/2210.12023)
@@ -56,11 +60,13 @@
         1. [ ] 代码：GSM8K数据集
     2. (ACL) [Solving Math Word Problems via Cooperative Reasoning induced Language Models](https://arxiv.org/abs/2210.16257)
     2. (ACL Findings) [Compositional Mathematical Encoding for Math Word Problems](https://aclanthology.org/2023.findings-acl.635/)
+    4. (AAAI) [Generalizing Math Word Problem Solvers via Solution Diversification](https://arxiv.org/abs/2212.00833)
     4. (IJCNN) [Improving Math Word Problems Solver with Logical Semantic Similarity](https://ieeexplore.ieee.org/abstract/document/10191088)
     5. (IJCNN) [Solving Math Word Problems Following Logically Consistent Template](https://ieeexplore.ieee.org/abstract/document/10191776)
     6. (NLPCC) [Solving Math Word Problem with Problem Type Classification](https://arxiv.org/abs/2308.13844)
     7. (ICANN) [Solving Math Word Problem with External Knowledge and Entailment Loss](https://link.springer.com/chapter/10.1007/978-3-031-44201-8_27)
     2. (BEA) [Scalable and Explainable Automated Scoring for Open-Ended Constructed Response Math Word Problems](https://aclanthology.org/2023.bea-1.12/)：关注MPT问题
+    3. (ICLP) [Enhancing Math Word Problem Solving Through Salient Clue Prioritization: A Joint Token-Phrase-Level Feature Integration Approach](https://ieeexplore.ieee.org/abstract/document/10337252)
     4. [Let GPT be a Math Tutor: Teaching Math Word Problem Solvers with Customized Exercise Generation](https://arxiv.org/abs/2305.14386)
     5. [Non-Autoregressive Math Word Problem Solver with Unified Tree Structure](https://arxiv.org/abs/2305.04556)
     6. [Solving Math Word Problems by Combining Language Models With Symbolic Solvers](https://arxiv.org/abs/2304.09102)
@@ -76,6 +82,7 @@
 3. (ACL Findings) [World Models for Math Story Problems](https://arxiv.org/abs/2306.04347)
 4. (EACL) [BERT is not The Count: Learning to Match Mathematical Statements with Proofs](https://arxiv.org/abs/2302.09350)
 5. (华师) [Math-KG: Construction and Applications of Mathematical Knowledge Graph](https://arxiv.org/abs/2205.03772)
+6. [Mathematical Language Models: A Survey](https://arxiv.org/abs/2312.07622)
 
 **2022年**  
 1. 数值推理
