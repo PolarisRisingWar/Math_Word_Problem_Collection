@@ -79,6 +79,7 @@
     12. (耶鲁&卡梅) [ProofNet: Autoformalizing and Formally Proving Undergraduate-Level Mathematics](https://arxiv.org/abs/2302.12433)：证明题
 3. 数值表征
     1. (TMLR) [Semantic Representations of Mathematical Expressions in a Continuous Vector Space](https://arxiv.org/abs/2211.08142)：表征数学表达式
+3. (Nature DeepMind) [Mathematical discoveries from program search with large language models](https://www.nature.com/articles/s41586-023-06924-6)：FunSearch模型，用函数搜索的方式解决数学问题
 3. (ACL Findings) [World Models for Math Story Problems](https://arxiv.org/abs/2306.04347)
 4. (EACL) [BERT is not The Count: Learning to Match Mathematical Statements with Proofs](https://arxiv.org/abs/2302.09350)
 5. (华师) [Math-KG: Construction and Applications of Mathematical Knowledge Graph](https://arxiv.org/abs/2205.03772)
