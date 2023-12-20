@@ -45,7 +45,6 @@
 **2023年**  
 1. 数值推理
     1. (ACL) [A Causal Framework to Quantify the Robustness of Mathematical Reasoning with Language Models](https://arxiv.org/abs/2210.12023)
-    2. (ACL Industry) [MathPrompter: Mathematical Reasoning using Large Language Models](https://arxiv.org/abs/2303.05398)
     3. (ICLR) [Dynamic Prompt Learning via Policy Gradient for Semi-structured Mathematical Reasoning](https://arxiv.org/abs/2209.14610)
     2. (KDD) [Exploiting Relation-aware Attribute Representation Learning in Knowledge Graph Embedding for Numerical Reasoning](https://dl.acm.org/doi/abs/10.1145/3580305.3599338)
     3. (AAAI) [An Independent Evaluation of ChatGPT on Mathematical Word Problems (MWP)](https://arxiv.org/abs/2302.13814)
@@ -60,6 +59,7 @@
         1. [ ] 代码：GSM8K数据集
     2. (ACL) [Solving Math Word Problems via Cooperative Reasoning induced Language Models](https://arxiv.org/abs/2210.16257)
     2. (ACL Findings) [Compositional Mathematical Encoding for Math Word Problems](https://aclanthology.org/2023.findings-acl.635/)
+    4. (ACL Industry) [MathPrompter: Mathematical Reasoning using Large Language Models](https://arxiv.org/abs/2303.05398)
     4. (AAAI) [Generalizing Math Word Problem Solvers via Solution Diversification](https://arxiv.org/abs/2212.00833)
     4. (IJCNN) [Improving Math Word Problems Solver with Logical Semantic Similarity](https://ieeexplore.ieee.org/abstract/document/10191088)
     5. (IJCNN) [Solving Math Word Problems Following Logically Consistent Template](https://ieeexplore.ieee.org/abstract/document/10191776)
@@ -77,6 +77,7 @@
     10. [Chatbots put to the test in math and logic problems: A preliminary comparison and assessment of ChatGPT-3.5, ChatGPT-4, and Google Bard](https://arxiv.org/abs/2305.18618)
     11. [An Empirical Study on Challenging Math Problem Solving with GPT-4](https://arxiv.org/abs/2306.01337)
     12. (耶鲁&卡梅) [ProofNet: Autoformalizing and Formally Proving Undergraduate-Level Mathematics](https://arxiv.org/abs/2302.12433)：证明题
+    13. [TinyGSM: achieving >80% on GSM8k with small language models](https://arxiv.org/abs/2312.09241)
 3. 数值表征
     1. (TMLR) [Semantic Representations of Mathematical Expressions in a Continuous Vector Space](https://arxiv.org/abs/2211.08142)：表征数学表达式
 3. (Nature DeepMind) [Mathematical discoveries from program search with large language models](https://www.nature.com/articles/s41586-023-06924-6)：FunSearch模型，用函数搜索的方式解决数学问题
