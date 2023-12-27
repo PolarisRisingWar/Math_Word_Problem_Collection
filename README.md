@@ -1,3 +1,5 @@
+MWP的综述也在路上啦，等我写完了跟导师说一声就去挂ArXiv上。如果跟我关系好而且等不及论文成品的可以私我加入共享石墨文档链接。
+
 数值推理，包括但不限于（具体的分类不一定是严格MECE的）：  
 1. 数值推理
 2. MWP（标准做法依然是熟悉的文本生成，encoder+decoder。当然就是说虽然基础是这样的，但大家都可以积极整活）
@@ -80,6 +82,8 @@
     13. [TinyGSM: achieving >80% on GSM8k with small language models](https://arxiv.org/abs/2312.09241)
 3. 数值表征
     1. (TMLR) [Semantic Representations of Mathematical Expressions in a Continuous Vector Space](https://arxiv.org/abs/2211.08142)：表征数学表达式
+4. 集合推理
+    1. (谷歌) [GeomVerse: A Systematic Evaluation of Large Models for Geometric Reasoning](https://arxiv.org/abs/2312.12241)
 3. (Nature DeepMind) [Mathematical discoveries from program search with large language models](https://www.nature.com/articles/s41586-023-06924-6)：FunSearch模型，用函数搜索的方式解决数学问题
 3. (ACL Findings) [World Models for Math Story Problems](https://arxiv.org/abs/2306.04347)
 4. (EACL) [BERT is not The Count: Learning to Match Mathematical Statements with Proofs](https://arxiv.org/abs/2302.09350)
