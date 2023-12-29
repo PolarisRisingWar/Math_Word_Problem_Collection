@@ -63,6 +63,7 @@ MWP的综述也在路上啦，等我写完了跟导师说一声就去挂ArXiv上
     2. (ACL Findings) [Compositional Mathematical Encoding for Math Word Problems](https://aclanthology.org/2023.findings-acl.635/)
     4. (ACL Industry) [MathPrompter: Mathematical Reasoning using Large Language Models](https://arxiv.org/abs/2303.05398)
     4. (AAAI) [Generalizing Math Word Problem Solvers via Solution Diversification](https://arxiv.org/abs/2212.00833)
+    5. (EMNLP) [Non-Autoregressive Math Word Problem Solver with Unified Tree Structure](https://arxiv.org/abs/2305.04556)
     4. (IJCNN) [Improving Math Word Problems Solver with Logical Semantic Similarity](https://ieeexplore.ieee.org/abstract/document/10191088)
     5. (IJCNN) [Solving Math Word Problems Following Logically Consistent Template](https://ieeexplore.ieee.org/abstract/document/10191776)
     6. (NLPCC) [Solving Math Word Problem with Problem Type Classification](https://arxiv.org/abs/2308.13844)
@@ -70,7 +71,6 @@ MWP的综述也在路上啦，等我写完了跟导师说一声就去挂ArXiv上
     2. (BEA) [Scalable and Explainable Automated Scoring for Open-Ended Constructed Response Math Word Problems](https://aclanthology.org/2023.bea-1.12/)：关注MPT问题
     3. (ICLP) [Enhancing Math Word Problem Solving Through Salient Clue Prioritization: A Joint Token-Phrase-Level Feature Integration Approach](https://ieeexplore.ieee.org/abstract/document/10337252)
     4. [Let GPT be a Math Tutor: Teaching Math Word Problem Solvers with Customized Exercise Generation](https://arxiv.org/abs/2305.14386)
-    5. [Non-Autoregressive Math Word Problem Solver with Unified Tree Structure](https://arxiv.org/abs/2305.04556)
     6. [Solving Math Word Problems by Combining Language Models With Symbolic Solvers](https://arxiv.org/abs/2304.09102)
     7. [Solving Challenging Math Word Problems Using GPT-4 Code Interpreter with Code-based Self-Verification](https://arxiv.org/abs/2308.07921)：大意是用GPT-4 code interpreter，结合代码与文本生成更强的MWP结果（具体的还没看）
     8. [Exploring Equation as a Better Intermediate Meaning Representation for Numerical Reasoning](https://arxiv.org/abs/2308.10585)：通过方程而不是程序作为模型的中间输出（IMR），生成方程是通过LLM实现的
@@ -84,8 +84,11 @@ MWP的综述也在路上啦，等我写完了跟导师说一声就去挂ArXiv上
     1. (TMLR) [Semantic Representations of Mathematical Expressions in a Continuous Vector Space](https://arxiv.org/abs/2211.08142)：表征数学表达式
 4. 集合推理
     1. (谷歌) [GeomVerse: A Systematic Evaluation of Large Models for Geometric Reasoning](https://arxiv.org/abs/2312.12241)
-3. (Nature DeepMind) [Mathematical discoveries from program search with large language models](https://www.nature.com/articles/s41586-023-06924-6)：FunSearch模型，用函数搜索的方式解决数学问题
+3. 金融
+    1. [Numerical Reasoning for Financial Reports](https://arxiv.org/abs/2312.14870)
+4. (Nature DeepMind) [Mathematical discoveries from program search with large language models](https://www.nature.com/articles/s41586-023-06924-6)：FunSearch模型，用函数搜索的方式解决数学问题
 3. (ACL Findings) [World Models for Math Story Problems](https://arxiv.org/abs/2306.04347)
+4. (EMNLP) [MAF: Multi-Aspect Feedback for Improving Reasoning in Large Language Models](https://arxiv.org/abs/2310.12426)
 4. (EACL) [BERT is not The Count: Learning to Match Mathematical Statements with Proofs](https://arxiv.org/abs/2302.09350)
 5. (华师) [Math-KG: Construction and Applications of Mathematical Knowledge Graph](https://arxiv.org/abs/2205.03772)
 6. [Mathematical Language Models: A Survey](https://arxiv.org/abs/2312.07622)
