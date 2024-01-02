@@ -75,6 +75,7 @@ MWP的综述也在路上啦，等我写完了跟导师说一声就去挂ArXiv上
     7. (ICANN) [Solving Math Word Problem with External Knowledge and Entailment Loss](https://link.springer.com/chapter/10.1007/978-3-031-44201-8_27)
     2. (BEA) [Scalable and Explainable Automated Scoring for Open-Ended Constructed Response Math Word Problems](https://aclanthology.org/2023.bea-1.12/)：关注MPT问题
     3. (ICLP) [Enhancing Math Word Problem Solving Through Salient Clue Prioritization: A Joint Token-Phrase-Level Feature Integration Approach](https://ieeexplore.ieee.org/abstract/document/10337252)
+    4. (Computación y Sistemas) [Math Word Problem Solving: Operator and Template Techniques with Multi-Head Attention](https://www.polibits.cidetec.ipn.mx/ojs/index.php/CyS/article/view/4769)
     6. [Solving Math Word Problems by Combining Language Models With Symbolic Solvers](https://arxiv.org/abs/2304.09102)
     7. [Solving Challenging Math Word Problems Using GPT-4 Code Interpreter with Code-based Self-Verification](https://arxiv.org/abs/2308.07921)：大意是用GPT-4 code interpreter，结合代码与文本生成更强的MWP结果（具体的还没看）
     8. [Exploring Equation as a Better Intermediate Meaning Representation for Numerical Reasoning](https://arxiv.org/abs/2308.10585)：通过方程而不是程序作为模型的中间输出（IMR），生成方程是通过LLM实现的
