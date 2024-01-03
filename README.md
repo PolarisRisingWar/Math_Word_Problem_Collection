@@ -59,6 +59,7 @@ MWP的综述也在路上啦，等我写完了跟导师说一声就去挂ArXiv上
     4. (港中文+腾讯) [StrategyLLM: Large Language Models as Strategy Generators, Executors, Optimizers, and Evaluators for Problem Solving](https://arxiv.org/abs/2311.08803)：这一篇应该算是通用的解决方案，但是下游任务中包含数值推理
     5. (耶鲁等多家高校) [DocMath-Eval: Evaluating Numerical Reasoning Capabilities of LLMs in Understanding Long Documents with Tabular Data](https://arxiv.org/abs/2311.09805)：这一篇主要考虑带表格长文档的数值推理场景
     6. (人大、科大讯飞等) [Evaluating and Improving Tool-Augmented Computation-Intensive Math Reasoning](https://arxiv.org/abs/2306.02408)
+    7. [Learning From Mistakes Makes LLM Better Reasoner](https://arxiv.org/abs/2310.20689)
 2. MWP
     1. (ACL OpenAI) [Interpretable Math Word Problem Solution Generation Via Step-by-step Planning](https://arxiv.org/abs/2306.00784)：关注步骤分（bushi）
         1. [ ] 代码：GSM8K数据集
