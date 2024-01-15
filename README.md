@@ -36,6 +36,7 @@ MWP的综述也在路上啦，等我写完了跟导师说一声就去挂ArXiv上
 |Geometry3K|英语|<https://lupantech.github.io/inter-gps/>|(2021 ACL) [Inter-GPS: Interpretable Geometry Problem Solving with Formal Language and Symbolic Reasoning](https://arxiv.org/abs/2105.04165)|图形QA|2401条训练样本<br>300条验证样本<br>601条测试样本
 | SVAMP | 英语 | [arkilpatel/SVAMP: NAACL 2021: Are NLP Models really able to Solve Simple Math Word Problems?](https://github.com/arkilpatel/SVAMP) | (2021 NAACL) [Are NLP Models really able to Solve Simple Math Word Problems?](https://arxiv.org/abs/2103.07191) | MWP | | |
 | 符号化的MWP | 英语 | [vedantgaur/Symbolic-MWP-Reasoning](https://github.com/vedantgaur/Symbolic-MWP-Reasoning) | (2023 ACL Findings) [Reasoning in Large Language Models Through Symbolic Math Word Problems](https://aclanthology.org/2023.findings-acl.364/) | MWP | | |
+|SuperCLUE-Math6|中文||[SuperCLUE-Math6: 新一代中文数学推理数据集的探索之旅](https://mp.weixin.qq.com/s/jM2rgWE_-2TC7c49e22jAw)
 
 
 
