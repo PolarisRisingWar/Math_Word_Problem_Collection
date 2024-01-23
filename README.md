@@ -44,6 +44,7 @@ MWP的综述也在路上啦，等我写完了跟导师说一声就去挂ArXiv上
 **2024年**  
 1. MWP
     1. (AAAI) [Get an A in Math: Progressive Rectification Prompting](https://arxiv.org/abs/2312.06867)
+    2. (清华) [Augmenting Math Word Problems via Iterative Question Composing](https://arxiv.org/abs/2401.09003)
 2. (ICDE) [Enhancing Quantitative Reasoning Skills of Large Language Models through Dimension Perception](https://arxiv.org/abs/2312.17532)：关注数值单位（维度）
 3. [BIBench: Benchmarking Data Analysis Knowledge of Large Language Models](https://arxiv.org/abs/2401.02982)：这篇是商务智能那边数据分析领域的研究……也算是数值推理吧
 
