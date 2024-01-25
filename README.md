@@ -57,7 +57,9 @@ MWP的综述也在路上啦，等我写完了跟导师说一声就去挂ArXiv上
     4. (EMNLP) [MarkQA: A large scale KBQA dataset with numerical reasoning](https://aclanthology.org/2023.emnlp-main.633)
     5. (EMNLP) ATHENA: Mathematical Reasoning with Thought Expansion
     6. (EMNLP) UniMath: A Foundational and Multimodal Mathematical Reasoner
+    7. (ICML) Large Language Models Can Be Easily Distracted by Irrelevant Context
     3. (EACL) [ComSearch: Equation Searching with Combinatorial Strategy for Solving Math Word Problems with Weak Supervision](https://arxiv.org/abs/2210.07017)
+    4. (TMLR) [Program of Thoughts Prompting: Disentangling Computation from Reasoning for Numerical Reasoning Tasks](https://arxiv.org/abs/2211.12588)
     2. [Scaling Relationship on Learning Mathematical Reasoning with Large Language Models](https://arxiv.org/abs/2308.01825)：发现微调数据量越大，模型效果越好。提出RFT技术自动采样数据
     2. [CREATOR: Tool Creation for Disentangling Abstract and Concrete Reasoning of Large Language Models](https://blender.cs.illinois.edu/paper/creator2023.pdf)
     4. (港中文+腾讯) [StrategyLLM: Large Language Models as Strategy Generators, Executors, Optimizers, and Evaluators for Problem Solving](https://arxiv.org/abs/2311.08803)：这一篇应该算是通用的解决方案，但是下游任务中包含数值推理
