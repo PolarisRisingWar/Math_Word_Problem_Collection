@@ -100,6 +100,7 @@ MWP的综述也在路上啦，等我写完了跟导师说一声就去挂ArXiv上
 5. (华师) [Math-KG: Construction and Applications of Mathematical Knowledge Graph](https://arxiv.org/abs/2205.03772)
 6. [Mathematical Language Models: A Survey](https://arxiv.org/abs/2312.07622)
 7. [Bridging the Semantic-Numerical Gap: A Numerical Reasoning Method of Cross-modal Knowledge Graph for Material Property Prediction](https://arxiv.org/abs/2312.09744)
+8. (ACL) [A Survey of Deep Learning for Mathematical Reasoning](https://aclanthology.org/2023.acl-long.817/)
 
 **2022年**  
 1. 数值推理
