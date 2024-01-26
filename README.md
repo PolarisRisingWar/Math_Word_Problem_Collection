@@ -108,13 +108,14 @@ MWP任务（setting：只输出一个答案的数学题，对于没有原始划�
 3. 金融
     1. [Numerical Reasoning for Financial Reports](https://arxiv.org/abs/2312.14870)
 4. (Nature DeepMind) [Mathematical discoveries from program search with large language models](https://www.nature.com/articles/s41586-023-06924-6)：FunSearch模型，用函数搜索的方式解决数学问题
+8. (ACL) [A Survey of Deep Learning for Mathematical Reasoning](https://aclanthology.org/2023.acl-long.817/)
 3. (ACL Findings) [World Models for Math Story Problems](https://arxiv.org/abs/2306.04347)
 4. (EMNLP) [MAF: Multi-Aspect Feedback for Improving Reasoning in Large Language Models](https://arxiv.org/abs/2310.12426)
+9. (EMNLP Findings) [Large Language Models are Better Reasoners with Self-Verification](https://arxiv.org/abs/2212.09561)：有数值推理相关的下游任务
 4. (EACL) [BERT is not The Count: Learning to Match Mathematical Statements with Proofs](https://arxiv.org/abs/2302.09350)
 5. (华师) [Math-KG: Construction and Applications of Mathematical Knowledge Graph](https://arxiv.org/abs/2205.03772)
 6. [Mathematical Language Models: A Survey](https://arxiv.org/abs/2312.07622)
 7. [Bridging the Semantic-Numerical Gap: A Numerical Reasoning Method of Cross-modal Knowledge Graph for Material Property Prediction](https://arxiv.org/abs/2312.09744)
-8. (ACL) [A Survey of Deep Learning for Mathematical Reasoning](https://aclanthology.org/2023.acl-long.817/)
 
 **2022年**  
 1. 数值推理
