@@ -6,10 +6,17 @@ MWP的综述也在路上啦，等我写完了跟导师说一声就去挂ArXiv上
 3. 信息抽取：数值抽取
 4. 数值表征
 
+* [1. 实验结果](#实验结果)
+* [2. 数据](#数据)
+* [3. 论文](#论文)
+* [4. 工具](#工具)
 
-* [1. 数据](#数据)
-* [2. 论文](#论文)
-* [3. 工具](#工具)
+# 实验结果
+MWP任务（setting：只输出一个答案的数学题，对于没有原始划分方案的数据集按照8:1:2的比例进行数据集划分）的准确率指标：
+| **方法名** | **Alg514** |
+|---|---|
+|GPT-3.5-Turbo|
+|GPT-3.5-Turbo CoT|74.29%
 
 # 数据
 简单介绍：
@@ -47,6 +54,7 @@ MWP的综述也在路上啦，等我写完了跟导师说一声就去挂ArXiv上
     2. (清华) [Augmenting Math Word Problems via Iterative Question Composing](https://arxiv.org/abs/2401.09003)
 2. (ICDE) [Enhancing Quantitative Reasoning Skills of Large Language Models through Dimension Perception](https://arxiv.org/abs/2312.17532)：关注数值单位（维度）
 3. [BIBench: Benchmarking Data Analysis Knowledge of Large Language Models](https://arxiv.org/abs/2401.02982)：这篇是商务智能那边数据分析领域的研究……也算是数值推理吧
+4. [SuperCLUE-Math6: Graded Multi-Step Math Reasoning Benchmark for LLMs in Chinese](https://arxiv.org/abs/2401.11819)
 
 **2023年**  
 1. 数值推理
@@ -80,6 +88,7 @@ MWP的综述也在路上啦，等我写完了跟导师说一声就去挂ArXiv上
     5. (IJCNN) [Solving Math Word Problems Following Logically Consistent Template](https://ieeexplore.ieee.org/abstract/document/10191776)
     6. (NLPCC) [Solving Math Word Problem with Problem Type Classification](https://arxiv.org/abs/2308.13844)
     7. (ICANN) [Solving Math Word Problem with External Knowledge and Entailment Loss](https://link.springer.com/chapter/10.1007/978-3-031-44201-8_27)
+    8. (IEEE International Conference on Big Data) [Combining Transformers and Tree-based Decoders for Solving Math Word Problems](https://www.computer.org/csdl/proceedings-article/bigdata/2023/10386340/1TUOgfb1Pe8)
     2. (BEA) [Scalable and Explainable Automated Scoring for Open-Ended Constructed Response Math Word Problems](https://aclanthology.org/2023.bea-1.12/)：关注MPT问题
     3. (ICLP) [Enhancing Math Word Problem Solving Through Salient Clue Prioritization: A Joint Token-Phrase-Level Feature Integration Approach](https://ieeexplore.ieee.org/abstract/document/10337252)
     4. (Computación y Sistemas) [Math Word Problem Solving: Operator and Template Techniques with Multi-Head Attention](https://www.polibits.cidetec.ipn.mx/ojs/index.php/CyS/article/view/4769)
@@ -111,6 +120,7 @@ MWP的综述也在路上啦，等我写完了跟导师说一声就去挂ArXiv上
 1. 数值推理
     1. (ACL) [Turning Tables: Generating Examples from Semi-structured Tables for Endowing Language Models with Reasoning Skills](https://aclanthology.org/2022.acl-long.416/)：表格数据
     2. (AAAI) [Weakly Supervised Neuro-Symbolic Module Networks for Numerical Reasoning](https://arxiv.org/abs/2101.11802)
+    3. (NeurIPS) [Large Language Models are Zero-Shot Reasoners](https://arxiv.org/abs/2205.11916)
 2. MWP
     1. (EMNLP) [Automatic Generation of Socratic Subquestions for Teaching Math Word Problems](https://arxiv.org/abs/2211.12835)
     2. (COLING) [WARM: A Weakly (+Semi) Supervised Model for Solving Math word Problems](https://arxiv.org/abs/2104.06722)
@@ -171,6 +181,7 @@ MWP的综述也在路上啦，等我写完了跟导师说一声就去挂ArXiv上
     3. (EMNLP | IJCNLP) [Giving BERT a Calculator: Finding Operations and Arguments with Reading Comprehension](https://aclanthology.org/D19-1609/)：用BERT选择可执行程序（预定义好的）
 2. MWP
     1. (IJCAI) [A Goal-Driven Tree-Structured Neural Model for Math Word Problems](https://www.ijcai.org/proceedings/2019/0736.pdf)
+    2. (AAAI) [Template-Based Math Word Problem Solvers with Recursive Neural Networks](https://ojs.aaai.org/index.php/AAAI/article/view/4697)
     2. (NAACL) [MathQA: Towards Interpretable Math Word Problem Solving with Operation-Based Formalisms](https://aclanthology.org/N19-1245/)
     2. (NAACL) [Semantically-Aligned Equation Generation for Solving and Reasoning Math Word Problems](https://aclanthology.org/N19-1272/)：将推理过程结合进了seq2seq模型之中：先用encoder表征问题中常数的语义信息（理解问题的语义），再用decoder依次决定公式中的数值和运算符，以模拟人类的推理逻辑。在decoder中，从原文中抽取或生成的数字组合成栈，逐一输出并生成匹配的运算符。最后生成的效果优于直接使用seq2seq模型
 
@@ -193,6 +204,7 @@ MWP的综述也在路上啦，等我写完了跟导师说一声就去挂ArXiv上
 **2016年** 
 1. MWP
     1. (ACL) [How well do Computers Solve Math Word Problems? Large-Scale Dataset Construction and Evaluation](https://aclanthology.org/P16-1084/)：发现简单的基于相似度的方法就已经能超过大多数统计学习模型了
+    2. (ACL) [Learning To Use Formulas To Solve Simple Arithmetic Problems](https://aclanthology.org/P16-1202/)
 
 **2015年**  
 1. MWP
