@@ -31,6 +31,7 @@ parser.add_argument("-ds","--dataset_path",type=str)
 parser.add_argument("-pt","--prompt_template",type=str,default="CoT")
 #目前支持的选项：
 #CoT: 在问题后面加“Let's think step by step.”
+#pure：不加任何东西
 
 parser.add_argument("-rt","--result_txt_path",type=str)  #输出结果储存文件（将直接追加写入）
 
@@ -46,8 +47,17 @@ if arg_dict["dataset_name"]=="Alg514":
 
 #构建模型
 
-def extract_result(text):
-    """从自然语言格式的结果中抽取出结果，结果是最后一个数值"""
+def extract_result_prompt(question,nl_result):
+    """从自然语言格式的结果中抽取出结果
+    参考Get an A in Math: Progressive Rectification Prompting"""
+    return f"""
+        Q: {question} 
+        A: {nl_result} 
+        Therefore, X (expressed in Arabic numerals and without units) is:
+        """
+
+def extract_last_number(text):
+    """从自然语言格式的结果中抽取出最后一个数值"""
     # 使用正则表达式找到所有数字（整数或浮点数）
     numbers = re.findall(r'-?\d+\.\d+|-?\d+', text)
     
@@ -65,6 +75,8 @@ def extract_result(text):
 def question2prompt(question):
     if arg_dict["prompt_template"]=="CoT":
         return question+" Let's think step by step."
+    elif arg_dict["prompt_template"]=="pure":
+        return question
     
 
 
@@ -94,12 +106,12 @@ if arg_dict["model_checkpoint_path"]=="GPT-3.5":
         return num_tokens
     
     @retry(wait=wait_random_exponential(min=20, max=600),stop=stop_after_attempt(6))
-    def predict(question):
-        return wrap4predict(question)
+    def predict(content):
+        return wrap4predict(content)
     
-    def wrap4predict(question):
+    def wrap4predict(content):
         messages=[
-                {"role": "user", "content":question2prompt(question)}
+                {"role": "user", "content":content}
             ]
         
         if num_tokens_from_messages(messages,"gpt-3.5-turbo")<3096:  #留1000个token给输出
@@ -119,8 +131,16 @@ result_file=open(arg_dict["result_txt_path"],"a")
 amount_predict_right=0
 with alive_bar(len(test_data)) as bar:
     for i in range(len(test_data)):
-        model_prediction=predict(test_data[i]["question"])
-        predict_result=extract_result(model_prediction)
+        model_prediction=predict(question2prompt(test_data[i]["question"]))
+
+        predict_result=predict(extract_result_prompt(test_data[i]["question"],model_prediction))
+        try:
+            predict_result=float(predict_result)
+        except:
+            predict_result=extract_last_number(predict_result)
+            if predict_result is None:
+                predict_result=0
+
         if abs(predict_result-test_data[i]["answer"])<0.00001:
             amount_predict_right+=1
         
