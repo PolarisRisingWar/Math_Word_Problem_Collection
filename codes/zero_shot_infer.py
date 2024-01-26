@@ -28,6 +28,10 @@ parser.add_argument("-dn","--dataset_name",type=str)
 parser.add_argument("-ds","--dataset_path",type=str)
 #Alg514数据：JSON文件对应的位置
 
+parser.add_argument("-pt","--prompt_template",type=str,default="CoT")
+#目前支持的选项：
+#CoT: 在问题后面加“Let's think step by step.”
+
 parser.add_argument("-rt","--result_txt_path",type=str)  #输出结果储存文件（将直接追加写入）
 
 args = parser.parse_args()
@@ -57,6 +61,10 @@ def extract_result(text):
         return float(last_number)
     else:
         return int(last_number)
+
+def question2prompt(question):
+    if arg_dict["prompt_template"]=="CoT":
+        return question+" Let's think step by step."
     
 
 
@@ -91,7 +99,7 @@ if arg_dict["model_checkpoint_path"]=="GPT-3.5":
     
     def wrap4predict(question):
         messages=[
-                {"role": "user", "content": question+" Let's think step by step."}
+                {"role": "user", "content":question2prompt(question)}
             ]
         
         if num_tokens_from_messages(messages,"gpt-3.5-turbo")<3096:  #留1000个token给输出
