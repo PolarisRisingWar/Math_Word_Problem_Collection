@@ -84,6 +84,7 @@ MWP任务（setting：只输出一个答案的数学题，对于没有原始划�
     5. (EMNLP) [Non-Autoregressive Math Word Problem Solver with Unified Tree Structure](https://arxiv.org/abs/2305.04556)
     4. (EMNLP) [Let GPT be a Math Tutor: Teaching Math Word Problem Solvers with Customized Exercise Generation](https://arxiv.org/abs/2305.14386)
     5. (EMNLP Findings) Conic10K: A Challenging Math Problem Understanding and Reasoning Dataset
+    8. (TKDD) [Math Word Problem Generation via Disentangled Memory Retrieval](https://dl.acm.org/doi/10.1145/3639569)
     4. (IJCNN) [Improving Math Word Problems Solver with Logical Semantic Similarity](https://ieeexplore.ieee.org/abstract/document/10191088)
     5. (IJCNN) [Solving Math Word Problems Following Logically Consistent Template](https://ieeexplore.ieee.org/abstract/document/10191776)
     6. (NLPCC) [Solving Math Word Problem with Problem Type Classification](https://arxiv.org/abs/2308.13844)
