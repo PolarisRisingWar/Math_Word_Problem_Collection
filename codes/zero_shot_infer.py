@@ -17,9 +17,15 @@ import argparse
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument("-mc","--model_checkpoint_path",type=str)  #本地：预训练模型checkpoint目录；API：模型名称
-#目前支持的选项：
+parser.add_argument("-mc","--model_checkpoint_path",type=str)  #本地：预训练模型名或本地目录；API：模型名称
+#目前支持的选项（与下一条参数逐行对应）：
 #GPT-3.5 ("gpt-3.5-turbo"和"gpt-3.5-turbo-16k"，根据输入文本长度自动判断)
+#THUDM/chatglm3-6b或存储checkpoint的本地文件夹
+
+parser.add_argument("-mn","--model_name",type=str)
+#目前支持的选项
+#TODO：OpenAI
+#ChatGLM3
 
 parser.add_argument("-dn","--dataset_name",type=str)
 #目前支持的选项：
@@ -124,6 +130,16 @@ if arg_dict["model_checkpoint_path"]=="GPT-3.5":
             messages=messages
         )
         return completion.choices[0].message.content
+else:
+    from transformers import AutoModel,AutoTokenizer
+    if arg_dict["model_name"]=="ChatGLM3":
+        model=AutoModel.from_pretrained(arg_dict["model_checkpoint_path"],load_in_8bit=False, 
+                                        trust_remote_code=True,device_map='auto')
+        model.eval()
+        tokenizer=AutoTokenizer.from_pretrained(arg_dict["model_checkpoint_path"],trust_remote_code=True)
+        def predict(content):
+            response,_=model.chat(tokenizer,content,history=[],temperature=0.01)
+            return response
         
 #运行模型
 result_file=open(arg_dict["result_txt_path"],"a")
