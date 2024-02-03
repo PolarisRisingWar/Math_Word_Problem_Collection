@@ -1,0 +1,1 @@
+def extract_number_from_prediction(predict_function,)
