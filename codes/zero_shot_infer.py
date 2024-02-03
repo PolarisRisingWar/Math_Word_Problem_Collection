@@ -83,6 +83,8 @@ def question2prompt(question):
         return question+" Let's think step by step."
     elif arg_dict["prompt_template"]=="pure":
         return question
+    elif arg_dict["prompt_template"]=="CoT+tip":
+        return question+" Let's think step by step. I will tip you $100,000 for a perfect answer."
     
 
 

@@ -17,9 +17,12 @@ MWP任务（setting见表后）的准确率指标：
 |---|---|
 |GPT-3.5-Turbo|82.86%
 |GPT-3.5-Turbo CoT|**85.71%**
+|GPT-3.5-Turbo CoT+tip|80%
 |ChatGLM3-6B|65.71%
 1. 仅考虑输出一个答案的数学题
 2. 对于没有原始划分方案的数据集随机按照8:1:2的比例进行数据集划分：Alg514
+3. 提示工程
+    1. tip的理论基础：[给ChatGPT小费真的好使！10块或10万效果拔群，但给1毛不升反降](https://mp.weixin.qq.com/s/vQPWFRMSrEzpsT-_N1VT3w)
 
 # 数据
 简单介绍：
