@@ -1,11 +1,12 @@
-import os,json,re
+import os,json
 from alive_progress import alive_bar
 
 import torch
 
 from get_data import get_data
-from prompts import extract_result_prompt,extract_last_number,question2prompt
+from prompts import question2prompt
 from infer_predict import get_infer
+from extract_number import extract_number_from_prediction
 
 num_threads = '32'
 torch.set_num_threads(int(num_threads))
@@ -62,13 +63,7 @@ with alive_bar(len(test_data)) as bar:
     for i in range(len(test_data)):
         model_prediction=predict(question2prompt(test_data[i]["question"]))
 
-        predict_result=predict(extract_result_prompt(test_data[i]["question"],model_prediction))
-        try:
-            predict_result=float(predict_result)
-        except:
-            predict_result=extract_last_number(predict_result)
-            if predict_result is None:
-                predict_result=0
+        predict_result=extract_number_from_prediction(predict,test_data[i]["question"],model_prediction)
 
         if abs(predict_result-test_data[i]["answer"])<0.00001:
             amount_predict_right+=1

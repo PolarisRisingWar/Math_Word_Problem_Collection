@@ -6,6 +6,7 @@
     2. CoT系列：在问题后面直接加` Let's think step by step.`
     另一种写法是：`Q: [Q]. A: Let’s think step by step`
     GPT-3.5-Turbo CoT
+    3. PRP系列：算是CoT的一种延伸，通过重复多次CoT→验证答案→带着错误答案CoT的过程来实现预测
 
 # 运行命令
 

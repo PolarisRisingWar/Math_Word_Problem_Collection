@@ -19,6 +19,7 @@ MWP任务（setting见表后）的准确率指标：
 |GPT-3.5-Turbo CoT|**85.71%**
 |GPT-3.5-Turbo CoT+tip|80%
 |GPT-3.5-Turbo CoT+SC|
+|GPT-3.5-Turbo PRP|
 |ChatGLM3-6B|65.71%
 1. 仅考虑输出一个答案的数学题
 2. 对于没有原始划分方案的数据集随机按照8:1:2的比例进行数据集划分：Alg514
