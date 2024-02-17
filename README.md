@@ -61,6 +61,7 @@ MWP任务（setting见表后）的准确率指标：
 1. MWP
     1. (AAAI) [Get an A in Math: Progressive Rectification Prompting](https://arxiv.org/abs/2312.06867)
     2. (清华) [Augmenting Math Word Problems via Iterative Question Composing](https://arxiv.org/abs/2401.09003)
+    3. [Scaling the Authoring of AutoTutors with Large Language Models](https://arxiv.org/abs/2402.09216)
 2. 几何题
     1. [GAPS: Geometry-Aware Problem Solver](https://arxiv.org/abs/2401.16287)
 2. (ICDE) [Enhancing Quantitative Reasoning Skills of Large Language Models through Dimension Perception](https://arxiv.org/abs/2312.17532)：关注数值单位（维度）
