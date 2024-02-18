@@ -4,7 +4,6 @@ from alive_progress import alive_bar
 import torch
 
 from get_data import get_data
-from prompts import question2prompt
 from infer_predict import get_infer
 from extract_number import extract_number_from_prediction
 
@@ -55,6 +54,10 @@ predict=get_infer(arg_dict["model_name"],arg_dict["model_checkpoint_path"])
         
 #运行模型
 result_file=open(arg_dict["result_txt_path"],"a")
+
+init_template="Q: {question}. A: Let’s think step by step"
+rectification_template="Q: {question} (The answer is likely not {hypothesis}) . A: Let’s think step by step"
+verification_template="[{question} Suppose the answer is {answer}. What is {X}? (If {X} is irrelevant to the calculation process please answer Unknown)"
 
 amount_predict_right=0
 with alive_bar(len(test_data)) as bar:
