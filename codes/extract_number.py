@@ -1,4 +1,5 @@
 import re
+from typing import Union, Callable
 
 def extract_result_prompt(question,nl_result):
     """参考Get an A in Math: Progressive Rectification Prompting"""
@@ -24,7 +25,7 @@ def extract_last_number(text):
     else:
         return int(last_number)
 
-def extract_number_from_prediction(predict_function:function,question:str,prediction:str):
+def extract_number_from_prediction(predict_function:Callable[[str], Union[int,float]],question:str,prediction:str):
     predict_result=predict_function(extract_result_prompt(question,prediction))
     try:
         predict_result=float(predict_result)

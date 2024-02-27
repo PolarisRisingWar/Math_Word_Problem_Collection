@@ -62,7 +62,7 @@ verification_template="[{question} Suppose the answer is {answer}. What is {X}? 
 amount_predict_right=0
 with alive_bar(len(test_data)) as bar:
     for i in range(len(test_data)):
-        model_prediction=predict(question2prompt(test_data[i]["question"]))
+        model_prediction=predict(init_template.format(question=test_data[i]["question"]))
 
         predict_result=extract_number_from_prediction(predict,test_data[i]["question"],model_prediction)
 
