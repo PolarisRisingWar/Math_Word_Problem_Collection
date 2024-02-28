@@ -1,7 +1,8 @@
-from hide_config import CHATGPT3_5_API_KEY,CHATGPT3_5_base_url
+from hide_config import CHATGPT3_5_API_KEY, CHATGPT3_5_base_url, Zhipu_key
 
-def get_infer(model_name:str,model_checkpoint_path:str):
-    if model_checkpoint_path=="GPT-3.5":
+
+def get_infer(model_name: str, model_checkpoint_path: str):
+    if model_checkpoint_path == "GPT-3.5":
         import tiktoken
         from tenacity import (
             retry,
@@ -10,9 +11,9 @@ def get_infer(model_name:str,model_checkpoint_path:str):
         )
         from openai import OpenAI
 
-        client = OpenAI(api_key=CHATGPT3_5_API_KEY,base_url=CHATGPT3_5_base_url)
+        client = OpenAI(api_key=CHATGPT3_5_API_KEY, base_url=CHATGPT3_5_base_url)
 
-        def num_tokens_from_messages(messages,model):
+        def num_tokens_from_messages(messages, model):
             """Returns the number of tokens used by a list of messages."""
             try:
                 encoding = tiktoken.encoding_for_model(model)
@@ -25,36 +26,63 @@ def get_infer(model_name:str,model_checkpoint_path:str):
                     num_tokens += len(encoding.encode(value))
             num_tokens += 2  # every reply is primed with <im_start>assistant
             return num_tokens
-        
-        @retry(wait=wait_random_exponential(min=20, max=600),stop=stop_after_attempt(6))
+
+        @retry(
+            wait=wait_random_exponential(min=20, max=600), stop=stop_after_attempt(6)
+        )
         def predict(content):
             return wrap4predict(content)
-        
+
         def wrap4predict(content):
-            messages=[
-                    {"role": "user", "content":content}
-                ]
-            
-            if num_tokens_from_messages(messages,"gpt-3.5-turbo")<3096:  #留1000个token给输出
-                model_name="gpt-3.5-turbo"
+            messages = [{"role": "user", "content": content}]
+
+            if (
+                num_tokens_from_messages(messages, "gpt-3.5-turbo") < 3096
+            ):  # 留1000个token给输出
+                model_name = "gpt-3.5-turbo"
             else:
-                model_name="gpt-3.5-turbo-16k"
+                model_name = "gpt-3.5-turbo-16k"
 
             completion = client.chat.completions.create(
-                model=model_name,
-                messages=messages
+                model=model_name, messages=messages
             )
             return completion.choices[0].message.content
-    else:
-        from transformers import AutoModel,AutoTokenizer
-        if model_name=="ChatGLM3":
-            model=AutoModel.from_pretrained(model_checkpoint_path,load_in_8bit=False,trust_remote_code=True,
-                                            device_map='auto')
-            model.eval()
-            tokenizer=AutoTokenizer.from_pretrained(model_checkpoint_path,trust_remote_code=True)
-            def predict(content):
-                response,_=model.chat(tokenizer,content,history=[],temperature=0.01)
-                return response
-    
-    return predict
 
+    elif model_checkpoint_path == "GLM-4":
+        from zhipuai import ZhipuAI
+
+        client = ZhipuAI(api_key=Zhipu_key)
+
+        def predict(content):
+            response = client.chat.completions.create(
+                model="glm-4",
+                messages=[{"role": "user", "content": content}],
+                top_p=0.7,
+                temperature=0.9,
+                stream=False,
+                max_tokens=2000,
+            )
+            return response.choices[0].message.content
+
+    else:
+        from transformers import AutoModel, AutoTokenizer
+
+        if model_name == "ChatGLM3":
+            model = AutoModel.from_pretrained(
+                model_checkpoint_path,
+                load_in_8bit=False,
+                trust_remote_code=True,
+                device_map="auto",
+            )
+            model.eval()
+            tokenizer = AutoTokenizer.from_pretrained(
+                model_checkpoint_path, trust_remote_code=True
+            )
+
+            def predict(content):
+                response, _ = model.chat(
+                    tokenizer, content, history=[], temperature=0.01
+                )
+                return response
+
+    return predict
