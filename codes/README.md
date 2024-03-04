@@ -16,7 +16,7 @@ GPT-3.5-Turbo CoT + Alg514：`python codes/zero_shot_infer.py -mc GPT-3.5 -dn Al
 
 GPT-3.5-Turbo CoT+tip + Alg514：`python codes/zero_shot_infer.py -mc GPT-3.5 -dn Alg514 -ds datasets/Alg514 -pt CoT+tip -rt codes/results/ChatGPT-3.5_COT+tip_Alg_result.txt`
 
-GPT-3.5_PRP + Alg514: `python codes/PRP.py -mc GPT-3.5 -dn Alg514 -ds datasets/Alg514 -rt codes/results/ChatGPT_PRP_Alg_result.txt`
+GPT-3.5_PRP + Alg514: `python codes/PRP.py -mc GPT-3.5 -dn Alg514 -ds datasets/Alg514 -rt codes/results/ChatGPT_PRP_Alg_result.txt`（约10分钟）
 
 ChatGLM3-6B + Alg514：`CUDA_VISIBLE_DEVICES=4 python codes/zero_shot_infer.py -mc /data/pretrained_models/chatglm3-6b -mn ChatGLM3 -dn Alg514 -ds datasets/Alg514 -rt codes/results/ChatGLM3_Alg_result.txt`
 

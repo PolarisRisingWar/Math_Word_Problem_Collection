@@ -76,6 +76,7 @@ def get_verify_problem_and_answer(question, wrong_answer=[]):
     for n in numbers:
         if float(n) not in wrong_answer:
             return question.replace(str(n), "X"), float(n)
+    return "No Number", "No Number"
 
 
 with alive_bar(len(test_data)) as bar:
@@ -108,6 +109,8 @@ with alive_bar(len(test_data)) as bar:
         incorrect_verify_answer = []
         incorrect_answer = []
         for iter_number in range(arg_dict["max_iteration"]):
+            if verify_problem == "No Number":
+                break
             verification_result = predict(
                 verification_template.format(
                     verify_problem=verify_problem, generated_answer=generated_values[-1]
@@ -119,6 +122,8 @@ with alive_bar(len(test_data)) as bar:
                 verify_problem, verify_answer = get_verify_problem_and_answer(
                     question, incorrect_verify_answer
                 )
+                if verify_problem == "No Number":
+                    break
                 verification_result = predict(
                     verification_template.format(
                         verify_problem=verify_problem,
@@ -126,6 +131,8 @@ with alive_bar(len(test_data)) as bar:
                     ),
                     max_length=arg_dict["max_length"],
                 )
+            if verify_problem == "No Number":
+                break
             print_result += (
                 "\n第"
                 + str(iter_number + 1)
@@ -185,7 +192,7 @@ with alive_bar(len(test_data)) as bar:
         result_file.flush()
 
         bar()
-        #break
+        # break
 
 result_file.close()
 

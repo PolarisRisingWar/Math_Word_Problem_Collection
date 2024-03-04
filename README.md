@@ -16,10 +16,10 @@ MWP任务（setting见表后）的准确率指标：
 | **方法名** | **Alg514** |
 |---|---|
 |GPT-3.5-Turbo|82.86%
-|GPT-3.5-Turbo CoT|**85.71%**
+|GPT-3.5-Turbo CoT|85.71%
 |GPT-3.5-Turbo CoT+tip|80%
 |GPT-3.5-Turbo CoT+SC|
-|GPT-3.5-Turbo PRP|
+|GPT-3.5-Turbo PRP|**94.29%**
 |ChatGLM3-6B|65.71%
 |GLM-4|77.14%
 1. 仅考虑输出一个答案的数学题
