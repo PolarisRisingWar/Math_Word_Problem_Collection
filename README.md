@@ -26,7 +26,7 @@ MWP任务（setting见表后）的准确率指标：
 2. 对于没有原始划分方案的数据集随机按照8:1:2的比例进行数据集划分：Alg514
 3. tip的理论基础：[给ChatGPT小费真的好使！10块或10万效果拔群，但给1毛不升反降](https://mp.weixin.qq.com/s/vQPWFRMSrEzpsT-_N1VT3w)
 4. SC (self-consistency)
-5. PRP：(2024 AAAI) [Get an A in Math: Progressive Rectification Prompting](https://arxiv.org/abs/2312.06867)
+5. PRP：(2024 AAAI) [Re61：读论文 PRP Get an A in Math: Progressive Rectification Prompting](https://blog.csdn.net/PolarisRisingWar/article/details/135844039)
 
 # 数据
 简单介绍：
@@ -60,7 +60,7 @@ MWP任务（setting见表后）的准确率指标：
 # 论文
 **2024年**  
 1. MWP
-    1. (AAAI) [Get an A in Math: Progressive Rectification Prompting](https://arxiv.org/abs/2312.06867)
+    1. (AAAI) [Re61：读论文 PRP Get an A in Math: Progressive Rectification Prompting](https://blog.csdn.net/PolarisRisingWar/article/details/135844039)
     2. (清华) [Augmenting Math Word Problems via Iterative Question Composing](https://arxiv.org/abs/2401.09003)
     3. [Scaling the Authoring of AutoTutors with Large Language Models](https://arxiv.org/abs/2402.09216)
 2. 几何题
