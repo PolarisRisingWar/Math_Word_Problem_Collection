@@ -30,10 +30,10 @@ def get_infer(model_name: str, model_checkpoint_path: str):
         @retry(
             wait=wait_random_exponential(min=20, max=600), stop=stop_after_attempt(6)
         )
-        def predict(content):
-            return wrap4predict(content)
+        def predict(content, max_length=None):
+            return wrap4predict(content, max_length)
 
-        def wrap4predict(content):
+        def wrap4predict(content, max_length=None):
             messages = [{"role": "user", "content": content}]
 
             if (
@@ -43,9 +43,12 @@ def get_infer(model_name: str, model_checkpoint_path: str):
             else:
                 model_name = "gpt-3.5-turbo-16k"
 
-            completion = client.chat.completions.create(
-                model=model_name, messages=messages
-            )
+            completion_params = {"model": model_name, "messages": messages}
+
+            if max_length is not None:
+                completion_params["max_tokens"] = max_length
+
+            completion = client.chat.completions.create(**completion_params)
             return completion.choices[0].message.content
 
     elif model_checkpoint_path == "GLM-4":
