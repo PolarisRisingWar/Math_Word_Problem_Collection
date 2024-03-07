@@ -64,7 +64,7 @@ result_file = open(arg_dict["result_txt_path"], "a")
 
 init_template = "Q: {question}. \nA: Let’s think step by step"
 rectification_template = "Q: {question} (The answer is likely not {hypothesis}) . A: Let’s think step by step"
-verification_template = "Q: {verify_problem} If we know the answer to the above question is {generated_answer}, what is the value of unknown variable X? (If X is irrelevant to the calculation process please answer 'Unknown')\nA: Let's think step by step."
+verification_template = "Q: {verify_problem} If we know the answer to the above question is {generated_answer}, what is the value of unknown variable X? (If X is irrelevant to the calculation process please answer 'Unrelated')\nA: Let's think step by step."
 
 amount_predict_right = 0
 
@@ -117,7 +117,7 @@ with alive_bar(len(test_data)) as bar:
                 ),
                 max_length=arg_dict["max_length"],
             )
-            while "Unknown" in verification_result:
+            while "Unrelated" in verification_result:
                 incorrect_verify_answer.append(verify_answer)
                 verify_problem, verify_answer = get_verify_problem_and_answer(
                     question, incorrect_verify_answer
