@@ -1,0 +1,73 @@
+{"model_prediction": "Tom has 9 yellow balloons and Sara has 8 yellow balloons, so together they have 9 + 8 = 17 yellow balloons in total.", "predict_result": 17.0}
+{"model_prediction": "Pamela has 9.8 ounces of sugar.\nShe spilled 5.2 ounces of sugar.\nTo find out how much sugar she has left, we subtract the amount spilled from the original amount:\n9.8 - 5.2 = 4.6\n\nTherefore, Pamela has 4.6 ounces of sugar left.", "predict_result": 4.6}
+{"model_prediction": "6 hamburgers were left over.", "predict_result": 6.0}
+{"model_prediction": "Dale's Vegetarian Restaurant bought a total of 5.666666666666667 pounds of peppers.", "predict_result": 5.666666666666667}
+{"model_prediction": "Altogether, Fred, Sam, and Dan have 10 + 46 + 16 = 72 red balloons.\nSince each red balloon costs $10, the total cost of all the red balloons is 72 * 10 = $720.", "predict_result": 72}
+{"model_prediction": "15 cakes were served today. (6 + 9 = 15)", "predict_result": 15.0}
+{"model_prediction": "Joan missed 469 baseball games. \n\nTotal games played: 864\nGames played at night: 128\nGames attended: 395\n\nGames missed: Total games played - Games attended = 864 - 395 = 469", "predict_result": 469.0}
+{"model_prediction": "Tom now has 15 + 33 = 48 dimes.\nTherefore, Tom has a total of 48 dimes now.", "predict_result": 48.0}
+{"model_prediction": "Dan now has 50 violet marbles. (64 - 14 = 50)", "predict_result": 50.0}
+{"model_prediction": "Tim and Mike have a total of 42 books together. (22 + 20 = 42)", "predict_result": 42.0}
+{"model_prediction": "The truck would have 4.1 - 2.4 = 1.7 pounds of sand when it arrives at the construction yard.", "predict_result": 1.7}
+{"model_prediction": "Sara originally had 35 pears, and she gave 28 pears to Dan. \n\n35 - 28 = 7\n\nTherefore, Sara now has 7 pears.", "predict_result": 7.0}
+{"model_prediction": "Jonah poured a total of 0.25 + 0.4166666666666667 + 0.25 = 0.9166666666666667 pitchers of lemonade during the school play. \n\nTherefore, Jonah poured a total of approximately 0.9167 pitchers of lemonade in all.", "predict_result": 0.9167}
+{"model_prediction": "The fault line moved 1.25 inches this year and 5.25 inches the year before. To find out how far it moved in all, we add the two distances together:\n\n1.25 inches + 5.25 inches = 6.5 inches\n\nTherefore, the fault line moved a total of 6.5 inches over the past two years.", "predict_result": 6.5}
+{"model_prediction": "The total fraction of garments that are bikinis or trunks is 0.375 + 0.25 = 0.625.\n\nTherefore, the fraction of the garments that are either bikinis or trunks is 0.625.", "predict_result": 0.625}
+{"model_prediction": "Fred grew 38 cantelopes and Tim grew 44 cantelopes.\n\nTotal number of cantelopes = 38 + 44 = 82 cantelopes\n\nTherefore, Fred and Tim grew a total of 82 cantelopes.", "predict_result": 82.0}
+{"model_prediction": "There are 5 pencils left in the drawer now.", "predict_result": 5.0}
+{"model_prediction": "When Scarlett adds 0.6666666666666666 cups more to the existing 0.16666666666666666 cup, the total amount of oil in the measuring cup will be:\n\n0.16666666666666666 + 0.6666666666666666 = 0.8333333333333332 cups\n\nTherefore, Scarlett will have 0.8333333333333332 cups of oil in the measuring cup.", "predict_result": 0.8333333333333331}
+{"model_prediction": "0.36 - 0.05 = 0.31 pounds of honey remains.", "predict_result": 0.31}
+{"model_prediction": "Sara picked 45 pears and Sally picked 11 pears.\n\n45 + 11 = 56\n\nIn total, 56 pears were picked.", "predict_result": 56.0}
+{"model_prediction": "Sam has 16 blue balloons and Alyssa has 21 blue balloons, so together they have 16 + 21 = 37 blue balloons.", "predict_result": 37.0}
+{"model_prediction": "Jessica cut 16 red orchids from her flower garden to make a total of 18 red orchids in the vase.", "predict_result": 16.0}
+{"model_prediction": "The Montoya family spends 0.6 + 0.2 = 0.8 of their budget on food.\n\nTherefore, the fraction of their budget that the Montoya family spends on food is 0.8 or 8/10.", "predict_result": 10}
+{"model_prediction": "Kevin bought a total of 14.02 pounds of watermelon. \n\n9.91 + 4.11 = 14.02 pounds", "predict_result": 14.02}
+{"model_prediction": "Dan now has 32 - 23 = 9 green marbles.", "predict_result": 9.0}
+{"model_prediction": "There are 4 crayons left in the drawer.", "predict_result": 4.0}
+{"model_prediction": "Jonah added 0.3 cup + 0.4 cup = 0.7 cup of raisins in total. \nTherefore, Jonah added 0.7 cups of raisins in all.", "predict_result": 0.7}
+{"model_prediction": "Jessica now has 5 quarters (8 - 3 = 5).", "predict_result": 5.0}
+{"model_prediction": "Tom spent a total of $14.02 + $9.46 + $12.04 = $35.52 on video games.", "predict_result": 35.52}
+{"model_prediction": "Sara picked 37 peaches from the orchard. \n\nOriginal number of peaches = 24\nTotal peaches after picking = 61\nPeaches picked = Total peaches after picking - Original number of peaches\nPeaches picked = 61 - 24\nPeaches picked = 37\n\nSara picked 37 peaches from the orchard.", "predict_result": 37.0}
+{"model_prediction": "To find the total amount Alyssa spent, add the cost of grapes and cherries:\n\n$12.08 (grapes) + $9.85 (cherries) = $21.93\n\nTherefore, Alyssa spent a total of $21.93.", "predict_result": 21.93}
+{"model_prediction": "Tom found 15 seashells and Fred found 43 seashells, for a total of 15 + 43 = 58 seashells.\nHowever, out of those 58 seashells, 29 were cracked. So, the total number of seashells they found together was 58 - 29 = 29 seashells.", "predict_result": 29.0}
+{"model_prediction": "The workers planted 11 maple trees today. \n\n64 total trees - 53 initial trees = 11 trees planted today.", "predict_result": 11.0}
+{"model_prediction": "After cleaning the seashells, the total number of intact seashells found by Mary, Melanie, and Jason is:\n\n45 + 23 + 32 = 100 seashells\n\nTherefore, they found together 100 seashells.", "predict_result": 100.0}
+{"model_prediction": "To find the fraction of apartments that are either one-bedroom or two-bedroom, we need to add the fractions of one-bedroom and two-bedroom apartments together:\n\nFraction of one-bedroom apartments = 0.16666666666666666\nFraction of two-bedroom apartments = 0.3333333333333333\n\nTotal fraction of either one-bedroom or two-bedroom apartments = Fraction of one-bedroom apartments + Fraction of two-bedroom apartments\n= 0.16666666666666666 + 0.3333333333333333\n= 0.5\n\nTherefore, half (or 0.5) of Shannon's apartment complex are either one-bedroom or two-bedroom apartments.", "predict_result": 0.5}
+{"model_prediction": "In total, 36 + 32 + 35 = 103 limes were picked.", "predict_result": 103.0}
+{"model_prediction": "2515 coats were collected at the elementary schools (9437 total coats collected - 6922 coats collected from high schools = 2515 coats collected at elementary schools)", "predict_result": 2515.0}
+{"model_prediction": "Developers built 574 houses during the housing boom. (2000 - 1426 = 574)", "predict_result": 574.0}
+{"model_prediction": "Joan now has 7 blue balloons.", "predict_result": 7.0}
+{"model_prediction": "Dan picked 85 - 14 = 71 peaches from the orchard.", "predict_result": 71.0}
+{"model_prediction": "After planting 13 more orchid bushes, the park will have a total of 22 + 13 = 35 orchid bushes.", "predict_result": 35.0}
+{"model_prediction": "The total cost of Dan's purchases was $11.76 + $14.54 = $26.30. \nIncluding the dollar bill he found, the total cost would be $26.30 - $1.00 = $25.30.", "predict_result": 25.3}
+{"model_prediction": "Sam now has 16 dimes. (9 dimes + 7 dimes = 16 dimes)", "predict_result": 16.0}
+{"model_prediction": "Sally started with 27 Pokemon cards. Dan gave her 41 new cards, bringing her to 27 + 41 = 68 cards. After buying 20 more cards, Sally now has a total of 68 + 20 = 88 Pokemon cards. \nSally now has 88 Pokemon cards.", "predict_result": 88.0}
+{"model_prediction": "In total, Irwin's family hiked 0.2 + 0.4 + 0.1 = 0.7 miles. \nSo, Irwin's family hiked 0.7 miles in total.", "predict_result": 0.7}
+{"model_prediction": "The company ordered a total of 0.16666666666666667 + 0.16666666666666667 + 0.5 = 0.8333333333333333 tons of material in all.", "predict_result": 0.8333333333333333}
+{"model_prediction": "After using 0.16 grams of pepper, Brennan would have 0.25g - 0.16g = 0.09 grams of pepper left. \n\nSo, Brennan would have 0.09 grams of pepper left.", "predict_result": 0.09}
+{"model_prediction": "61,921 + 49,500 = 111,421\n\nThe factory dyed a total of 111,421 yards of silk for that order.", "predict_result": 111421.0}
+{"model_prediction": "Keith has 20 books. Jason has 21 books. Together, they have 20 + 21 = 41 books.", "predict_result": 41.0}
+{"model_prediction": "Dan grew 42 turnips and Jessica grew 47 turnips, so in total they grew 42 + 47 = 89 turnips.", "predict_result": 89.0}
+{"model_prediction": "Jason now has 36 seashells (49 - 13 = 36) after giving 13 to Tim.", "predict_result": 36.0}
+{"model_prediction": "In total, 16 plums were picked (4 + 9 + 3 = 16).", "predict_result": 16.0}
+{"model_prediction": "In total, they picked 46 + 47 + 12 = 105 pears.", "predict_result": 105.0}
+{"model_prediction": "Fred now has 488 green balloons. \n\n709 - 221 = 488", "predict_result": 488.0}
+{"model_prediction": "There will be 15 oak trees left in the park after the workers cut down the damaged trees.  (33 - 18 = 15)", "predict_result": 15.0}
+{"model_prediction": "Sam had 8 puppies with spots before giving 2 to his friends. So, he must have had 10 puppies to start with.", "predict_result": 10.0}
+{"model_prediction": "There are now 71 pencils in total in the drawer. (41 + 30 = 71)", "predict_result": 71.0}
+{"model_prediction": "Altogether, Alyssa and Nancy picked 59 pears. (42 + 17 = 59)", "predict_result": 59.0}
+{"model_prediction": "Nancy will attend a total of 24 football games in the next three months (9 + 8 + 7 = 24).", "predict_result": 24.0}
+{"model_prediction": "There are now 21 rulers left in the drawer. (46 - 25 = 21)", "predict_result": 21.0}
+{"model_prediction": "The restaurant served a total of 11 hot dogs today (9 during lunch + 2 during dinner).", "predict_result": 11.0}
+{"model_prediction": "Alyssa now has 4 kittens left after giving 4 to her friends.", "predict_result": 4.0}
+{"model_prediction": "To find out how much more brown sugar Victor used, we need to subtract the amount of white sugar used from the amount of brown sugar used.\n\n0.625 - 0.25 = 0.375\n\nVictor used 0.375 more brown sugar than white sugar.", "predict_result": 0.375}
+{"model_prediction": "Melanie now has 4 plums left after giving 3 plums to Sam.", "predict_result": 4.0}
+{"model_prediction": "Allie had a total of 0.8333333333333333 cartons of ice cream in all.", "predict_result": 0.8333333333333333}
+{"model_prediction": "Tori picked up 1576 - 344 = 1232 pieces of trash outside the classrooms. \nTherefore, Tori picked up 1232 pieces of trash outside the classrooms.", "predict_result": 1232.0}
+{"model_prediction": "To find out how much extra food is needed to feed the second cat, we need to subtract the amount of food needed for 1 cat from the total amount needed for 2 cats.\n\nFor 1 cat:\n0.5 can/day\n\nFor 2 cats:\n0.9 can/day\n\nTherefore, the extra food needed for the second cat is:\n0.9 - 0.5 = 0.4 can/day. \n\nSo, Jake needs an extra 0.4 can of cat food each day to feed the second cat.", "predict_result": 0.4}
+{"model_prediction": "Keith grew 29 cantaloupes\nFred grew 16 cantaloupes\nJason grew 20 cantaloupes\n\nTotal cantaloupes grown = 29 + 16 + 20 = 65\n\nIn total, they grew 65 cantaloupes.", "predict_result": 65.0}
+{"model_prediction": "Sara picked 6 pears and Tim picked 5 pears, so in total they picked 6 + 5 = 11 pears. \nTherefore, there were 11 pears picked in total.", "predict_result": 11.0}
+{"model_prediction": "To find out how many grams of strawberry jelly Shannon and her family have, we need to subtract the amount of blueberry jelly they have from the total amount of jelly they have.\n\nTotal jelly = Strawberry jelly + Blueberry jelly\n6310 grams = Strawberry jelly + 4518 grams\n\nTo find the amount of strawberry jelly, we rearrange the equation:\n\nStrawberry jelly = Total jelly - Blueberry jelly\nStrawberry jelly = 6310 grams - 4518 grams\nStrawberry jelly = 1792 grams\n\nTherefore, Shannon and her family have 1792 grams of strawberry jelly.", "predict_result": 1792.0}
+{"model_prediction": "After Tim placed 14 rulers in the drawer, there are a total of 11 + 14 = 25 rulers in the drawer.", "predict_result": 25.0}
+{"model_prediction": "The total number of books in Oak Grove's public library and school libraries is 1986 + 5106 = 7092 books. \n\nTherefore, the libraries in Oak Grove have a total of 7092 books overall.", "predict_result": 7092.0}
+{"model_prediction": "Tom found 3 unbroken seashells.", "predict_result": 3.0}

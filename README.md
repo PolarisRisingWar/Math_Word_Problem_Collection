@@ -1,10 +1,10 @@
-MWP的综述也在路上啦，等我写完了跟导师说一声就去挂ArXiv上。如果跟我关系好而且等不及论文成品的可以私我加入共享石墨文档链接。
+本项目致力于整理math word problem (MWP) 领域的数据集、论文、工具等信息。  
+现有工作的复现详见codes文件夹，其中preprocess_data文件夹放置对数据集的预处理代码，在每个文件的开头位置存放数据集的原始下载位置、引用论文和预处理的逻辑；results文件夹是对公开数据集使用不同算法得到的结果。代码的运行命令可参考codes/README.md。  
+由于数据集可能很大，所以我没有上传到GitHub，但是我会在数据预处理的代码里面介绍数据集的原始下载地址。  
 
-数值推理，包括但不限于（具体的分类不一定是严格MECE的）：  
-1. 数值推理
-2. MWP（标准做法依然是熟悉的文本生成，encoder+decoder。当然就是说虽然基础是这样的，但大家都可以积极整活）
-3. 信息抽取：数值抽取
-4. 数值表征
+以下内容首先介绍MWP任务上不同方法的实验结果，然后介绍MWP任务的数据集，接着介绍MWP任务的论文，最后介绍MWP任务的工具。
+
+由于本项目原来想囊括所有数值推理领域的工作，现在决定专注于MWP任务，所以现在在更改项目的结构，以下内容改完后将删除本段。
 
 * [1. 实验结果](#实验结果)
 * [2. 数据](#数据)
@@ -13,9 +13,9 @@ MWP的综述也在路上啦，等我写完了跟导师说一声就去挂ArXiv上
 
 # 实验结果
 MWP任务（setting见表后）的准确率指标：
-| **方法名** | **Alg514** |
-|---|---|
-|GPT-3.5-Turbo|82.86%
+| **方法名** | **Alg514** |**AI2**|
+|---|---|---|
+|GPT-3.5-Turbo|82.86%|**93.15%**
 |GPT-3.5-Turbo CoT|85.71%
 |GPT-3.5-Turbo CoT+tip|80%
 |GPT-3.5-Turbo CoT+SC|
@@ -23,22 +23,22 @@ MWP任务（setting见表后）的准确率指标：
 |ChatGLM3-6B|65.71%
 |GLM-4|77.14%
 1. 仅考虑输出一个答案的数学题
-2. 对于没有原始划分方案的数据集随机按照8:1:2的比例进行数据集划分：Alg514
+2. 对于没有原始划分方案的数据集随机按照8:1:2的比例进行数据集划分：Alg514 AI2 Dolphin1878
 3. tip的理论基础：[给ChatGPT小费真的好使！10块或10万效果拔群，但给1毛不升反降](https://mp.weixin.qq.com/s/vQPWFRMSrEzpsT-_N1VT3w)
 4. SC (self-consistency)
 5. PRP：(2024 AAAI) [Re61：读论文 PRP Get an A in Math: Progressive Rectification Prompting](https://blog.csdn.net/PolarisRisingWar/article/details/135844039)
 
 # 数据
-简单介绍：
-（由于数据可能太大所以我全都不上传Git了，但是反正全是放在datasets文件夹里，在代码中如有引用也全是从这里引用）
+因为下载地址太占位置了，所以不在这里列出，但是在代码文件里面会有。
 
 尽量按时间顺序排列。有些我不确定先后顺序，所以可能有错误。
 
-| **数据集名称** | **语言** | **下载地址** | **出处** | **任务** | **样本量** | **其他备注** |
-|---|---|---|---|---|---|---|
-| Alg514 | 英语 | <http://groups.csail.mit.edu/rbg/code/wordprobs/questions.json> | (2014 ACL) [Learning to Automatically Solve Algebra Word Problems](https://aclanthology.org/P14-1026/) | MWP<br>（线性场景） | 514 | |
-| AI2 | 英语 | 数据集下载地址挂了，但是可以在代码文件（<https://www.dropbox.com/s/1slbq2fi77fq7wx/Java%20code_mathproblems.zip?dl=1>）里面找到Math_Word_DS2.zip文件 | (2014 EMNLP) [Re42：读论文 ARIS Learning to Solve Arithmetic Word Problems with Verb Categorization](https://blog.csdn.net/PolarisRisingWar/article/details/131726944) | MWP | 395 | 这个数据集名是MathDQN起的 |
-| number_word_std / Dolphin / Dophin1878 | | <https://www.microsoft.com/en-us/research/uploads/prod/2016/02//dolphin-number_word_std.zip> | (2015 EMNLP) [Automatically Solving Number Word Problems by Semantic Parsing and Reasoning](https://aclanthology.org/D15-1135/) | MWP | | |
+| **数据集名称** | **语言** |  **出处**  | **样本量** | **其他备注** |
+|---|---|---|---|---|
+| Alg514 | 英语 | (2014 ACL) [Learning to Automatically Solve Algebra Word Problems](https://aclanthology.org/P14-1026/) | 514 | 简单的线性数学题 |
+| AI2 | 英语 | (2014 EMNLP) [Re42：读论文 ARIS Learning to Solve Arithmetic Word Problems with Verb Categorization](https://blog.csdn.net/PolarisRisingWar/article/details/131726944) | 395 | 这个数据集名是MathDQN起的 |
+| number_word_std / Dolphin / Dophin1878 |英语| (2015 EMNLP) [Automatically Solving Number Word Problems by Semantic Parsing and Reasoning](https://aclanthology.org/D15-1135/)  |1878 |
+
 | Dolphin18K | | <https://www.microsoft.com/en-us/research/uploads/prod/2015/08/dolphin18k-v1.1.zip> | (2016 ACL) [How well do Computers Solve Math Word Problems? Large-Scale Dataset Construction and Evaluation](https://aclanthology.org/P16-1084/) | MWP | 18460 | 公式+结果
 | MAWPS | 英语 | [sroy9/mawps: Code for MAWPS: A Math Word Problem Repository](https://github.com/sroy9/mawps) | (2016 NAACL) [MAWPS: A Math Word Problem Repository](https://aclanthology.org/N16-1136/) | MWP |100K | |
 | DRAW-1K | 英语 | <https://www.microsoft.com/en-us/download/details.aspx?id=52628> | (2017 EACL) [Annotating Derivations: A New Evaluation Strategy and Dataset for Algebra Word Problems](https://aclanthology.org/E17-1047/) | MWP<br>（一元线性场景） | 1000 | |

@@ -1,3 +1,6 @@
+#http://groups.csail.mit.edu/rbg/code/wordprobs/questions.json
+# Nate Kushman, Yoav Artzi, Luke Zettlemoyer, and Regina Barzilay. 2014. Learning to Automatically Solve Algebra Word Problems. In Proceedings of the 52nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pages 271–281, Baltimore, Maryland. Association for Computational Linguistics.
+
 #仅保留只有一个输出的问题。按照8:1:2的比例随机划分数据集
 import json,random
 
