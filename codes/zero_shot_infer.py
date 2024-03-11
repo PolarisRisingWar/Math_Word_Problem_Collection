@@ -72,18 +72,18 @@ with alive_bar(len(test_data)) as bar:
             question2prompt(test_data[i]["question"], arg_dict["prompt_template"])
         )
 
-        predict_result = extract_number_from_prediction(
+        predict_value = extract_number_from_prediction(
             predict, test_data[i]["question"], model_prediction
         )
 
-        if abs(predict_result - test_data[i]["answer"]) < threshold:
+        if abs(predict_value - test_data[i]["answer"]) < threshold:
             amount_predict_right += 1
 
         result_file.write(
             json.dumps(
                 {
                     "model_prediction": model_prediction,
-                    "predict_result": predict_result,
+                    "predict_value": predict_value,
                 },
                 ensure_ascii=False,
             )

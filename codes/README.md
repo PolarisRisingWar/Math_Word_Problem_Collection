@@ -16,7 +16,7 @@ GPT-3.5-Turbo + AI2：`python codes/zero_shot_infer.py -mc GPT-3.5 -dn AI2 -ds d
 
 GPT-3.5-Turbo + dolphin1878: `python codes/zero_shot_infer.py -mc GPT-3.5 -dn dolphin1878 -ds datasets/dolphin1878 -pt pure -rt codes/results/ChatGPT-3.5_dolphin1878_result.txt`（约9分钟）
 
-GPT-3.5-Turbo + Math23K：`python codes/zero_shot_infer.py -mc GPT-3.5 -dn Math23K -ds datasets/math23k -pt pure -rt codes/results/ChatGPT-3.5_Math23K_result.txt`
+GPT-3.5-Turbo + Math23K：`python codes/zero_shot_infer.py -mc GPT-3.5 -dn Math23K -ds datasets/math23k -pt pure -rt codes/results/ChatGPT-3.5_Math23K_result.txt`（约1小时32分钟）
 
 GPT-3.5-Turbo CoT + Alg514：`python codes/zero_shot_infer.py -mc GPT-3.5 -dn Alg514 -ds datasets/Alg514 -pt CoT -rt codes/results/ChatGPT-3.5_COT_Alg_result.txt`
 

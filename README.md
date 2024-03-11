@@ -15,7 +15,7 @@
 MWP任务（setting见表后）的准确率指标：
 | **方法名** | **Alg514** |**AI2**|**Dolphin1878**|**Math23K**
 |---|---|---|---|---|
-|GPT-3.5-Turbo|82.86%|**93.15%**|**66.67%**|
+|GPT-3.5-Turbo|82.86%|**93.15%**|**66.67%**|**60.3%**
 |GPT-3.5-Turbo CoT|85.71%
 |GPT-3.5-Turbo CoT+tip|80%
 |GPT-3.5-Turbo CoT+SC|
@@ -24,12 +24,13 @@ MWP任务（setting见表后）的准确率指标：
 |GLM-4|77.14%
 1. 仅考虑输出一个答案的数学题
 2. 对于没有原始划分方案的数据集随机按照8:1:2的比例进行数据集划分：Alg514 AI2 Dolphin1878
+3. 使用原数据集中给出的数据划分方案：Math23K
 3. tip的理论基础：[给ChatGPT小费真的好使！10块或10万效果拔群，但给1毛不升反降](https://mp.weixin.qq.com/s/vQPWFRMSrEzpsT-_N1VT3w)
-4. SC (self-consistency)
+4. SC (self-consistency) (2023 ICLR) [Self-Consistency Improves Chain of Thought Reasoning in Language Models](https://openreview.net/forum?id=1PL1NIMMrw)
 5. PRP：(2024 AAAI) [Re61：读论文 PRP Get an A in Math: Progressive Rectification Prompting](https://blog.csdn.net/PolarisRisingWar/article/details/135844039)
 
 # 数据
-因为下载地址太占位置了，所以不在这里列出，但是在代码文件里面会有。
+因为下载地址太占位置了，所以不在这里列出，但是在数据预处理代码文件里面会有。
 
 尽量按时间顺序排列。有些我不确定先后顺序，所以可能有错误。
 ## 可下载数据集
@@ -146,6 +147,7 @@ MWP任务（setting见表后）的准确率指标：
     2. (COLING) [WARM: A Weakly (+Semi) Supervised Model for Solving Math word Problems](https://arxiv.org/abs/2104.06722)
     3. (NAACL) [Practice Makes a Solver Perfect: Data Augmentation for Math Word Problem Solvers](https://aclanthology.org/2022.naacl-main.310/)
     4. (NAACL) [MWP-BERT: Numeracy-Augmented Pre-training for Math Word Problem Solving](https://arxiv.org/abs/2107.13435)
+    3. (AAAI demo) [MWPToolkit: An Open-Source Framework for Deep Learning-Based Math Word Problem Solvers](https://arxiv.org/abs/2109.00799)
 
 **2021年**  
 1. MWP
