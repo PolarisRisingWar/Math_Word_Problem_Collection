@@ -24,6 +24,14 @@ def get_data(dataset_name: str, dataset_path: str):
                 {"question": x["text"], "answer": float(x["ans_simple"][0])}
                 for x in json.load(open(os.path.join(dataset_path, file_path)))
             ]
+    elif dataset_name == "Math23K":
+        print(json.load(open("datasets/math23k/test23k_processed.json")))
+        for split_type in ["train", "valid", "test"]:
+            file_path = f"{split_type}23k_processed.json"
+            return_json[split_type] = [
+                {"question": x["original_text"], "answer": float(x["answer"])}
+                for x in json.load(open(os.path.join(dataset_path, file_path)))
+            ]
 
     if dataset_name in ["Alg514", "dolphin1878"]:
         threshold = 0.001
