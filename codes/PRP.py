@@ -52,8 +52,8 @@ args = parser.parse_args()
 arg_dict = args.__dict__
 
 # 数据预处理
-# answer是数值类对象
-test_data = get_data(arg_dict["dataset_name"], arg_dict["dataset_path"])["test"]
+all_data, threshold = get_data(arg_dict["dataset_name"], arg_dict["dataset_path"])
+test_data = all_data["test"]
 
 
 # 构建模型
@@ -171,12 +171,12 @@ with alive_bar(len(test_data)) as bar:
                 rectification_value
             )
 
-            if abs(rectification_value - generated_values[-1]) < 0.00001:
+            if abs(rectification_value - generated_values[-1]) < threshold:
                 break
 
             generated_values.append(rectification_value)
 
-        if abs(generated_values[-1] - answer) < 0.00001:
+        if abs(generated_values[-1] - answer) < threshold:
             amount_predict_right += 1
 
         result_file.write(
