@@ -39,7 +39,10 @@ MWP任务（setting见表后）的准确率指标：
 | AI2 | 英语 | (2014 EMNLP) [Re42：读论文 ARIS Learning to Solve Arithmetic Word Problems with Verb Categorization](https://blog.csdn.net/PolarisRisingWar/article/details/131726944) | 395 | 这个数据集名是MathDQN起的 |
 | number_word_std / Dolphin / Dophin1878 |英语| (2015 EMNLP) [Automatically Solving Number Word Problems by Semantic Parsing and Reasoning](https://aclanthology.org/D15-1135/)  |1878 |
 | DRAW-1K | 英语 | (2017 EACL) [Annotating Derivations: A New Evaluation Strategy and Dataset for Algebra Word Problems](https://aclanthology.org/E17-1047/) | 1000 | 求解线性方程组 |
+| AQuA-RAT | 英语 | (2017 ACL) [Program Induction by Rationale Generation : Learning to Solve and Explain Algebraic Word Problems](https://arxiv.org/abs/1705.04146) | 100,000 | 单选题<br>GSM8K嫌这个数据集里面模版化的题太多，而且自然语言解法的质量控制很拉 |
 | Math23K | 中文 | (2017 EMNLP) [Deep Neural Solver for Math Word Problems](https://aclanthology.org/D17-1088/) | 训练集21K<br>验证集1K<br>测试集1K | 腾讯人工智能实验室<br>数据来源于爬虫 |
+|MathQA|英语|(2019 NAACL) [MathQA: Towards Interpretable Math Word Problem Solving with Operation-Based Formalisms](https://aclanthology.org/N19-1245/)|训练集29.8K<br>验证集4.48K<br>测试集2.99K |AQUA-RAT的子集，关注解决AQuA-RAT中的错误。但是仍有约30%的数据存在不连续的问题
+| Academia Sinica Diverse MWP Dataset (ASDiv) V1.0 | 英语 | (2020 ACL) [A Diverse Corpus for Evaluating and Developing English Math Word Problem Solvers](https://aclanthology.org/2020.acl-main.92/) | MWP | 2.3K | 解决了之前数据集中的缺点 |
 
 ##无法下载的数据集
 | **数据集名称** | **语言** |  **出处**  | **样本量** | **无法下载的原因和其他备注** |
@@ -49,11 +52,6 @@ MWP任务（setting见表后）的准确率指标：
 
 
 
-
-| AQuA-RAT | 英语 | <https://github.com/deepmind/AQuA> | (2017 ACL) [Program Induction by Rationale Generation : Learning to Solve and Explain Algebraic Word Problems](https://arxiv.org/abs/1705.04146) | MWP | 100000个样本 | GSM8K嫌这个数据集里面模版化的题太多，而且自然语言解法的质量控制很拉 |
-|MathQA|||(2019 NAACL) [MathQA: Towards Interpretable Math Word Problem Solving with Operation-Based Formalisms](https://aclanthology.org/N19-1245/)|MWP||AQUA-RAT的子集，关注解决AQuA-RAT中的错误。但是仍有约30%的数据存在不连续的问题
-| DROP | | | (2019 NAACL) [DROP: A Reading Comprehension Benchmark Requiring Discrete Reasoning Over Paragraphs](https://aclanthology.org/N19-1246/) | 数值推理 | | |
-| Academia Sinica Diverse MWP Dataset (ASDiv) V1.0 | 英语 | [chaochun/nlu-asdiv-dataset](https://github.com/chaochun/nlu-asdiv-dataset) | (2020 ACL) [A Diverse Corpus for Evaluating and Developing English Math Word Problem Solvers](https://aclanthology.org/2020.acl-main.92/) | MWP | 2.3K | 解决了之前数据集中的缺点 |
 | Ape210K | 中文 | <https://github.com/Chenny0808/ape210k> | (2020) [Ape210K: A Large-Scale and Template-Rich Dataset of Math Word Problems](https://arxiv.org/pdf/2009.11506v1.pdf)（已撤回，所以在ArXiv论文主页是看不到的） | MWP | | 猿辅导 AI Lab，西北大学<br>包含 210K 个中国小学水平的数学问题，每个问题都包含黄金答案和得出答案所需的方程式 |
 | MATH | 英语 | <https://people.eecs.berkeley.edu/~hendrycks/MATH.tar> | (2021 NeurIPS) [Measuring Mathematical Problem Solving With the MATH Dataset](https://arxiv.org/abs/2103.03874) | MWP | | GSM8K论文觉得这里面的问题有点太难了。问题来自可汗学院和Mathematica脚本 |
 | GSM8K | 英语 | <https://huggingface.co/datasets/gsm8k> | (2021) [Training Verifiers to Solve Math Word Problems](https://arxiv.org/abs/2110.14168) | MWP |7473条训练样本<br>1319条测试样本 | 众包生成 |
