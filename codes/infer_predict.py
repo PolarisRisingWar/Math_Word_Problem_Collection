@@ -1,7 +1,8 @@
-from hide_config import CHATGPT3_5_API_KEY, CHATGPT3_5_base_url, Zhipu_key
+from hide_config import CHATGPT3_5_API_KEY, CHATGPT3_5_base_url, Zhipu_key, groq_key
 
 
 def get_infer(model_name: str, model_checkpoint_path: str):
+    # 调用API
     if model_checkpoint_path == "GPT-3.5":
         import tiktoken
         from tenacity import (
@@ -67,6 +68,38 @@ def get_infer(model_name: str, model_checkpoint_path: str):
             )
             return response.choices[0].message.content
 
+    elif model_checkpoint_path in [
+        "llama2-70b-4096",
+        "mixtral-8x7b-32768",
+        "Gemma-7b-it",
+    ]:
+        from groq import Groq
+
+        client = Groq(
+            api_key=groq_key,
+        )
+
+        def predict(content):
+            completion = client.chat.completions.create(
+                model=model_checkpoint_path,
+                messages=[
+                    {
+                        "role": "user",
+                        "content": content
+                    }
+                ],
+                temperature=0.5,
+                max_tokens=1024,
+                top_p=1,
+                stream=True,
+                stop=None,
+            )
+
+            result_str=""
+            for chunk in completion:
+                result_str+=chunk.choices[0].delta.content or ""
+    
+    # 本地服务
     else:
         from transformers import AutoModel, AutoTokenizer
 

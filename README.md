@@ -12,7 +12,7 @@
 * [4. 工具](#工具)
 
 # 实验结果
-MWP任务（setting见表后）的准确率指标：
+QA格式MWP任务（仅考虑输出一个答案的数学题。其他setting见表后）的准确率指标：
 | **方法名** | **Alg514** |**AI2**|**Dolphin1878**|**Math23K**
 |---|---|---|---|---|
 |GPT-3.5-Turbo|82.86%|**93.15%**|**66.67%**|**60.3%**
@@ -22,8 +22,7 @@ MWP任务（setting见表后）的准确率指标：
 |GPT-3.5-Turbo PRP|**94.29%**
 |ChatGLM3-6B|65.71%
 |GLM-4|77.14%
-1. 仅考虑输出一个答案的数学题
-2. 对于没有原始划分方案的数据集随机按照8:1:2的比例进行数据集划分：Alg514 AI2 Dolphin1878
+1. 对于没有原始划分方案的数据集随机按照8:1:2的比例进行数据集划分：Alg514 AI2 Dolphin1878
 3. 使用原数据集中给出的数据划分方案：Math23K
 3. tip的理论基础：[给ChatGPT小费真的好使！10块或10万效果拔群，但给1毛不升反降](https://mp.weixin.qq.com/s/vQPWFRMSrEzpsT-_N1VT3w)
 4. SC (self-consistency) (2023 ICLR) [Self-Consistency Improves Chain of Thought Reasoning in Language Models](https://openreview.net/forum?id=1PL1NIMMrw)
