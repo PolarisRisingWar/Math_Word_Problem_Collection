@@ -13,9 +13,9 @@
 
 # 实验结果
 MWP任务（setting见表后）的准确率指标：
-| **方法名** | **Alg514** |**AI2**|
-|---|---|---|
-|GPT-3.5-Turbo|82.86%|**93.15%**
+| **方法名** | **Alg514** |**AI2**|**Dolphin1878**|
+|---|---|---|---|
+|GPT-3.5-Turbo|82.86%|**93.15%**|**66.67%**|
 |GPT-3.5-Turbo CoT|85.71%
 |GPT-3.5-Turbo CoT+tip|80%
 |GPT-3.5-Turbo CoT+SC|
@@ -32,14 +32,19 @@ MWP任务（setting见表后）的准确率指标：
 因为下载地址太占位置了，所以不在这里列出，但是在代码文件里面会有。
 
 尽量按时间顺序排列。有些我不确定先后顺序，所以可能有错误。
-
+## 可下载数据集
 | **数据集名称** | **语言** |  **出处**  | **样本量** | **其他备注** |
 |---|---|---|---|---|
 | Alg514 | 英语 | (2014 ACL) [Learning to Automatically Solve Algebra Word Problems](https://aclanthology.org/P14-1026/) | 514 | 简单的线性数学题 |
 | AI2 | 英语 | (2014 EMNLP) [Re42：读论文 ARIS Learning to Solve Arithmetic Word Problems with Verb Categorization](https://blog.csdn.net/PolarisRisingWar/article/details/131726944) | 395 | 这个数据集名是MathDQN起的 |
 | number_word_std / Dolphin / Dophin1878 |英语| (2015 EMNLP) [Automatically Solving Number Word Problems by Semantic Parsing and Reasoning](https://aclanthology.org/D15-1135/)  |1878 |
 
-| Dolphin18K | | <https://www.microsoft.com/en-us/research/uploads/prod/2015/08/dolphin18k-v1.1.zip> | (2016 ACL) [How well do Computers Solve Math Word Problems? Large-Scale Dataset Construction and Evaluation](https://aclanthology.org/P16-1084/) | MWP | 18460 | 公式+结果
+##无法下载的数据集
+| **数据集名称** | **语言** |  **出处**  | **样本量** | **无法下载的原因和其他备注** |
+|---|---|---|---|---|
+| Dolphin18K | 英语 | (2016 ACL) [How well do Computers Solve Math Word Problems? Large-Scale Dataset Construction and Evaluation](https://aclanthology.org/P16-1084/) | 18460 | 需要通过URL从雅虎问答下载数据，但是雅虎问答已经倒闭了。没有找到直接下载数据集的来源。有的话请跟我说一声。
+
+
 | MAWPS | 英语 | [sroy9/mawps: Code for MAWPS: A Math Word Problem Repository](https://github.com/sroy9/mawps) | (2016 NAACL) [MAWPS: A Math Word Problem Repository](https://aclanthology.org/N16-1136/) | MWP |100K | |
 | DRAW-1K | 英语 | <https://www.microsoft.com/en-us/download/details.aspx?id=52628> | (2017 EACL) [Annotating Derivations: A New Evaluation Strategy and Dataset for Algebra Word Problems](https://aclanthology.org/E17-1047/) | MWP<br>（一元线性场景） | 1000 | |
 | Math23K | 中文 | <https://huggingface.co/datasets/Gxg/Math23K><br><https://github.com/SumbeeLei/Math_EN/tree/master/data> | (2017 EMNLP) [Deep Neural Solver for Math Word Problems](https://aclanthology.org/D17-1088/) | MWP<br>（一元线性场景） | 23162 | 腾讯人工智能实验室<br>数据来源于爬虫 |
