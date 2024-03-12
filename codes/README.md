@@ -24,7 +24,7 @@ GPT-3.5-Turbo + Ape210K：`python codes/zero_shot_infer.py -mc GPT-3.5 -dn Ape21
 
 GPT-3.5-Turbo + GSM8K：`python codes/zero_shot_infer.py -mc GPT-3.5 -dn GSM8K -ds datasets/gsm8k -pt pure -rt codes/results/ChatGPT-3.5_GSM8K_result.txt`
 
-GPT-3.5-Turbo + SVAMP：`python codes/zero_shot_infer.py -mc GPT-3.5 -dn SVAMP -ds datasets/svamp -pt pure -rt codes/results/ChatGPT-3.5_SVAMP_result.txt`
+GPT-3.5-Turbo + SVAMP：`python codes/zero_shot_infer.py -mc GPT-3.5 -dn SVAMP -ds datasets/svamp -pt pure -rt codes/results/ChatGPT-3.5_SVAMP_result.txt`（约20分钟）
 
 GPT-3.5-Turbo CoT + Alg514：`python codes/zero_shot_infer.py -mc GPT-3.5 -dn Alg514 -ds datasets/Alg514 -pt CoT -rt codes/results/ChatGPT-3.5_COT_Alg_result.txt`
 

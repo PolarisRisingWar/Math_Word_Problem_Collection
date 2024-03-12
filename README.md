@@ -12,7 +12,7 @@
 QA格式MWP任务（仅考虑输出一个数值答案的数学题。其他实验setting见表后）的准确率指标：
 | **方法名** | **Alg514** |**AI2**|**Dolphin1878**|**Math23K**|**ASDiv**|**Ape210K**|**GSM8K**|**SVAMP**|
 |---|---|---|---|---|---|---|---|---|
-|GPT-3.5-Turbo|82.86%|**93.15%**|**66.67%**|**60.3%**|**86.19%**|
+|GPT-3.5-Turbo|82.86%|**93.15%**|**66.67%**|**60.3%**|**86.19%**|||**79.78%**|
 |GPT-3.5-Turbo CoT|85.71%
 |GPT-3.5-Turbo CoT+tip|80%
 |GPT-3.5-Turbo CoT+SC|
@@ -52,16 +52,15 @@ QA格式MWP任务（仅考虑输出一个数值答案的数学题。其他实验
 |---|---|---|---|---|
 | Dolphin18K | 英语 | (2016 ACL) [How well do Computers Solve Math Word Problems? Large-Scale Dataset Construction and Evaluation](https://aclanthology.org/P16-1084/) | 18460 | 需要通过URL从雅虎问答下载数据，但是雅虎问答已经倒闭了。没有找到直接下载数据集的来源。有的话请跟我说一声。
 | MAWPS | 英语  | (2016 NAACL) [MAWPS: A Math Word Problem Repository](https://aclanthology.org/N16-1136/) | 100K | 我服务器没下Maven，下次有机会再下数据吧 |
-|SuperCLUE-Math6|中文|||需要申请，懒得搞
+|SuperCLUE-Math6|中文|(2024) [SuperCLUE-Math6: Graded Multi-Step Math Reasoning Benchmark for LLMs in Chinese](https://arxiv.org/abs/2401.11819)||需要申请，懒得搞
 
 
 
 # 论文
 **2024年**  
-1. MWP
-    1. (AAAI) [Re61：读论文 PRP Get an A in Math: Progressive Rectification Prompting](https://blog.csdn.net/PolarisRisingWar/article/details/135844039)
-    2. (清华) [Augmenting Math Word Problems via Iterative Question Composing](https://arxiv.org/abs/2401.09003)
-    3. [Scaling the Authoring of AutoTutors with Large Language Models](https://arxiv.org/abs/2402.09216)
+1. (AAAI) [Re61：读论文 PRP Get an A in Math: Progressive Rectification Prompting](https://blog.csdn.net/PolarisRisingWar/article/details/135844039)：已复现（PRP），标准QA格式MWP任务，使用大模型做推理，思路是在预测出答案后挖空题目中另一变量，让大模型通过预测结果来预测挖空变量，如果预测正确就视为
+2. (清华) [Augmenting Math Word Problems via Iterative Question Composing](https://arxiv.org/abs/2401.09003)
+3. [Scaling the Authoring of AutoTutors with Large Language Models](https://arxiv.org/abs/2402.09216)
 2. 几何题
     1. [GAPS: Geometry-Aware Problem Solver](https://arxiv.org/abs/2401.16287)
 2. (ICDE) [Enhancing Quantitative Reasoning Skills of Large Language Models through Dimension Perception](https://arxiv.org/abs/2312.17532)：关注数值单位（维度）
