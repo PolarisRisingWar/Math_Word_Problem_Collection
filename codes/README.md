@@ -2,7 +2,7 @@
 1. LLM
     1. direct系列：直接将问题输入LLM
     另一种写法是在问题后面加`The answer is`
-    GPT-3.5-Turbo&emsp;&emsp;ChatGLM3-6B
+    GPT-3.5-Turbo&emsp;&emsp;ChatGLM3-6B&emsp;&emsp;GLM-4
     2. CoT系列：在问题后面直接加` Let's think step by step.`
     另一种写法是：`Q: [Q]. A: Let’s think step by step`
     GPT-3.5-Turbo CoT
@@ -18,6 +18,10 @@ GPT-3.5-Turbo + dolphin1878: `python codes/zero_shot_infer.py -mc GPT-3.5 -dn do
 
 GPT-3.5-Turbo + Math23K：`python codes/zero_shot_infer.py -mc GPT-3.5 -dn Math23K -ds datasets/math23k -pt pure -rt codes/results/ChatGPT-3.5_Math23K_result.txt`（约1小时32分钟）
 
+GPT-3.5-Turbo + ASDiv：`python codes/zero_shot_infer.py -mc GPT-3.5 -dn ASDiv -ds datasets/asdiv -pt pure -rt codes/results/ChatGPT-3.5_ASDiv_result.txt`（约28分钟）
+
+GPT-3.5-Turbo + Ape210K：`python codes/zero_shot_infer.py -mc GPT-3.5 -dn Ape210K -ds datasets/ape210k -pt pure -rt codes/results/ChatGPT-3.5_Ape210K_result.txt`
+
 GPT-3.5-Turbo CoT + Alg514：`python codes/zero_shot_infer.py -mc GPT-3.5 -dn Alg514 -ds datasets/Alg514 -pt CoT -rt codes/results/ChatGPT-3.5_COT_Alg_result.txt`
 
 GPT-3.5-Turbo CoT+tip + Alg514：`python codes/zero_shot_infer.py -mc GPT-3.5 -dn Alg514 -ds datasets/Alg514 -pt CoT+tip -rt codes/results/ChatGPT-3.5_COT+tip_Alg_result.txt`
@@ -28,4 +32,4 @@ ChatGLM3-6B + Alg514：`CUDA_VISIBLE_DEVICES=4 python codes/zero_shot_infer.py -
 
 GLM-4 + Alg514：`python codes/zero_shot_infer.py -mc GLM-4 -dn Alg514 -ds datasets/Alg514 -pt pure -rt codes/results/GLM4_Alg_result.txt`（约2.1元 + 6分钟）
 
-llama2-70b-4096 + Alg514：`python codes/zero_shot_infer.py -mc llama2-70b-4096 -dn Alg514 -ds datasets/Alg514 -pt pure -rt codes/results/llama2-70b-4096_Alg_result.txt`
+（由于网络问题未成功运行）llama2-70b-4096 + Alg514：`python codes/zero_shot_infer.py -mc llama2-70b-4096 -dn Alg514 -ds datasets/Alg514 -pt pure -rt codes/results/llama2-70b-4096_Alg_result.txt`

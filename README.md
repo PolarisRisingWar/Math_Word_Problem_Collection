@@ -13,9 +13,9 @@
 
 # 实验结果
 QA格式MWP任务（仅考虑输出一个答案的数学题。其他setting见表后）的准确率指标：
-| **方法名** | **Alg514** |**AI2**|**Dolphin1878**|**Math23K**
-|---|---|---|---|---|
-|GPT-3.5-Turbo|82.86%|**93.15%**|**66.67%**|**60.3%**
+| **方法名** | **Alg514** |**AI2**|**Dolphin1878**|**Math23K**|**ASDiv**|
+|---|---|---|---|---|---|
+|GPT-3.5-Turbo|82.86%|**93.15%**|**66.67%**|**60.3%**|**86.19%**|
 |GPT-3.5-Turbo CoT|85.71%
 |GPT-3.5-Turbo CoT+tip|80%
 |GPT-3.5-Turbo CoT+SC|
@@ -42,7 +42,8 @@ QA格式MWP任务（仅考虑输出一个答案的数学题。其他setting见�
 | AQuA-RAT | 英语 | (2017 ACL) [Program Induction by Rationale Generation : Learning to Solve and Explain Algebraic Word Problems](https://arxiv.org/abs/1705.04146) | 100,000 | 单选题<br>GSM8K嫌这个数据集里面模版化的题太多，而且自然语言解法的质量控制很拉 |
 | Math23K | 中文 | (2017 EMNLP) [Deep Neural Solver for Math Word Problems](https://aclanthology.org/D17-1088/) | 训练集21K<br>验证集1K<br>测试集1K | 腾讯人工智能实验室<br>数据来源于爬虫 |
 |MathQA|英语|(2019 NAACL) [MathQA: Towards Interpretable Math Word Problem Solving with Operation-Based Formalisms](https://aclanthology.org/N19-1245/)|训练集29.8K<br>验证集4.48K<br>测试集2.99K |AQUA-RAT的子集，关注解决AQuA-RAT中的错误。但是仍有约30%的数据存在不连续的问题
-| Academia Sinica Diverse MWP Dataset (ASDiv) V1.0 | 英语 | (2020 ACL) [A Diverse Corpus for Evaluating and Developing English Math Word Problem Solvers](https://aclanthology.org/2020.acl-main.92/) | MWP | 2.3K | 解决了之前数据集中的缺点 |
+| Academia Sinica Diverse MWP Dataset (ASDiv) V1.0 | 英语 | (2020 ACL) [A Diverse Corpus for Evaluating and Developing English Math Word Problem Solvers](https://aclanthology.org/2020.acl-main.92/) | 2.3K | 解决了之前数据集中的缺点 |
+| Ape210K | 中文 | (2020) [Ape210K: A Large-Scale and Template-Rich Dataset of Math Word Problems](https://arxiv.org/pdf/2009.11506v1.pdf)（已撤回，所以在ArXiv论文主页是看不到的） | 210K| 猿辅导 AI Lab，西北大学<br>包含 210K 个中国小学水平的数学问题 |
 
 ##无法下载的数据集
 | **数据集名称** | **语言** |  **出处**  | **样本量** | **无法下载的原因和其他备注** |
@@ -52,7 +53,7 @@ QA格式MWP任务（仅考虑输出一个答案的数学题。其他setting见�
 
 
 
-| Ape210K | 中文 | <https://github.com/Chenny0808/ape210k> | (2020) [Ape210K: A Large-Scale and Template-Rich Dataset of Math Word Problems](https://arxiv.org/pdf/2009.11506v1.pdf)（已撤回，所以在ArXiv论文主页是看不到的） | MWP | | 猿辅导 AI Lab，西北大学<br>包含 210K 个中国小学水平的数学问题，每个问题都包含黄金答案和得出答案所需的方程式 |
+
 | MATH | 英语 | <https://people.eecs.berkeley.edu/~hendrycks/MATH.tar> | (2021 NeurIPS) [Measuring Mathematical Problem Solving With the MATH Dataset](https://arxiv.org/abs/2103.03874) | MWP | | GSM8K论文觉得这里面的问题有点太难了。问题来自可汗学院和Mathematica脚本 |
 | GSM8K | 英语 | <https://huggingface.co/datasets/gsm8k> | (2021) [Training Verifiers to Solve Math Word Problems](https://arxiv.org/abs/2110.14168) | MWP |7473条训练样本<br>1319条测试样本 | 众包生成 |
 |Geometry3K|英语|<https://lupantech.github.io/inter-gps/>|(2021 ACL) [Inter-GPS: Interpretable Geometry Problem Solving with Formal Language and Symbolic Reasoning](https://arxiv.org/abs/2105.04165)|图形QA|2401条训练样本<br>300条验证样本<br>601条测试样本

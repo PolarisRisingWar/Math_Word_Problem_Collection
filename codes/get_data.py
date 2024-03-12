@@ -24,6 +24,13 @@ def get_data(dataset_name: str, dataset_path: str):
                 {"question": x["text"], "answer": float(x["ans_simple"][0])}
                 for x in json.load(open(os.path.join(dataset_path, file_path)))
             ]
+    elif dataset_name in ["ASDiv","Ape210K"]:
+        for split_type in ["train", "valid", "test"]:
+            file_path = f"{split_type}.json"
+            return_json[split_type] = [
+                {"question": x["question"], "answer": x["answer"]}
+                for x in json.load(open(os.path.join(dataset_path, file_path)))
+            ]
     elif dataset_name == "Math23K":
         for split_type in ["train", "valid", "test"]:
             file_path = f"{split_type}23k_processed.json"
