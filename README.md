@@ -247,8 +247,10 @@ QA格式MWP任务（仅考虑输出一个数值答案的数学题。其他实验
 1. MWP
     1. Computers and thought
 
-# 工具
-1. 
+# Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=PolarisRisingWar/Math_Word_Problem_Collection&type=Date)](https://star-history.com/#PolarisRisingWar/Math_Word_Problem_Collection&Date)
+
 
 [^1]: [论文笔记 | MathDQN: Solving Arithmetric Word Problems via Deep Reinforcement Learning_ttliu_kiwi的博客-CSDN博客](https://blog.csdn.net/ting0922/article/details/104358369)
 [【AAAI Oral】利用DeepMind的DQN解数学应用题，准确率提升15% - 知乎](https://zhuanlan.zhihu.com/p/33672372)
