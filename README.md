@@ -12,9 +12,9 @@
 * [4. 工具](#工具)
 
 # 实验结果
-QA格式MWP任务（仅考虑输出一个答案的数学题。其他setting见表后）的准确率指标：
-| **方法名** | **Alg514** |**AI2**|**Dolphin1878**|**Math23K**|**ASDiv**|
-|---|---|---|---|---|---|
+QA格式MWP任务（仅考虑输出一个数值答案的数学题。其他实验setting见表后）的准确率指标：
+| **方法名** | **Alg514** |**AI2**|**Dolphin1878**|**Math23K**|**ASDiv**|**Ape210K**|**GSM8K**|**SVAMP**|
+|---|---|---|---|---|---|---|---|---|
 |GPT-3.5-Turbo|82.86%|**93.15%**|**66.67%**|**60.3%**|**86.19%**|
 |GPT-3.5-Turbo CoT|85.71%
 |GPT-3.5-Turbo CoT+tip|80%
@@ -22,8 +22,8 @@ QA格式MWP任务（仅考虑输出一个答案的数学题。其他setting见�
 |GPT-3.5-Turbo PRP|**94.29%**
 |ChatGLM3-6B|65.71%
 |GLM-4|77.14%
-1. 对于没有原始划分方案的数据集随机按照8:1:2的比例进行数据集划分：Alg514 AI2 Dolphin1878
-3. 使用原数据集中给出的数据划分方案：Math23K
+1. 对于没有原始划分方案的数据集随机按照8:1:2的比例进行数据集划分：Alg514 AI2 Dolphin1878 SVAMP
+3. 使用原数据集中给出的数据划分方案：Math23K Ape210K
 3. tip的理论基础：[给ChatGPT小费真的好使！10块或10万效果拔群，但给1毛不升反降](https://mp.weixin.qq.com/s/vQPWFRMSrEzpsT-_N1VT3w)
 4. SC (self-consistency) (2023 ICLR) [Self-Consistency Improves Chain of Thought Reasoning in Language Models](https://openreview.net/forum?id=1PL1NIMMrw)
 5. PRP：(2024 AAAI) [Re61：读论文 PRP Get an A in Math: Progressive Rectification Prompting](https://blog.csdn.net/PolarisRisingWar/article/details/135844039)
@@ -43,23 +43,19 @@ QA格式MWP任务（仅考虑输出一个答案的数学题。其他setting见�
 | Math23K | 中文 | (2017 EMNLP) [Deep Neural Solver for Math Word Problems](https://aclanthology.org/D17-1088/) | 训练集21K<br>验证集1K<br>测试集1K | 腾讯人工智能实验室<br>数据来源于爬虫 |
 |MathQA|英语|(2019 NAACL) [MathQA: Towards Interpretable Math Word Problem Solving with Operation-Based Formalisms](https://aclanthology.org/N19-1245/)|训练集29.8K<br>验证集4.48K<br>测试集2.99K |AQUA-RAT的子集，关注解决AQuA-RAT中的错误。但是仍有约30%的数据存在不连续的问题
 | Academia Sinica Diverse MWP Dataset (ASDiv) V1.0 | 英语 | (2020 ACL) [A Diverse Corpus for Evaluating and Developing English Math Word Problem Solvers](https://aclanthology.org/2020.acl-main.92/) | 2.3K | 解决了之前数据集中的缺点 |
-| Ape210K | 中文 | (2020) [Ape210K: A Large-Scale and Template-Rich Dataset of Math Word Problems](https://arxiv.org/pdf/2009.11506v1.pdf)（已撤回，所以在ArXiv论文主页是看不到的） | 210K| 猿辅导 AI Lab，西北大学<br>包含 210K 个中国小学水平的数学问题 |
+| Ape210K | 中文 | (2020) [Ape210K: A Large-Scale and Template-Rich Dataset of Math Word Problems](https://arxiv.org/pdf/2009.11506v1.pdf)（已撤回，所以在ArXiv论文主页是看不到的） | 210K| 猿辅导 AI Lab，西北大学<br>中国小学水平的数学问题 |
+| MATH | 英语 | (2021 NeurIPS) [Measuring Mathematical Problem Solving With the MATH Dataset](https://arxiv.org/abs/2103.03874) | 训练集7.5K<br>测试集5K | GSM8K论文觉得这里面的问题有点太难了。问题来自可汗学院和Mathematica脚本 |
+| GSM8K | 英语 | (2021) [Training Verifiers to Solve Math Word Problems](https://arxiv.org/abs/2110.14168) |7473条训练样本<br>1319条测试样本 | 众包生成 |
+|Geometry3K|英语|(2021 ACL) [Inter-GPS: Interpretable Geometry Problem Solving with Formal Language and Symbolic Reasoning](https://arxiv.org/abs/2105.04165)|2401条训练样本<br>300条验证样本<br>601条测试样本|做几何题|
+| SVAMP | 英语 | (2021 NAACL) [Are NLP Models really able to Solve Simple Math Word Problems?](https://arxiv.org/abs/2103.07191) | 1000 | |
+| SVAMP_Sym | 英语 | (2023 ACL Findings) [Reasoning in Large Language Models Through Symbolic Math Word Problems](https://aclanthology.org/2023.findings-acl.364/) | | 符号化MWP问题 |
 
 ##无法下载的数据集
 | **数据集名称** | **语言** |  **出处**  | **样本量** | **无法下载的原因和其他备注** |
 |---|---|---|---|---|
 | Dolphin18K | 英语 | (2016 ACL) [How well do Computers Solve Math Word Problems? Large-Scale Dataset Construction and Evaluation](https://aclanthology.org/P16-1084/) | 18460 | 需要通过URL从雅虎问答下载数据，但是雅虎问答已经倒闭了。没有找到直接下载数据集的来源。有的话请跟我说一声。
 | MAWPS | 英语  | (2016 NAACL) [MAWPS: A Math Word Problem Repository](https://aclanthology.org/N16-1136/) | 100K | 我服务器没下Maven，下次有机会再下数据吧 |
-
-
-
-
-| MATH | 英语 | <https://people.eecs.berkeley.edu/~hendrycks/MATH.tar> | (2021 NeurIPS) [Measuring Mathematical Problem Solving With the MATH Dataset](https://arxiv.org/abs/2103.03874) | MWP | | GSM8K论文觉得这里面的问题有点太难了。问题来自可汗学院和Mathematica脚本 |
-| GSM8K | 英语 | <https://huggingface.co/datasets/gsm8k> | (2021) [Training Verifiers to Solve Math Word Problems](https://arxiv.org/abs/2110.14168) | MWP |7473条训练样本<br>1319条测试样本 | 众包生成 |
-|Geometry3K|英语|<https://lupantech.github.io/inter-gps/>|(2021 ACL) [Inter-GPS: Interpretable Geometry Problem Solving with Formal Language and Symbolic Reasoning](https://arxiv.org/abs/2105.04165)|图形QA|2401条训练样本<br>300条验证样本<br>601条测试样本
-| SVAMP | 英语 | [arkilpatel/SVAMP: NAACL 2021: Are NLP Models really able to Solve Simple Math Word Problems?](https://github.com/arkilpatel/SVAMP) | (2021 NAACL) [Are NLP Models really able to Solve Simple Math Word Problems?](https://arxiv.org/abs/2103.07191) | MWP | | |
-| 符号化的MWP | 英语 | [vedantgaur/Symbolic-MWP-Reasoning](https://github.com/vedantgaur/Symbolic-MWP-Reasoning) | (2023 ACL Findings) [Reasoning in Large Language Models Through Symbolic Math Word Problems](https://aclanthology.org/2023.findings-acl.364/) | MWP | | |
-|SuperCLUE-Math6|中文||[SuperCLUE-Math6: 新一代中文数学推理数据集的探索之旅](https://mp.weixin.qq.com/s/jM2rgWE_-2TC7c49e22jAw)
+|SuperCLUE-Math6|中文|||需要申请，懒得搞
 
 
 

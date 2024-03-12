@@ -6,15 +6,11 @@ dataset_folder = "datasets/ape210k"
 
 
 def replace_percentage_with_decimal(string):
-    # 使用正则表达式查找可能有前置数字的百分比
     percentages = re.findall(r"(\d*\.?\d+)%", string)
 
     for percent in percentages:
-        # 计算百分比前的数字（如果有）和百分比本身的乘积
         decimal_value = float(percent) / 100
-        # 构造替换目标字符串，考虑到原字符串中的百分比可能是如0.8%这样的形式
         target = percent + "%"
-        # 替换原始字符串中的百分比
         string = string.replace(target, str(decimal_value))
 
     return string
@@ -24,7 +20,7 @@ def add_prompt(x):
     data = json.loads(x)
     return_json = {}
     return_json["question"] = (
-        "Please answer this elementary school math question. Please ensure that the obtained result is a numerical value. If the number is not divisible (whether it is a fraction or an irrational number), please retain 4 decimal places:"
+        "Please answer this elementary school math question. Please ensure that the obtained result is a numerical value. If the number is not divisible (whether it is a fraction or an irrational number), please retain 3 decimal places:"
         + " "
         + data["original_text"]
     )
@@ -52,7 +48,11 @@ def add_prompt(x):
 
 for split_type in ["train", "valid", "test"]:
     file_path = f"{split_type}.ape.json"
-    this_data = [add_prompt(x) for x in open(os.path.join(dataset_folder, file_path))]
+    this_data = []
+    for problem in open(os.path.join(dataset_folder, file_path)):
+        processed_json = add_prompt(problem)
+        if "answer" in processed_json:
+            this_data.append(processed_json)
 
     json.dump(
         this_data,

@@ -24,7 +24,7 @@ def get_data(dataset_name: str, dataset_path: str):
                 {"question": x["text"], "answer": float(x["ans_simple"][0])}
                 for x in json.load(open(os.path.join(dataset_path, file_path)))
             ]
-    elif dataset_name in ["ASDiv","Ape210K"]:
+    elif dataset_name in ["ASDiv", "Ape210K", "SVAMP"]:
         for split_type in ["train", "valid", "test"]:
             file_path = f"{split_type}.json"
             return_json[split_type] = [
@@ -38,8 +38,24 @@ def get_data(dataset_name: str, dataset_path: str):
                 {"question": x["original_text"], "answer": float(x["answer"])}
                 for x in json.load(open(os.path.join(dataset_path, file_path)))
             ]
+    elif dataset_name == "GSM8K":
+        for split_type in ["train", "test"]:
+            file_path = f"{split_type}.jsonl"
+            this_list = []
+            for line in open(os.path.join(dataset_path, file_path)):
+                one_problem = json.loads(line)
+                answer_str = one_problem["answer"]
+                this_list.append(
+                    {
+                        "question": one_problem["question"],
+                        "answer": float(
+                            answer_str[answer_str.find("#### ") + 5 :].replace(",", "")
+                        ),
+                    }
+                )
+            return_json[split_type] = this_list
 
-    if dataset_name in ["Alg514", "dolphin1878"]:
+    if dataset_name in ["Alg514", "dolphin1878", "Ape210K"]:
         threshold = 0.001
     else:
         threshold = 0.00001

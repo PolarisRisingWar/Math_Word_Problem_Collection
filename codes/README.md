@@ -22,6 +22,10 @@ GPT-3.5-Turbo + ASDiv：`python codes/zero_shot_infer.py -mc GPT-3.5 -dn ASDiv -
 
 GPT-3.5-Turbo + Ape210K：`python codes/zero_shot_infer.py -mc GPT-3.5 -dn Ape210K -ds datasets/ape210k -pt pure -rt codes/results/ChatGPT-3.5_Ape210K_result.txt`
 
+GPT-3.5-Turbo + GSM8K：`python codes/zero_shot_infer.py -mc GPT-3.5 -dn GSM8K -ds datasets/gsm8k -pt pure -rt codes/results/ChatGPT-3.5_GSM8K_result.txt`
+
+GPT-3.5-Turbo + SVAMP：`python codes/zero_shot_infer.py -mc GPT-3.5 -dn SVAMP -ds datasets/svamp -pt pure -rt codes/results/ChatGPT-3.5_SVAMP_result.txt`
+
 GPT-3.5-Turbo CoT + Alg514：`python codes/zero_shot_infer.py -mc GPT-3.5 -dn Alg514 -ds datasets/Alg514 -pt CoT -rt codes/results/ChatGPT-3.5_COT_Alg_result.txt`
 
 GPT-3.5-Turbo CoT+tip + Alg514：`python codes/zero_shot_infer.py -mc GPT-3.5 -dn Alg514 -ds datasets/Alg514 -pt CoT+tip -rt codes/results/ChatGPT-3.5_COT+tip_Alg_result.txt`
