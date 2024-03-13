@@ -7,6 +7,11 @@
     另一种写法是：`Q: [Q]. A: Let’s think step by step`
     GPT-3.5-Turbo CoT
     3. PRP系列：算是CoT的一种延伸，通过重复多次CoT→验证答案→带着错误答案CoT的过程来实现预测
+    GPT-3.5-Turbo PRP
+    4. 微调系列：
+        1. GPT-2 finetune
+        GPT-2英文版/原版：
+        GPT-2中文版：
 
 # 运行命令
 

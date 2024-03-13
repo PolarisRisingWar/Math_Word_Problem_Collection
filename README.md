@@ -9,9 +9,11 @@
 [TOC]
 
 # 实验结果
-QA格式MWP任务（仅考虑输出一个数值答案的数学题。其他实验setting见表后）的准确率指标：
-| **方法名** | **Alg514** |**AI2**|**Dolphin1878**|**Math23K**|**ASDiv**|**Ape210K**|**GSM8K**|**SVAMP**|
+QA格式MWP任务（仅考虑输出一个数值答案的数学题。其他实验setting见表后）的准确率指标（相当于只计算test@1。其他指标不管了）：
+有些数据集有独特的标注信息（比如公式，推理过程，calculator），如果考虑到这种情况的话我会写明，没写就是没有。
+| **方法名**&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; | **Alg514** |**AI2**|**Dolphin1878**|**Math23K**|**ASDiv**|**Ape210K**|**GSM8K**|**SVAMP**|
 |---|---|---|---|---|---|---|---|---|
+|GPT-2 finetune|
 |GPT-3.5-Turbo|82.86%|**93.15%**|**66.67%**|**60.3%**|**86.19%**|**46.94%**|**78.92%**|**79.78%**|
 |GPT-3.5-Turbo CoT|85.71%
 |GPT-3.5-Turbo CoT+tip|80%
@@ -19,6 +21,7 @@ QA格式MWP任务（仅考虑输出一个数值答案的数学题。其他实验
 |GPT-3.5-Turbo PRP|**94.29%**
 |ChatGLM3-6B|65.71%
 |GLM-4|77.14%
+|CPM-2 prompt-based finetune
 1. 对于没有原始划分方案的数据集随机按照8:1:2的比例进行数据集划分：Alg514 AI2 Dolphin1878 SVAMP
 3. 使用原数据集中给出的数据划分方案：Math23K Ape210K
 3. tip的理论基础：[给ChatGPT小费真的好使！10块或10万效果拔群，但给1毛不升反降](https://mp.weixin.qq.com/s/vQPWFRMSrEzpsT-_N1VT3w)
