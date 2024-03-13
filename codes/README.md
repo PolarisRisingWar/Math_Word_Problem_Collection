@@ -11,7 +11,7 @@
     4. 微调系列：
         1. GPT-2 finetune
         GPT-2英文版/原版我用的是：https://huggingface.co/openai-community/gpt2
-        GPT-2中文版：
+        
 
 # 运行命令
 
@@ -44,4 +44,8 @@ GLM-4 + Alg514：`python codes/zero_shot_infer.py -mc GLM-4 -dn Alg514 -ds datas
 （由于网络问题未成功运行）llama2-70b-4096 + Alg514：`python codes/zero_shot_infer.py -mc llama2-70b-4096 -dn Alg514 -ds datasets/Alg514 -pt pure -rt codes/results/llama2-70b-4096_Alg_result.txt`
 
 GPT-2 finetune + Alg514：
-训练：`python codes/finetune/gpt2/finetune.py -dn Alg514 -ds datasets/Alg514 -gp  -rt codes/results/GPT-2_Alg_result.txt`
+训练：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/finetune.py -dn Alg514 -ds datasets/Alg514 -cp my_checkpoints/gpt2_alg514`（约39秒）
+测试：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/test.py -dn Alg514 -ds datasets/Alg514 -cp my_checkpoints/gpt2_alg514 -rt codes/results/gpt2_Alg_result.txt`（约1分钟）
+
+GPT-2 finetune + GSM8K：
+训练：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/finetune.py -dn GSM8K -ds datasets/gsm8k -cp my_checkpoints/gpt2_gsm8k`

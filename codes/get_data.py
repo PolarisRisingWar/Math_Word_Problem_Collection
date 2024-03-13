@@ -18,9 +18,9 @@ def get_data(dataset_name: str, dataset_path: str):
                     "question": x["sQuestion"],
                     "answer": float(x["lSolutions"][0]),
                     "answer_with_reasoning": "The calculation formula for the question is:"
-                    + " ".join(x["sSolutions"])
+                    + " ".join(x["lEquations"])
                     + "#### "
-                    + x["lSolutions"][0],
+                    + str(x["lSolutions"][0]),
                 }
                 for x in json.load(open(os.path.join(dataset_path, file_path)))
             ]

@@ -3,14 +3,14 @@
 # 代码参考https://github.com/openai/grade-school-math/blob/master/grade_school_math/train.py
 # https://github.com/openai/grade-school-math/blob/master/grade_school_math/dataset.py
 
-from hide_config import gpt_2_english_path
+from hide_config import gpt_2_english_path, gpt_2_chinese_path
 
 import sys
 
 sys.path.append("codes")
 
 
-import torch
+import torch, os
 from transformers import GPT2Tokenizer, GPT2LMHeadModel
 from transformers import GPT2Config, AdamW
 from transformers import get_scheduler
@@ -19,6 +19,14 @@ from torch.utils.data import DataLoader
 
 from get_data import get_data
 from GPT2DataSet import GPT2DefinedDataset
+
+num_threads = "32"
+torch.set_num_threads(int(num_threads))
+os.environ["OMP_NUM_THREADS"] = num_threads
+os.environ["OPENBLAS_NUM_THREADS"] = num_threads
+os.environ["MKL_NUM_THREADS"] = num_threads
+os.environ["VECLIB_MAXIMUM_THREADS"] = num_threads
+os.environ["NUMEXPR_NUM_THREADS"] = num_threads
 
 
 import argparse
@@ -32,9 +40,12 @@ parser.add_argument("-dn", "--dataset_name", type=str)
 parser.add_argument("-ds", "--dataset_path", type=str)
 # 储存数据的文件夹
 
+parser.add_argument("--language", type=str, default="en")  # 使用的模型的语言，可选en/zh
+
 parser.add_argument("-cp", "--checkpoint_path", type=str)  # 模型存储路径
 
 parser.add_argument("-bs", "--batch_size", type=int, default=16)
+parser.add_argument("-lr", "--learning_rate", type=float, default=1e-5)
 parser.add_argument("-e", "--num_epochs", type=int, default=20)
 parser.add_argument("-ws", "--warmup_steps", type=int, default=0)
 
@@ -51,11 +62,16 @@ for example in train_examples:
 
 print(f"{len(train_examples)} train examples")
 
-tokenizer = GPT2Tokenizer.from_pretrained(arg_dict["gpt2_path"])
+if arg_dict["language"] == "en":
+    gpt2path = gpt_2_english_path
+else:
+    gpt2path = gpt_2_chinese_path
+
+tokenizer = GPT2Tokenizer.from_pretrained(gpt2path)
 train_dset = GPT2DefinedDataset(tokenizer, train_examples)
 
-config = GPT2Config.from_pretrained(arg_dict["gpt2_path"])
-model = GPT2LMHeadModel.from_pretrained(arg_dict["gpt2_path"], config=config)
+config = GPT2Config.from_pretrained(gpt2path)
+model = GPT2LMHeadModel.from_pretrained(gpt2path, config=config)
 
 if torch.cuda.is_available():
     device = "cuda"
@@ -66,7 +82,7 @@ model.to(device)
 model.train()
 
 train_loader = DataLoader(train_dset, batch_size=arg_dict["batch_size"], shuffle=True)
-optim = AdamW(model.parameters(), lr=1e-5)
+optim = AdamW(model.parameters(), lr=arg_dict["learning_rate"])
 
 num_epochs = arg_dict["num_epochs"]
 num_training_steps = num_epochs * len(train_loader)
