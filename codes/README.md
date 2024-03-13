@@ -10,7 +10,7 @@
     GPT-3.5-Turbo PRP
     4. 微调系列：
         1. GPT-2 finetune
-        GPT-2英文版/原版：
+        GPT-2英文版/原版我用的是：https://huggingface.co/openai-community/gpt2
         GPT-2中文版：
 
 # 运行命令
@@ -42,3 +42,6 @@ ChatGLM3-6B + Alg514：`CUDA_VISIBLE_DEVICES=4 python codes/zero_shot_infer.py -
 GLM-4 + Alg514：`python codes/zero_shot_infer.py -mc GLM-4 -dn Alg514 -ds datasets/Alg514 -pt pure -rt codes/results/GLM4_Alg_result.txt`（约2.1元 + 6分钟）
 
 （由于网络问题未成功运行）llama2-70b-4096 + Alg514：`python codes/zero_shot_infer.py -mc llama2-70b-4096 -dn Alg514 -ds datasets/Alg514 -pt pure -rt codes/results/llama2-70b-4096_Alg_result.txt`
+
+GPT-2 finetune + Alg514：
+训练：`python codes/finetune/gpt2/finetune.py -dn Alg514 -ds datasets/Alg514 -gp  -rt codes/results/GPT-2_Alg_result.txt`

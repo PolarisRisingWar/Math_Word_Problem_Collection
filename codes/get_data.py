@@ -14,7 +14,14 @@ def get_data(dataset_name: str, dataset_path: str):
                 file_path = f"{split_type}.json"
 
             return_json[split_type] = [
-                {"question": x["sQuestion"], "answer": float(x["lSolutions"][0])}
+                {
+                    "question": x["sQuestion"],
+                    "answer": float(x["lSolutions"][0]),
+                    "answer_with_reasoning": "The calculation formula for the question is:"
+                    + " ".join(x["sSolutions"])
+                    + "#### "
+                    + x["lSolutions"][0],
+                }
                 for x in json.load(open(os.path.join(dataset_path, file_path)))
             ]
     elif dataset_name == "dolphin1878":
@@ -51,6 +58,7 @@ def get_data(dataset_name: str, dataset_path: str):
                         "answer": float(
                             answer_str[answer_str.find("#### ") + 5 :].replace(",", "")
                         ),
+                        "answer_with_reasoning": answer_str,
                     }
                 )
             return_json[split_type] = this_list
