@@ -49,4 +49,5 @@ GPT-2 finetune + Alg514：
 
 GPT-2 finetune + GSM8K：
 训练：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/finetune.py -dn GSM8K -ds datasets/gsm8k -cp my_checkpoints/gpt2_gsm8k`（约1小时13分钟）
-测试（未使用calculator）：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/test.py -dn GSM8K -ds datasets/gsm8k -cp my_checkpoints/gpt2_gsm8k -rt codes/results/gpt2_GSM8K_result.txt`（约2分钟）
+测试（未使用calculator）：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/test.py -dn GSM8K -ds datasets/gsm8k -cp my_checkpoints/gpt2_gsm8k -rt codes/results/gpt2_GSM8K_result.txt`（约21分钟）
+测试（使用calculator）：`CUDA_VISIBLE_DEVICES=1 python codes/finetune/gpt2/test_w_calculator.py -dn GSM8K -ds datasets/gsm8k -cp my_checkpoints/gpt2_gsm8k -rt codes/results/gpt2_GSM8K_w_calculator_result.txt`（约28分钟）
