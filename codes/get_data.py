@@ -1,7 +1,7 @@
 import os, json
 
 
-def get_data(dataset_name: str, dataset_path: str):
+def get_data(dataset_name: str, dataset_path: str) -> dict:
     return_json = {}
 
     if dataset_name == "Alg514" or dataset_name == "AI2":

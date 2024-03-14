@@ -1,7 +1,8 @@
 from hide_config import CHATGPT3_5_API_KEY, CHATGPT3_5_base_url, Zhipu_key, groq_key
+from typing import Callable
 
 
-def get_infer(model_name: str, model_checkpoint_path: str):
+def get_infer(model_name: str, model_checkpoint_path: str) -> Callable[[str], str]:
     # 调用API
     if model_checkpoint_path == "GPT-3.5":
         import tiktoken
@@ -82,12 +83,7 @@ def get_infer(model_name: str, model_checkpoint_path: str):
         def predict(content):
             completion = client.chat.completions.create(
                 model=model_checkpoint_path,
-                messages=[
-                    {
-                        "role": "user",
-                        "content": content
-                    }
-                ],
+                messages=[{"role": "user", "content": content}],
                 temperature=0.5,
                 max_tokens=1024,
                 top_p=1,
@@ -95,10 +91,10 @@ def get_infer(model_name: str, model_checkpoint_path: str):
                 stop=None,
             )
 
-            result_str=""
+            result_str = ""
             for chunk in completion:
-                result_str+=chunk.choices[0].delta.content or ""
-    
+                result_str += chunk.choices[0].delta.content or ""
+
     # 本地服务
     else:
         from transformers import AutoModel, AutoTokenizer
