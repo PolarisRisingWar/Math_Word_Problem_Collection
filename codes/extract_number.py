@@ -15,7 +15,7 @@ def extract_last_number(text):
     """从自然语言格式的结果中抽取出最后一个数值"""
     numbers = re.findall(r"-?\d+\.\d+|-?\d+", text)
     if not numbers:
-        return None
+        return 0
     last_number = numbers[-1]
     if "." in last_number:
         return float(last_number)
