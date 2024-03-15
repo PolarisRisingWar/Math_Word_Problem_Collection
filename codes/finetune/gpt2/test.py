@@ -78,7 +78,8 @@ write_file = open(arg_dict["result_path"], "a")
 amount_predict_right = 0
 with torch.no_grad():
     for sample in tqdm(test_examples):
-        toks = tokenizer(sample["question"], padding=False, return_tensors="pt").to(
+        question_prompt=sample["question"]+" The answer is:"
+        toks = tokenizer(question_prompt, padding=False, return_tensors="pt").to(
             device
         )
 
@@ -87,7 +88,7 @@ with torch.no_grad():
         )
         output_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
         output_text = output_text[
-            output_text.find(sample["question"]) + len(sample["question"]) :
+            output_text.find(question_prompt) + len(question_prompt) :
         ]
 
         predict_value = extract_last_number(output_text)

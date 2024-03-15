@@ -79,7 +79,8 @@ write_file = open(arg_dict["result_path"], "a")
 
 EQUALS_TOKENS = set([28, 796, 47505])
 
-#来源的来源：https://stackoverflow.com/questions/492519/timeout-on-a-function-call
+
+# 来源的来源：https://stackoverflow.com/questions/492519/timeout-on-a-function-call
 @contextmanager
 def timeout(duration, formula):
     def timeout_handler(signum, frame):
@@ -121,7 +122,8 @@ def use_calculator(sample):
 amount_predict_right = 0
 with torch.no_grad():
     for sample in tqdm(test_examples):
-        qn = sample["question"]
+        question_prompt = sample["question"] + " The answer is:"
+        qn = question_prompt
 
         sample_len = 512
         for _ in range(sample_len):
@@ -143,7 +145,7 @@ with torch.no_grad():
             if "<|endoftext|>" in qn:
                 break
 
-        qn = qn[qn.find(sample["question"]) + len(sample["question"]) :]
+        qn = qn[qn.find(question_prompt) + len(question_prompt) :]
 
         predict_value = extract_last_number(qn)
         if predict_value is None:

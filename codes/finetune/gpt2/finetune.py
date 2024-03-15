@@ -57,7 +57,7 @@ all_data, threshold = get_data(arg_dict["dataset_name"], arg_dict["dataset_path"
 
 train_examples = all_data["train"]
 for example in train_examples:
-    example.update(question=example["question"] + "\n")
+    example.update(question=example["question"] + " The answer is:" + "\n")
     example.update(answer=example["answer_with_reasoning"] + "<|endoftext|>")
 
 print(f"{len(train_examples)} train examples")
