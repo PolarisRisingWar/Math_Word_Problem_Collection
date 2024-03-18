@@ -14,7 +14,7 @@ QA格式MWP任务（仅考虑输出一个数值答案的数学题。其他实验
 | **方法名**&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; | **Alg514** |**AI2**|**Dolphin1878**|**Math23K**|**ASDiv**|**Ape210K**|**GSM8K**|**SVAMP**|
 |---|---|---|---|---|---|---|---|---|
 |GPT-2|0
-|GPT-2 finetune①|2.9%||||||2.05%
+|GPT-2 finetune①|2.9%|0|||||2.05%
 |GPT-2 finetune + calculator②|-|-|-|-|-|-|3.64%|-
 |GPT-3.5-Turbo|82.86%|**93.15%**|**66.67%**|**60.3%**|**86.19%**|**46.94%**|**78.92%**|**79.78%**|
 |GPT-3.5-Turbo CoT|85.71%

@@ -78,13 +78,14 @@ write_file = open(arg_dict["result_path"], "a")
 amount_predict_right = 0
 with torch.no_grad():
     for sample in tqdm(test_examples):
-        question_prompt=sample["question"]+" The answer is:"
-        toks = tokenizer(question_prompt, padding=False, return_tensors="pt").to(
-            device
-        )
+        question_prompt = sample["question"] + " The answer is:"
+        toks = tokenizer(question_prompt, padding=False, return_tensors="pt").to(device)
 
         outputs = model.generate(
-            **toks, max_new_tokens=512, do_sample=False, pad_token_id=50256
+            **toks,
+            max_new_tokens=512,
+            do_sample=False,
+            pad_token_id=model.config.eos_token_id,
         )
         output_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
         output_text = output_text[

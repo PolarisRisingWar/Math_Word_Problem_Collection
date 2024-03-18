@@ -49,6 +49,10 @@ GPT-2 finetune + Alg514：
 训练：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/finetune.py -dn Alg514 -ds datasets/Alg514 -cp my_checkpoints/gpt2_alg514`（约39秒）
 测试：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/test.py -dn Alg514 -ds datasets/Alg514 -cp my_checkpoints/gpt2_alg514 -rt codes/results/gpt2_Alg_result.txt`（约1分钟）
 
+GPT-2 finetune + AI2：（之所以采用不同的写法是为了练习代码能力）
+训练：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/finetune_w_Trainer.py -dn AI2 -ds datasets/AI2 -cp my_checkpoints/gpt2_AI2`（约39秒）
+测试：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/test.py -dn AI2 -ds datasets/AI2 -cp my_checkpoints/gpt2_AI2 -rt codes/results/gpt2_AI2_result.txt`
+
 GPT-2 finetune + GSM8K：
 训练：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/finetune.py -dn GSM8K -ds datasets/gsm8k -cp my_checkpoints/gpt2_gsm8k`（约1小时13分钟）
 测试（未使用calculator）：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/test.py -dn GSM8K -ds datasets/gsm8k -cp my_checkpoints/gpt2_gsm8k -rt codes/results/gpt2_GSM8K_result.txt`（约21分钟）
