@@ -16,6 +16,7 @@ QA格式MWP任务（仅考虑输出一个数值答案的数学题。其他实验
 |GPT-2|0
 |GPT-2 finetune①|2.9%|0|||||2.05%
 |GPT-2 finetune + calculator②|-|-|-|-|-|-|3.64%|-
+|GPT-2 verifier①②|-|-|-|-|-|-|
 |GPT-3.5-Turbo|82.86%|**93.15%**|**66.67%**|**60.3%**|**86.19%**|**46.94%**|**78.92%**|**79.78%**|
 |GPT-3.5-Turbo CoT|85.71%
 |GPT-3.5-Turbo CoT+tip|80%
@@ -25,13 +26,13 @@ QA格式MWP任务（仅考虑输出一个数值答案的数学题。其他实验
 |GLM-4|77.14%
 |CPM-2 prompt-based finetune
 1. 对于没有原始划分方案的数据集随机按照8:1:2的比例进行数据集划分：Alg514 AI2 Dolphin1878 SVAMP
-3. 使用原数据集中给出的数据划分方案：Math23K Ape210K
+3. 使用原数据集中给出的数据划分方案：Math23K Ape210K GSM8K
 3. tip的理论基础：[给ChatGPT小费真的好使！10块或10万效果拔群，但给1毛不升反降](https://mp.weixin.qq.com/s/vQPWFRMSrEzpsT-_N1VT3w)
 4. SC (self-consistency) (2023 ICLR) [Self-Consistency Improves Chain of Thought Reasoning in Language Models](https://openreview.net/forum?id=1PL1NIMMrw)
 5. PRP：(2024 AAAI) [Re61：读论文 PRP Get an A in Math: Progressive Rectification Prompting](https://blog.csdn.net/PolarisRisingWar/article/details/135844039)
 
 ① 将数据集自带的公式/推理过程/计算器信息添加到生成标签中辅助模型训练。具体用的哪个可以看get_data.py里的answer_with_reasoning键的设置
-② 用了GSM8K数据集自带的计算器信息来辅助推理。checkpoint是直接用GPT-2 finetune的
+② 用了GSM8K数据集自带的计算器信息来辅助推理
 
 # 数据
 因为下载地址太占位置了，所以不在这里列出，但是在数据预处理代码文件里面会有。
@@ -121,6 +122,7 @@ QA格式MWP任务（仅考虑输出一个数值答案的数学题。其他实验
     11. [An Empirical Study on Challenging Math Problem Solving with GPT-4](https://arxiv.org/abs/2306.01337)
     12. (耶鲁&卡梅) [ProofNet: Autoformalizing and Formally Proving Undergraduate-Level Mathematics](https://arxiv.org/abs/2302.12433)：证明题
     13. [TinyGSM: achieving >80% on GSM8k with small language models](https://arxiv.org/abs/2312.09241)
+    14. [Progressive-Hint Prompting Improves Reasoning in Large Language Models](https://arxiv.org/abs/2304.09797)
 3. 数值表征
     1. (TMLR) [Semantic Representations of Mathematical Expressions in a Continuous Vector Space](https://arxiv.org/abs/2211.08142)：表征数学表达式
 4. 集合推理

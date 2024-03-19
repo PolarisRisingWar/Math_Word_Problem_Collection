@@ -11,6 +11,8 @@
     4. 微调系列：
         1. GPT-2 finetune
         GPT-2英文版/原版我用的是：https://huggingface.co/openai-community/gpt2
+    5. verifier：通过generator生成答案，再用verifier验证答案
+        1. GPT-2 verifier
         
 
 # 运行命令
@@ -57,3 +59,7 @@ GPT-2 finetune + GSM8K：
 训练：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/finetune.py -dn GSM8K -ds datasets/gsm8k -cp my_checkpoints/gpt2_gsm8k`（约1小时13分钟）
 测试（未使用calculator）：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/test.py -dn GSM8K -ds datasets/gsm8k -cp my_checkpoints/gpt2_gsm8k -rt codes/results/gpt2_GSM8K_result.txt`（约21分钟）
 测试（使用calculator）：`CUDA_VISIBLE_DEVICES=1 python codes/finetune/gpt2/test_w_calculator.py -dn GSM8K -ds datasets/gsm8k -cp my_checkpoints/gpt2_gsm8k -rt codes/results/gpt2_GSM8K_w_calculator_result.txt`（约28分钟）
+
+GPT-2 verifier + GSM8K：
+第一阶段-训练generator：直接用了上面的GPT-2 finetune + GSM8K的checkpoint（因为我把之前的checkpoint删了，所以其实是重跑了一遍，得到了不同的checkpoint。但是这个不重要）
+第二阶段-训练verifier：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/verifier2_generate_verifier_train_data.py -dn GSM8K -ds datasets/gsm8k -cp my_checkpoints/gpt2_gsm8k -rt codes/finetune/gpt2/mid_result/gpt2_GSM8K_verifier_train_data.jsonl`
