@@ -66,7 +66,7 @@ QA格式MWP任务（仅考虑输出一个数值答案的数学题。其他实验
 
 
 # 论文
-**2024年**  
+## 2024年  
 1. (AAAI) [Re61：读论文 PRP Get an A in Math: Progressive Rectification Prompting](https://blog.csdn.net/PolarisRisingWar/article/details/135844039)：已复现（PRP），标准QA格式MWP任务，使用大模型做推理，思路是在预测出答案后挖空题目中另一变量，让大模型通过预测结果来预测挖空变量，如果预测正确就视为
 2. (清华) [Augmenting Math Word Problems via Iterative Question Composing](https://arxiv.org/abs/2401.09003)
 3. [Scaling the Authoring of AutoTutors with Large Language Models](https://arxiv.org/abs/2402.09216)
@@ -76,7 +76,7 @@ QA格式MWP任务（仅考虑输出一个数值答案的数学题。其他实验
 3. [BIBench: Benchmarking Data Analysis Knowledge of Large Language Models](https://arxiv.org/abs/2401.02982)：这篇是商务智能那边数据分析领域的研究……也算是数值推理吧
 4. [SuperCLUE-Math6: Graded Multi-Step Math Reasoning Benchmark for LLMs in Chinese](https://arxiv.org/abs/2401.11819)
 
-**2023年**  
+## 2023年
 1. 数值推理
     1. (ACL) [A Causal Framework to Quantify the Robustness of Mathematical Reasoning with Language Models](https://arxiv.org/abs/2210.12023)
     3. (ICLR) [Dynamic Prompt Learning via Policy Gradient for Semi-structured Mathematical Reasoning](https://arxiv.org/abs/2209.14610)
@@ -98,6 +98,7 @@ QA格式MWP任务（仅考虑输出一个数值答案的数学题。其他实验
     1. (ACL OpenAI) [Interpretable Math Word Problem Solution Generation Via Step-by-step Planning](https://arxiv.org/abs/2306.00784)：关注步骤分（bushi）
         1. [ ] 代码：GSM8K数据集
     2. (ACL) [Solving Math Word Problems via Cooperative Reasoning induced Language Models](https://arxiv.org/abs/2210.16257)
+    3. (ACL) [Plan-and-Solve Prompting: Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models](https://arxiv.org/abs/2305.04091)
     2. (ACL Findings) [Compositional Mathematical Encoding for Math Word Problems](https://aclanthology.org/2023.findings-acl.635/)
     4. (ACL Industry) [MathPrompter: Mathematical Reasoning using Large Language Models](https://arxiv.org/abs/2303.05398)
     4. (AAAI) [Generalizing Math Word Problem Solvers via Solution Diversification](https://arxiv.org/abs/2212.00833)
@@ -105,6 +106,7 @@ QA格式MWP任务（仅考虑输出一个数值答案的数学题。其他实验
     4. (EMNLP) [Let GPT be a Math Tutor: Teaching Math Word Problem Solvers with Customized Exercise Generation](https://arxiv.org/abs/2305.14386)
     5. (EMNLP Findings) Conic10K: A Challenging Math Problem Understanding and Reasoning Dataset
     8. (TKDD) [Math Word Problem Generation via Disentangled Memory Retrieval](https://dl.acm.org/doi/10.1145/3639569)
+    9. (ICLR) [Self-Consistency Improves Chain of Thought Reasoning in Language Models](https://openreview.net/forum?id=1PL1NIMMrw)
     4. (IJCNN) [Improving Math Word Problems Solver with Logical Semantic Similarity](https://ieeexplore.ieee.org/abstract/document/10191088)
     5. (IJCNN) [Solving Math Word Problems Following Logically Consistent Template](https://ieeexplore.ieee.org/abstract/document/10191776)
     6. (NLPCC) [Solving Math Word Problem with Problem Type Classification](https://arxiv.org/abs/2308.13844)

@@ -62,4 +62,4 @@ GPT-2 finetune + GSM8K：
 
 GPT-2 verifier + GSM8K：
 第一阶段-训练generator：直接用了上面的GPT-2 finetune + GSM8K的checkpoint（因为我把之前的checkpoint删了，所以其实是重跑了一遍，得到了不同的checkpoint。但是这个不重要）
-第二阶段-训练verifier：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/verifier2_generate_verifier_train_data.py -dn GSM8K -ds datasets/gsm8k -cp my_checkpoints/gpt2_gsm8k -rt codes/finetune/gpt2/mid_result/gpt2_GSM8K_verifier_train_data.jsonl`
+第二阶段-训练verifier：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/verifier2_generate_verifier_train_data.py -dn GSM8K -ds datasets/gsm8k -cp my_checkpoints/gpt2_gsm8k -rt codes/finetune/gpt2/mid_result/gpt2_GSM8K_verifier_train_data.jsonl`（因为出现了OverflowError问题（已debug）所以没跑完，只跑了2%……就姑且先用这么多数据凑合一下吧，毕竟我没写mini-batch代码，运行太慢了）

@@ -11,7 +11,7 @@ def extract_result_prompt(question, nl_result, x="the answer") -> str:
         """
 
 
-def extract_last_number(text) -> Union[int, float]:
+def extract_last_number(text) -> float:
     """从自然语言格式的结果中抽取出最后一个数值"""
     numbers = re.findall(r"-?\d+\.\d+|-?\d+", text)
     if not numbers:
@@ -20,7 +20,11 @@ def extract_last_number(text) -> Union[int, float]:
     if "." in last_number:
         return float(last_number)
     else:
-        return int(last_number)
+        i = int(last_number)
+        try:
+            return float(i)
+        except OverflowError:  # OverflowError: int too large to convert to float
+            return 0
 
 
 def extract_number_from_prediction(
