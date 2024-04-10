@@ -56,7 +56,7 @@ QA格式MWP任务（仅考虑输出一个数值答案的数学题。其他实验
 | SVAMP | 英语 | (2021 NAACL) [Are NLP Models really able to Solve Simple Math Word Problems?](https://arxiv.org/abs/2103.07191) | 1000 | |
 | SVAMP_Sym | 英语 | (2023 ACL Findings) [Reasoning in Large Language Models Through Symbolic Math Word Problems](https://aclanthology.org/2023.findings-acl.364/) | | 符号化MWP问题 |
 
-##无法下载的数据集
+## 无法下载的数据集
 | **数据集名称** | **语言** |  **出处**  | **样本量** | **无法下载的原因和其他备注** |
 |---|---|---|---|---|
 | Dolphin18K | 英语 | (2016 ACL) [How well do Computers Solve Math Word Problems? Large-Scale Dataset Construction and Evaluation](https://aclanthology.org/P16-1084/) | 18460 | 需要通过URL从雅虎问答下载数据，但是雅虎问答已经倒闭了。没有找到直接下载数据集的来源。有的话请跟我说一声。
