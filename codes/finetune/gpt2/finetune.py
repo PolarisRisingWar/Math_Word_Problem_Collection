@@ -68,7 +68,7 @@ else:
     gpt2path = gpt_2_chinese_path
 
 tokenizer = GPT2Tokenizer.from_pretrained(gpt2path)
-train_dset = GPT2DefinedDataset(tokenizer, train_examples)
+train_dset = GPT2DefinedDataset(tokenizer, train_examples, loss_on_prefix=False)
 
 config = GPT2Config.from_pretrained(gpt2path)
 model = GPT2LMHeadModel.from_pretrained(gpt2path, config=config)

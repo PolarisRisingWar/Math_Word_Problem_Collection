@@ -38,7 +38,7 @@ parser.add_argument("-sp", "--save_path", type=str)  # verifier存储路径
 
 parser.add_argument("-bs", "--batch_size", type=int, default=8)
 parser.add_argument("-lr", "--learning_rate", type=float, default=1e-5)
-parser.add_argument("-e", "--num_epochs", type=int, default=20)
+parser.add_argument("-e", "--num_epochs", type=int, default=2)  #论文值
 parser.add_argument("-ws", "--warmup_steps", type=int, default=0)
 
 args = parser.parse_args()
@@ -60,8 +60,7 @@ else:
 tokenizer = GPT2Tokenizer.from_pretrained(gpt2path)
 train_dset = GPT2DefinedDataset(tokenizer, train_examples, loss_on_prefix=False)
 
-config = GPT2Config.from_pretrained(gpt2path)
-model = GPT2LMHeadModel.from_pretrained(gpt2path, config=config)
+model = GPT2LMHeadModel.from_pretrained(arg_dict["initial_path"])  #用generator初始化GPT-2模型
 
 if torch.cuda.is_available():
     device = "cuda"
