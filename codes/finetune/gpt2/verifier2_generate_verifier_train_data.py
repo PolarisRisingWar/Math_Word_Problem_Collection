@@ -67,7 +67,7 @@ else:
 tokenizer = GPT2Tokenizer.from_pretrained(gpt2path)
 model = GPT2LMHeadModel.from_pretrained(arg_dict["checkpoint_path"])
 model.to(device)
-print("Model Loaded")
+model.eval()
 
 
 write_file = open(arg_dict["result_path"], "a")

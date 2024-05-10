@@ -35,7 +35,8 @@ parser.add_argument("-dp", "--dataset_path", type=str)  # 储存数据的文本�
 parser.add_argument("--language", type=str, default="en")  # 使用的模型的语言，可选en/zh
 
 parser.add_argument("-ip", "--initial_path", type=str)  # generator路径
-parser.add_argument("-sp", "--save_path", type=str)  # verifier存储路径
+parser.add_argument("-lsp", "--lm_save_path", type=str)  # verifier LM存储路径
+parser.add_argument("-sp", "--save_path", type=str)  # verifier全模型权重存储路径
 
 parser.add_argument("-bs", "--batch_size", type=int, default=8)
 parser.add_argument("-lr", "--learning_rate", type=float, default=1e-5)
@@ -126,4 +127,5 @@ for epoch in range(num_epochs):
         pbar.update(1)
         pbar.set_description(f"train_loss: {outputs.item():.5f}")
 
-model.save_pretrained(arg_dict["save_path"])
+model.lm.save_pretrained(arg_dict["lm_save_path"])
+torch.save(model.state_dict(),arg_dict["save_path"])

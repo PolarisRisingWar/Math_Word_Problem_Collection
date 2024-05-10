@@ -72,7 +72,7 @@ else:
 tokenizer = GPT2Tokenizer.from_pretrained(gpt2path)
 model = GPT2LMHeadModel.from_pretrained(arg_dict["checkpoint_path"])
 model.to(device)
-print("Model Loaded")
+model.eval()
 
 
 write_file = open(arg_dict["result_path"], "a")
@@ -131,7 +131,10 @@ with torch.no_grad():
             orig_len = toks["input_ids"].shape[1]
 
             out = model.generate(
-                **toks, max_length=orig_len + 1, pad_token_id=model.config.eos_token_id
+                **toks,
+                max_length=orig_len + 1,
+                pad_token_id=model.config.eos_token_id,
+                do_sample=False
             )
             text = tokenizer.batch_decode(out)[0]
 
