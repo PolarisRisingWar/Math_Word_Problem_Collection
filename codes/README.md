@@ -56,8 +56,8 @@ GPT-2 finetune + AI2：（之所以采用不同的写法是为了练习代码能
 测试：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/test.py -dn AI2 -ds datasets/AI2 -cp my_checkpoints/gpt2_AI2 -rt codes/results/gpt2_AI2_result.txt`（约31秒）
 
 GPT-2 finetune + GSM8K：
-训练：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/finetune.py -dn GSM8K -ds datasets/gsm8k -cp my_checkpoints/gpt2_gsm8k`（约1小时13分钟）
-测试（未使用calculator）：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/test.py -dn GSM8K -ds datasets/gsm8k -cp my_checkpoints/gpt2_gsm8k -rt codes/results/gpt2_GSM8K_result.txt`（约21分钟）
+训练：`CUDA_VISIBLE_DEVICES=1 python codes/finetune/gpt2/finetune.py -dn GSM8K -ds datasets/gsm8k -cp my_checkpoints/gpt2_gsm8k`（约7分钟）
+测试（未使用calculator）：`CUDA_VISIBLE_DEVICES=1 python codes/finetune/gpt2/test.py -dn GSM8K -ds datasets/gsm8k -cp my_checkpoints/gpt2_gsm8k -rt codes/results/gpt2_GSM8K_result.txt`（约9分钟）
 测试（使用calculator）：`CUDA_VISIBLE_DEVICES=1 python codes/finetune/gpt2/test_w_calculator.py -dn GSM8K -ds datasets/gsm8k -cp my_checkpoints/gpt2_gsm8k -rt codes/results/gpt2_GSM8K_w_calculator_result.txt`（约28分钟）
 
 GPT-2 verifier + GSM8K：
