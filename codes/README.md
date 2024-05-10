@@ -58,9 +58,9 @@ GPT-2 finetune + AI2：（之所以采用不同的写法是为了练习代码能
 GPT-2 finetune + GSM8K：
 训练：`CUDA_VISIBLE_DEVICES=1 python codes/finetune/gpt2/finetune.py -dn GSM8K -ds datasets/gsm8k -cp my_checkpoints/gpt2_gsm8k`（约7分钟）
 测试（未使用calculator）：`CUDA_VISIBLE_DEVICES=1 python codes/finetune/gpt2/test.py -dn GSM8K -ds datasets/gsm8k -cp my_checkpoints/gpt2_gsm8k -rt codes/results/gpt2_GSM8K_result.txt`（约9分钟）
-测试（使用calculator）：`CUDA_VISIBLE_DEVICES=1 python codes/finetune/gpt2/test_w_calculator.py -dn GSM8K -ds datasets/gsm8k -cp my_checkpoints/gpt2_gsm8k -rt codes/results/gpt2_GSM8K_w_calculator_result.txt`（约28分钟）
+测试（使用calculator）：`CUDA_VISIBLE_DEVICES=1 python codes/finetune/gpt2/test_w_calculator.py -dn GSM8K -ds datasets/gsm8k -cp my_checkpoints/gpt2_gsm8k -rt codes/results/gpt2_GSM8K_w_calculator_result.txt`（约1小时57分钟）
 
 GPT-2 verifier + GSM8K：
-第一阶段-训练generator：直接用了上面的GPT-2 finetune + GSM8K的checkpoint（因为我把之前的checkpoint删了，所以其实是重跑了一遍，得到了不同的checkpoint。但是这个不重要）
-第二阶段-获取用于训练verifier的数据集：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/verifier2_generate_verifier_train_data.py -dn GSM8K -ds datasets/gsm8k -cp my_checkpoints/gpt2_gsm8k -rt codes/finetune/gpt2/mid_result/gpt2_GSM8K_verifier_train_data.jsonl`（因为出现了OverflowError问题（已debug）所以没跑完，只跑了2%……就姑且先用这么多数据凑合一下吧，毕竟我没写mini-batch代码，运行太慢了）
-第三阶段-训练verifier：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/verifier3_train_verifier.py -dp codes/finetune/gpt2/mid_result/gpt2_GSM8K_verifier_train_data.jsonl -ip my_checkpoints/gpt2_gsm8k -sp my_checkpoints/gpt2verifier_gsm8k`
+第一阶段-训练generator：直接用了上面的GPT-2 finetune + GSM8K的checkpoint
+第二阶段-获取用于训练verifier的数据集：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/verifier2_generate_verifier_train_data.py -dn GSM8K -ds datasets/gsm8k -cp my_checkpoints/gpt2_gsm8k -rt codes/finetune/gpt2/mid_result/gpt2_GSM8K_verifier_train_data.jsonl`（我用的上一版GPT-2微调后得到的结果。别在乎这个了这不重要，反正这个代码是能用的，虽然跟我实际用的代码不一样）
+第三阶段-训练verifier：`CUDA_VISIBLE_DEVICES=3 python codes/finetune/gpt2/verifier3_train_verifier.py -dp codes/finetune/gpt2/mid_result/gpt2_GSM8K_verifier_train_data.jsonl -ip my_checkpoints/gpt2_gsm8k -sp my_checkpoints/gpt2verifier_gsm8k`
