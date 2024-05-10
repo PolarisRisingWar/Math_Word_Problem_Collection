@@ -46,7 +46,7 @@ parser.add_argument("-cp", "--checkpoint_path", type=str)  # 模型存储路径
 
 parser.add_argument("-bs", "--batch_size", type=int, default=16)
 parser.add_argument("-lr", "--learning_rate", type=float, default=1e-5)
-parser.add_argument("-e", "--num_epochs", type=int, default=20)
+parser.add_argument("-e", "--num_epochs", type=int, default=2)
 parser.add_argument("-ws", "--warmup_steps", type=int, default=0)
 
 args = parser.parse_args()

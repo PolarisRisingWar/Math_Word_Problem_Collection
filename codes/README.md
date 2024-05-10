@@ -48,8 +48,8 @@ GLM-4 + Alg514：`python codes/zero_shot_infer.py -mc GLM-4 -dn Alg514 -ds datas
 GPT + Alg514：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/test.py -dn Alg514 -ds datasets/Alg514 -cp openai-community/gpt2 -rt codes/results/gpt2_direct_Alg_result.txt`（约2分钟）
 
 GPT-2 finetune + Alg514：
-训练：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/finetune.py -dn Alg514 -ds datasets/Alg514 -cp my_checkpoints/gpt2_alg514 -bs 32`（约27秒）
-测试：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/test.py -dn Alg514 -ds datasets/Alg514 -cp my_checkpoints/gpt2_alg514 -rt codes/results/gpt2_Alg_result.txt`（约16秒）
+训练：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/finetune.py -dn Alg514 -ds datasets/Alg514 -cp my_checkpoints/gpt2_alg514 -bs 32`（约4秒）
+测试：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/test.py -dn Alg514 -ds datasets/Alg514 -cp my_checkpoints/gpt2_alg514 -rt codes/results/gpt2_Alg_result.txt`（约15秒）
 
 GPT-2 finetune + AI2：（之所以采用不同的写法是为了练习代码能力）
 训练：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/finetune_w_Trainer.py -dn AI2 -ds datasets/AI2 -cp my_checkpoints/gpt2_AI2`（约39秒）
