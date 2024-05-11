@@ -45,7 +45,7 @@ GLM-4 + Alg514：`python codes/zero_shot_infer.py -mc GLM-4 -dn Alg514 -ds datas
 
 （由于网络问题未成功运行）llama2-70b-4096 + Alg514：`python codes/zero_shot_infer.py -mc llama2-70b-4096 -dn Alg514 -ds datasets/Alg514 -pt pure -rt codes/results/llama2-70b-4096_Alg_result.txt`
 
-GPT + Alg514：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/test.py -dn Alg514 -ds datasets/Alg514 -cp openai-community/gpt2 -rt codes/results/gpt2_direct_Alg_result.txt`（约17秒）
+GPT-2 + Alg514：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/test.py -dn Alg514 -ds datasets/Alg514 -cp openai-community/gpt2 -rt codes/results/gpt2_direct_Alg_result.txt`（约17秒）
 
 GPT-2 finetune + Alg514：
 训练：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/finetune.py -dn Alg514 -ds datasets/Alg514 -cp my_checkpoints/gpt2_alg514 -bs 32`（约4秒）
@@ -58,9 +58,9 @@ GPT-2 finetune + AI2：（之所以采用不同的写法是为了练习代码能
 GPT-2 finetune + GSM8K：
 训练：`CUDA_VISIBLE_DEVICES=1 python codes/finetune/gpt2/finetune.py -dn GSM8K -ds datasets/gsm8k -cp my_checkpoints/gpt2_gsm8k`（约7分钟）
 测试（未使用calculator）：`CUDA_VISIBLE_DEVICES=1 python codes/finetune/gpt2/test.py -dn GSM8K -ds datasets/gsm8k -cp my_checkpoints/gpt2_gsm8k -rt codes/results/gpt2_GSM8K_result.txt`（约14分钟）
-测试（使用calculator）：`CUDA_VISIBLE_DEVICES=3 python codes/finetune/gpt2/test_w_calculator.py -dn GSM8K -ds datasets/gsm8k -cp my_checkpoints/gpt2_gsm8k -rt codes/results/gpt2_GSM8K_w_calculator_result.txt`（运行中）
+测试（使用calculator）：`CUDA_VISIBLE_DEVICES=3 python codes/finetune/gpt2/test_w_calculator.py -dn GSM8K -ds datasets/gsm8k -cp my_checkpoints/gpt2_gsm8k -rt codes/results/gpt2_GSM8K_w_calculator_result.txt`（约2小时38分钟）
 
 GPT-2 verifier + GSM8K：
 第一阶段-训练generator：直接用了上面的GPT-2 finetune + GSM8K的checkpoint
-第二阶段-获取用于训练verifier的数据集：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/verifier2_generate_verifier_train_data.py -dn GSM8K -ds datasets/gsm8k -cp my_checkpoints/gpt2_gsm8k -rt codes/finetune/gpt2/mid_result/gpt2_GSM8K_verifier_train_data.jsonl`（我用的verifier训练数据集其实是上一版GPT-2微调后得到的结果。别在乎这个了这不重要，反正这个代码是能用的，虽然跟我实际用的代码不一样）
-第三阶段-训练verifier：`CUDA_VISIBLE_DEVICES=5 python codes/finetune/gpt2/verifier3_train_verifier.py -dp codes/finetune/gpt2/mid_result/gpt2_GSM8K_verifier_train_data.jsonl -ip my_checkpoints/gpt2_gsm8k -lsp my_checkpoints/gpt2verifier_gsm8k -sp my_checkpoints/gpt2verifier_gsm8k.pt`（运行中）
+第二阶段-获取用于训练verifier的数据集：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/verifier2_generate_verifier_train_data.py -dn GSM8K -ds datasets/gsm8k -cp my_checkpoints/gpt2_gsm8k -rt codes/finetune/gpt2/mid_result/gpt2_GSM8K_verifier_train_data.jsonl`（我用的verifier训练数据集其实是上一版GPT-2微调后得到的结果，而且没跑完，只得到了16695条结果，理论上应该跑 (100 × MWP数据训练集样本数) 这么多条结果出来。别在乎这个了这不重要，反正这个代码是能用的，虽然跟我实际用的代码不一样）
+第三阶段-训练verifier：`CUDA_VISIBLE_DEVICES=5 python codes/finetune/gpt2/verifier3_train_verifier.py -dp codes/finetune/gpt2/mid_result/gpt2_GSM8K_verifier_train_data.jsonl -ip my_checkpoints/gpt2_gsm8k -lsp my_checkpoints/gpt2verifier_gsm8k -sp my_checkpoints/gpt2verifier_gsm8k.pt`（约30分钟：使用了16695个训练样本）
