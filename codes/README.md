@@ -16,6 +16,8 @@
         
 
 # 运行命令
+推广一下云GPU平台GpuMall：https://gpumall.com/login?user=%E5%A5%BD%E5%8F%8B&invitedUserId=1263207468&source=amb
+我的专属邀请码：A1263269801
 
 GPT-3.5-Turbo + Alg514：`python codes/zero_shot_infer.py -mc GPT-3.5 -dn Alg514 -ds datasets/Alg514 -pt pure -rt codes/results/ChatGPT-3.5_Alg_result.txt`
 
@@ -46,6 +48,8 @@ GLM-4 + Alg514：`python codes/zero_shot_infer.py -mc GLM-4 -dn Alg514 -ds datas
 Yi-Large + Alg514：`python codes/zero_shot_infer.py -mc yi-large -dn Alg514 -ds datasets/Alg514 -pt pure -rt codes/results/Yi_large_Alg_result.txt`（约0.49元 + 7分钟）
 
 （由于网络问题未成功运行）llama2-70b-4096 + Alg514：`python codes/zero_shot_infer.py -mc llama2-70b-4096 -dn Alg514 -ds datasets/Alg514 -pt pure -rt codes/results/llama2-70b-4096_Alg_result.txt`
+
+LLaMA3-8B-Instruct + Alg514：`torchrun codes/zero_shot_infer.py -mn Meta-Llama-3-8B-Instruct -mc /gm-data/Meta-Llama-3-8B-Instruct/ -dn Alg514 -ds datasets/Alg514 -pt pure -rt codes/results/LLaMA3-8B-Instruct_Alg_result.txt`（约3分钟）
 
 GPT-2 + Alg514：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/test.py -dn Alg514 -ds datasets/Alg514 -cp openai-community/gpt2 -rt codes/results/gpt2_direct_Alg_result.txt`（约17秒）
 

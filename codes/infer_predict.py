@@ -1,5 +1,6 @@
 from hide_config import *
 from typing import Callable
+import os
 
 
 def get_infer(model_name: str, model_checkpoint_path: str) -> Callable[[str], str]:
@@ -111,25 +112,54 @@ def get_infer(model_name: str, model_checkpoint_path: str) -> Callable[[str], st
                 result_str += chunk.choices[0].delta.content or ""
 
     # 本地服务
-    else:
+    elif model_name == "ChatGLM3":
         from transformers import AutoModel, AutoTokenizer
 
-        if model_name == "ChatGLM3":
-            model = AutoModel.from_pretrained(
-                model_checkpoint_path,
-                load_in_8bit=False,
-                trust_remote_code=True,
-                device_map="auto",
-            )
-            model.eval()
-            tokenizer = AutoTokenizer.from_pretrained(
-                model_checkpoint_path, trust_remote_code=True
-            )
+        model = AutoModel.from_pretrained(
+            model_checkpoint_path,
+            load_in_8bit=False,
+            trust_remote_code=True,
+            device_map="auto",
+        )
+        model.eval()
+        tokenizer = AutoTokenizer.from_pretrained(
+            model_checkpoint_path, trust_remote_code=True
+        )
 
-            def predict(content):
-                response, _ = model.chat(
-                    tokenizer, content, history=[], temperature=0.01
-                )
-                return response
+        def predict(content):
+            response, _ = model.chat(
+                tokenizer, content, history=[], temperature=0.01
+            )
+            return response
+
+    elif model_name=="Meta-Llama-3-8B-Instruct":
+        #我只写了LLaMA3原生模型权重的版本
+        import sys
+
+        sys.path.append(llama_module_path)  #https://github.com/meta-llama/llama3 下载到本地的路径。因为要调用这里面的llama模块
+   
+        from llama import Dialog, Llama
+
+        from typing import List
+        
+        generator = Llama.build(
+            ckpt_dir=model_checkpoint_path,
+            tokenizer_path=os.path.join(model_checkpoint_path,"tokenizer.model"),
+            max_seq_len=8192,
+            max_batch_size=6,
+        )
+
+        def predict(content,max_length=1024):
+            dialogs: List[Dialog] = [
+                [{"role": "user", "content": content}]        
+            ]
+            results = generator.chat_completion(
+                dialogs,
+                max_gen_len=max_length,  #其实这地方不该这么写的，写成max_length-calculate_length(input_str)比较合适
+                temperature=0.6,
+                top_p=0.9,
+            )
+            for _, result in zip(dialogs, results):
+                return result['generation']['content']
 
     return predict
