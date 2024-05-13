@@ -1,4 +1,4 @@
-from hide_config import CHATGPT3_5_API_KEY, CHATGPT3_5_base_url, Zhipu_key, groq_key
+from hide_config import *
 from typing import Callable
 
 
@@ -41,26 +41,41 @@ def get_infer(model_name: str, model_checkpoint_path: str) -> Callable[[str], st
             if (
                 num_tokens_from_messages(messages, "gpt-3.5-turbo") < 3096
             ):  # 留1000个token给输出
-                model_name = "gpt-3.5-turbo"
+                local_model_name = "gpt-3.5-turbo"
             else:
-                model_name = "gpt-3.5-turbo-16k"
+                local_model_name = "gpt-3.5-turbo-16k"
 
-            completion_params = {"model": model_name, "messages": messages}
+            completion_params = {"model": local_model_name, "messages": messages}
 
             if max_length is not None:
                 completion_params["max_tokens"] = max_length
 
             completion = client.chat.completions.create(**completion_params)
             return completion.choices[0].message.content
+    
+    elif model_checkpoint_path in ["yi-large","GLM-4"]:
+        if model_checkpoint_path=="yi-large":
+            from openai import OpenAI
 
-    elif model_checkpoint_path == "GLM-4":
-        from zhipuai import ZhipuAI
+            API_BASE = "https://api.lingyiwanwu.com/v1"
+            API_KEY = Yi_key
+            client = OpenAI(
+                api_key=API_KEY,
+                base_url=API_BASE
+            )
 
-        client = ZhipuAI(api_key=Zhipu_key)
+            local_model_name="yi-large"
+
+        elif model_checkpoint_path == "GLM-4":
+            from zhipuai import ZhipuAI
+
+            client = ZhipuAI(api_key=Zhipu_key)
+
+            local_model_name="glm-4"
 
         def predict(content):
             response = client.chat.completions.create(
-                model="glm-4",
+                model=local_model_name,
                 messages=[{"role": "user", "content": content}],
                 top_p=0.7,
                 temperature=0.9,

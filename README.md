@@ -26,6 +26,7 @@ QA格式MWP任务（仅考虑输出一个数值答案的数学题。其他实验
 |GPT-3.5-Turbo PRP|**94.29%**
 |ChatGLM3-6B|65.71%
 |GLM-4|77.14%
+|Yi-large|**94.29%**
 |CPM-2 prompt-based finetune
 1. 对于没有原始划分方案的数据集随机按照8:1:2的比例进行数据集划分：Alg514 AI2 Dolphin1878 SVAMP
 3. 使用原数据集中给出的数据划分方案：Math23K Ape210K GSM8K

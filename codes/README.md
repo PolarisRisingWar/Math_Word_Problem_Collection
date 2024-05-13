@@ -43,6 +43,8 @@ ChatGLM3-6B + Alg514：`CUDA_VISIBLE_DEVICES=4 python codes/zero_shot_infer.py -
 
 GLM-4 + Alg514：`python codes/zero_shot_infer.py -mc GLM-4 -dn Alg514 -ds datasets/Alg514 -pt pure -rt codes/results/GLM4_Alg_result.txt`（约2.1元 + 6分钟）
 
+Yi-Large + Alg514：`python codes/zero_shot_infer.py -mc yi-large -dn Alg514 -ds datasets/Alg514 -pt pure -rt codes/results/Yi_large_Alg_result.txt`（约0.49元 + 7分钟）
+
 （由于网络问题未成功运行）llama2-70b-4096 + Alg514：`python codes/zero_shot_infer.py -mc llama2-70b-4096 -dn Alg514 -ds datasets/Alg514 -pt pure -rt codes/results/llama2-70b-4096_Alg_result.txt`
 
 GPT-2 + Alg514：`CUDA_VISIBLE_DEVICES=0 python codes/finetune/gpt2/test.py -dn Alg514 -ds datasets/Alg514 -cp openai-community/gpt2 -rt codes/results/gpt2_direct_Alg_result.txt`（约17秒）
