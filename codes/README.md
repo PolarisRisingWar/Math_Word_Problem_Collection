@@ -47,7 +47,11 @@ GLM-4 + Alg514：`python codes/zero_shot_infer.py -mc GLM-4 -dn Alg514 -ds datas
 
 Yi-Large + Alg514：`python codes/zero_shot_infer.py -mc yi-large -dn Alg514 -ds datasets/Alg514 -pt pure -rt codes/results/Yi_large_Alg_result.txt`（约0.49元 + 7分钟）
 
-Yi-Large-preview + Alg514：`python codes/zero_shot_infer.py -mc yi-large-preview -dn Alg514 -ds datasets/Alg514 -pt pure -rt codes/results/Yi_large_preview_Alg_result.txt`
+（报错openai.RateLimitError未成功运行）Yi-Large-preview + Alg514：`python codes/zero_shot_infer.py -mc yi-large-preview -dn Alg514 -ds datasets/Alg514 -pt pure -rt codes/results/Yi_large_preview_Alg_result.txt`
+
+deepseek-chat + Alg514：`python codes/zero_shot_infer.py -mc deepseek-chat -dn Alg514 -ds datasets/Alg514 -pt pure -rt codes/results/deepseek-chat_Alg_result.txt`（约0.02元 + 7分钟）
+
+moonshot-v1-8k + Alg514：`python codes/zero_shot_infer.py -mc moonshot-v1-8k -dn Alg514 -ds datasets/Alg514 -pt pure -rt codes/results/moonshot_Alg_result.txt`（约
 
 （由于网络问题未成功运行）llama2-70b-4096 + Alg514：`python codes/zero_shot_infer.py -mc llama2-70b-4096 -dn Alg514 -ds datasets/Alg514 -pt pure -rt codes/results/llama2-70b-4096_Alg_result.txt`
 

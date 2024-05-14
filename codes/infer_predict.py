@@ -53,33 +53,55 @@ def get_infer(model_name: str, model_checkpoint_path: str) -> Callable[[str], st
 
             completion = client.chat.completions.create(**completion_params)
             return completion.choices[0].message.content
-    
-    elif model_checkpoint_path in ["yi-large","yi-large-preview","GLM-4"]:
-        if model_checkpoint_path in ["yi-large","yi-large-preview"] :
+
+    # 类OpenAI接口
+    elif model_checkpoint_path in [
+        "yi-large",
+        "yi-large-preview",
+        "deepseek-chat",
+        "moonshot-v1-8k",
+        "GLM-4",
+    ]:
+        temperature = 0.9
+
+        # 调用openai SDK
+        if model_checkpoint_path in [
+            "yi-large",
+            "yi-large-preview",
+            "deepseek-chat",
+            "moonshot-v1-8k",
+        ]:
             from openai import OpenAI
 
-            API_BASE = "https://api.lingyiwanwu.com/v1"
-            API_KEY = Yi_key
-            client = OpenAI(
-                api_key=API_KEY,
-                base_url=API_BASE
-            )
+            if model_checkpoint_path in ["yi-large", "yi-large-preview"]:
+                API_BASE = "https://api.lingyiwanwu.com/v1"
+                API_KEY = Yi_key
+            elif model_checkpoint_path == "deepseek-chat":
+                API_BASE = "https://api.deepseek.com"
+                API_KEY = DeepSeek_KEY
+                temperature = 0
+            else:
+                API_BASE = "https://api.moonshot.cn/v1"
+                API_KEY = Moonshot_KEY
+                temperature = 0.3
+            client = OpenAI(api_key=API_KEY, base_url=API_BASE)
 
-            local_model_name="yi-large"
+            local_model_name = model_checkpoint_path
 
+        # 调用原生SDK
         elif model_checkpoint_path == "GLM-4":
             from zhipuai import ZhipuAI
 
             client = ZhipuAI(api_key=Zhipu_key)
 
-            local_model_name="glm-4"
+            local_model_name = "glm-4"
 
         def predict(content):
             response = client.chat.completions.create(
                 model=local_model_name,
                 messages=[{"role": "user", "content": content}],
                 top_p=0.7,
-                temperature=0.9,
+                temperature=temperature,
                 stream=False,
                 max_tokens=2000,
             )
@@ -127,39 +149,37 @@ def get_infer(model_name: str, model_checkpoint_path: str) -> Callable[[str], st
         )
 
         def predict(content):
-            response, _ = model.chat(
-                tokenizer, content, history=[], temperature=0.01
-            )
+            response, _ = model.chat(tokenizer, content, history=[], temperature=0.01)
             return response
 
-    elif model_name=="Meta-Llama-3-8B-Instruct":
-        #我只写了LLaMA3原生模型权重的版本
+    elif model_name == "Meta-Llama-3-8B-Instruct":
+        # 我只写了LLaMA3原生模型权重的版本
         import sys
 
-        sys.path.append(llama_module_path)  #https://github.com/meta-llama/llama3 下载到本地的路径。因为要调用这里面的llama模块
-   
+        sys.path.append(
+            llama_module_path
+        )  # https://github.com/meta-llama/llama3 下载到本地的路径。因为要调用这里面的llama模块
+
         from llama import Dialog, Llama
 
         from typing import List
-        
+
         generator = Llama.build(
             ckpt_dir=model_checkpoint_path,
-            tokenizer_path=os.path.join(model_checkpoint_path,"tokenizer.model"),
+            tokenizer_path=os.path.join(model_checkpoint_path, "tokenizer.model"),
             max_seq_len=8192,
             max_batch_size=6,
         )
 
-        def predict(content,max_length=1024):
-            dialogs: List[Dialog] = [
-                [{"role": "user", "content": content}]        
-            ]
+        def predict(content, max_length=1024):
+            dialogs: List[Dialog] = [[{"role": "user", "content": content}]]
             results = generator.chat_completion(
                 dialogs,
-                max_gen_len=max_length,  #其实这地方不该这么写的，写成max_length-calculate_length(input_str)比较合适
+                max_gen_len=max_length,  # 其实这地方不该这么写的，写成max_length-calculate_length(input_str)比较合适
                 temperature=0.6,
                 top_p=0.9,
             )
             for _, result in zip(dialogs, results):
-                return result['generation']['content']
+                return result["generation"]["content"]
 
     return predict
