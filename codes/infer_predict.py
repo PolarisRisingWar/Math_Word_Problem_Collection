@@ -54,8 +54,8 @@ def get_infer(model_name: str, model_checkpoint_path: str) -> Callable[[str], st
             completion = client.chat.completions.create(**completion_params)
             return completion.choices[0].message.content
     
-    elif model_checkpoint_path in ["yi-large","GLM-4"]:
-        if model_checkpoint_path=="yi-large":
+    elif model_checkpoint_path in ["yi-large","yi-large-preview","GLM-4"]:
+        if model_checkpoint_path in ["yi-large","yi-large-preview"] :
             from openai import OpenAI
 
             API_BASE = "https://api.lingyiwanwu.com/v1"

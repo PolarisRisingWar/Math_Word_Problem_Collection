@@ -47,6 +47,8 @@ GLM-4 + Alg514：`python codes/zero_shot_infer.py -mc GLM-4 -dn Alg514 -ds datas
 
 Yi-Large + Alg514：`python codes/zero_shot_infer.py -mc yi-large -dn Alg514 -ds datasets/Alg514 -pt pure -rt codes/results/Yi_large_Alg_result.txt`（约0.49元 + 7分钟）
 
+Yi-Large-preview + Alg514：`python codes/zero_shot_infer.py -mc yi-large-preview -dn Alg514 -ds datasets/Alg514 -pt pure -rt codes/results/Yi_large_preview_Alg_result.txt`
+
 （由于网络问题未成功运行）llama2-70b-4096 + Alg514：`python codes/zero_shot_infer.py -mc llama2-70b-4096 -dn Alg514 -ds datasets/Alg514 -pt pure -rt codes/results/llama2-70b-4096_Alg_result.txt`
 
 LLaMA3-8B-Instruct + Alg514：`torchrun codes/zero_shot_infer.py -mn Meta-Llama-3-8B-Instruct -mc /gm-data/Meta-Llama-3-8B-Instruct/ -dn Alg514 -ds datasets/Alg514 -pt pure -rt codes/results/LLaMA3-8B-Instruct_Alg_result.txt`（约3分钟）
