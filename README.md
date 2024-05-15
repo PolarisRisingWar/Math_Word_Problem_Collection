@@ -261,8 +261,15 @@ LLaMA3-8B-Instruct|65.71%
 **1963年**  
 1. MWP
     1. Computers and thought
-
-# Star History
+# 工具
+1. 纯数学网站
+    1. wolframalpha
+    2. [Math is Fun](https://www.mathsisfun.com/index.htm)
+    3. [Solving home: World’s Best Step-by-Step Math Solver Tool Online](https://solving.homes/zh/)
+    4. [Prealgebra Videos](https://artofproblemsolving.com/videos/prealgebra)
+    5. [Free and clear online algebra help! | Purplemath](https://www.purplemath.com/)
+    6. [Solve - Step-by-Step Math Problem Solver](https://quickmath.com/)
+# 点个Star支持我(\*╹▽╹*)
 
 [![Star History Chart](https://api.star-history.com/svg?repos=PolarisRisingWar/Math_Word_Problem_Collection&type=Date)](https://star-history.com/#PolarisRisingWar/Math_Word_Problem_Collection&Date)
 
