@@ -27,7 +27,6 @@ QA格式MWP任务（仅考虑输出一个数值答案的数学题。其他实验
 |ChatGLM3-6B|65.71%
 |GLM-4|77.14%
 |Yi-large|**94.29%**
-|Yi-large-preview|
 |DeepSeek-V2|91.43%
 |Moonshot|88.57%
 LLaMA3-8B-Instruct|65.71%

@@ -57,7 +57,6 @@ def get_infer(model_name: str, model_checkpoint_path: str) -> Callable[[str], st
     # 类OpenAI接口
     elif model_checkpoint_path in [
         "yi-large",
-        "yi-large-preview",
         "deepseek-chat",
         "moonshot-v1-8k",
         "GLM-4",
@@ -67,13 +66,12 @@ def get_infer(model_name: str, model_checkpoint_path: str) -> Callable[[str], st
         # 调用openai SDK
         if model_checkpoint_path in [
             "yi-large",
-            "yi-large-preview",
             "deepseek-chat",
             "moonshot-v1-8k",
         ]:
             from openai import OpenAI
 
-            if model_checkpoint_path in ["yi-large", "yi-large-preview"]:
+            if model_checkpoint_path in ["yi-large"]:
                 API_BASE = "https://api.lingyiwanwu.com/v1"
                 API_KEY = Yi_key
             elif model_checkpoint_path == "deepseek-chat":
