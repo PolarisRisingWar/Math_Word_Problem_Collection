@@ -1,4 +1,4 @@
-import os, json
+import os, json, time
 from alive_progress import alive_bar
 
 import torch
@@ -20,26 +20,19 @@ import argparse
 
 parser = argparse.ArgumentParser()
 
+# 具体支持的选项可参考 codes/README.md
+
 parser.add_argument(
     "-mc", "--model_checkpoint_path", type=str
 )  # 本地：预训练模型名或本地目录；API：模型名称
-# 目前支持的选项（与下一条参数逐行对应）：
-# GPT-3.5 ("gpt-3.5-turbo"和"gpt-3.5-turbo-16k"，根据输入文本长度自动判断)
-# GLM-4
-# THUDM/chatglm3-6b或存储checkpoint的本地文件夹
 
 parser.add_argument("-mn", "--model_name", type=str)
-# 目前支持的选项
-# TODO：OpenAI
-# TODO: ZhipuAI
-# ChatGLM3
+# 本地：模型名称
 
 parser.add_argument("-dn", "--dataset_name", type=str)
-# 目前支持的选项：
-# Alg514
 
 parser.add_argument("-ds", "--dataset_path", type=str)
-# Alg514数据：train/valid/test json储存的文件夹
+# train/valid/test json储存的文件夹
 
 parser.add_argument("-pt", "--prompt_template", type=str, default="CoT")
 # 目前支持的选项：
@@ -68,6 +61,8 @@ result_file = open(arg_dict["result_txt_path"], "a")
 amount_predict_right = 0
 with alive_bar(len(test_data)) as bar:
     for i in range(len(test_data)):
+        if arg_dict["model_checkpoint_path"] == "moonshot-v1-8k":  # 说是RPM=3，但是我sleep 20秒也会超，不理解了真是
+            time.sleep(60)
         model_prediction = predict(
             question2prompt(test_data[i]["question"], arg_dict["prompt_template"])
         )
