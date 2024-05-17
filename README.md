@@ -9,16 +9,16 @@
 [TOC]
 
 # 实验结果
-QA格式MWP任务（仅考虑输出一个数值答案的数学题。其他实验setting见表后）的准确率指标（相当于只计算test@1。其他指标不管了）：
-有些数据集有独特的标注信息（比如公式，推理过程，calculator），如果考虑到这种情况的话我会写明，没写就是没有。
-解码超参数等没有专门做过优化。
+QA格式MWP任务（仅考虑输出一个数值答案的数学题。其他实验setting见表后）的准确率指标（相当于只计算test@1。其他指标不管了）：  
+有些数据集有独特的标注信息（比如公式，推理过程，calculator），如果考虑到这种情况的话我会写明，没写就是没有。  
+解码超参数等没有专门做过优化。  
 结果可能具有高随机性。代码可能有bug，我修改bug后会随时更新最新结果。
 | **方法名**&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; | **Alg514** |**AI2**|**Dolphin1878**|**Math23K**|**ASDiv**|**Ape210K**|**GSM8K**|**SVAMP**|
 |---|---|---|---|---|---|---|---|---|
 |GPT-2|0
 |GPT-2 finetune①|0|0.14%|||||1.06%③
 |GPT-2 finetune① + calculator②|-|-|-|-|-|-|1.13%|-
-|GPT-2 verifier①|-|-|-|-|-|-|
+|GPT-2 verifier①②|-|-|-|-|-|-|0.91%
 |GPT-3.5-Turbo|82.86%|**93.15%**|**66.67%**|**60.3%**|**86.19%**|**46.94%**|**78.92%**|**79.78%**|
 |GPT-3.5-Turbo CoT|85.71%
 |GPT-3.5-Turbo CoT+tip|80%
@@ -37,8 +37,8 @@ LLaMA3-8B-Instruct|65.71%
 4. SC (self-consistency) (2023 ICLR) [Self-Consistency Improves Chain of Thought Reasoning in Language Models](https://openreview.net/forum?id=1PL1NIMMrw)
 5. PRP：(2024 AAAI) [Re61：读论文 PRP Get an A in Math: Progressive Rectification Prompting](https://blog.csdn.net/PolarisRisingWar/article/details/135844039)
 
-① 将数据集自带的公式/推理过程/计算器信息添加到生成标签中辅助模型训练。具体用的哪个可以看get_data.py里的answer_with_reasoning键的设置
-② 用了GSM8K数据集自带的计算器信息来辅助推理
+① 将数据集自带的公式/推理过程/计算器信息添加到生成标签中辅助模型训练。具体用的哪个可以看get_data.py里的answer_with_reasoning键的设置  
+② 用了GSM8K数据集自带的计算器信息来辅助推理  
 ③ 试来试去发现decode时带sample（max_new_tokens=50,do_sample=True,top_k=50,top_p=0.95）的效果最好（2.4%），但是反正大家理解这是怎么个事就行，无所谓了
 
 # 数据
