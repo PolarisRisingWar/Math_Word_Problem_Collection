@@ -84,7 +84,9 @@ class Verifier(nn.Module):
         two_type_label = (
             two_type_label.unsqueeze(1).expand(-1, classifier_output.size()[1]).float()
         )
-        classifier_loss = loss_fn(classifier_output, two_type_label)
+        classifier_loss = loss_fn(
+            classifier_output, two_type_label
+        )  # 其实这个应该mask掉prompt的，但我忘了。总之你们如果也要复现的时候记得改一下
         return lm_loss + classifier_loss
 
 
@@ -128,4 +130,4 @@ for epoch in range(num_epochs):
         pbar.set_description(f"train_loss: {outputs.item():.5f}")
 
 model.lm.save_pretrained(arg_dict["lm_save_path"])
-torch.save(model.state_dict(),arg_dict["save_path"])
+torch.save(model.state_dict(), arg_dict["save_path"])

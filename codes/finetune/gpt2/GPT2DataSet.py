@@ -1,5 +1,6 @@
 import torch
 
+
 class GPT2DefinedDataset(torch.utils.data.Dataset):
     def __init__(self, tokenizer, examples, loss_on_prefix=True):
         self.examples = examples
@@ -17,9 +18,9 @@ class GPT2DefinedDataset(torch.utils.data.Dataset):
         print(f"Max tokens: {self.max_len}")
 
         if "label" in examples[0]:
-            self.two_type_label=[ex["label"] for ex in self.examples]
+            self.two_type_label = [ex["label"] for ex in self.examples]
         else:
-            self.two_type_label=[]
+            self.two_type_label = []
 
     def __len__(self):
         return len(self.examples)
@@ -37,7 +38,10 @@ class GPT2DefinedDataset(torch.utils.data.Dataset):
         tokens = torch.tensor(tokens)
         mask = torch.tensor(mask)
 
-        if len(self.two_type_label)>0:
-            return (dict(input_ids=tokens, attention_mask=mask),self.two_type_label[idx])
+        if len(self.two_type_label) > 0:
+            return (
+                dict(input_ids=tokens, attention_mask=mask),
+                self.two_type_label[idx],
+            )
         else:
             return dict(input_ids=tokens, attention_mask=mask)
