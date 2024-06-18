@@ -269,6 +269,7 @@ LLaMA3-8B-Instruct|65.71%
     4. [Prealgebra Videos](https://artofproblemsolving.com/videos/prealgebra)
     5. [Free and clear online algebra help! | Purplemath](https://www.purplemath.com/)
     6. [Solve - Step-by-Step Math Problem Solver](https://quickmath.com/)
+    7. [MathOverflow](https://mathoverflow.net/)
 # 点个Star支持我(\*╹▽╹*)
 
 [![Star History Chart](https://api.star-history.com/svg?repos=PolarisRisingWar/Math_Word_Problem_Collection&type=Date)](https://star-history.com/#PolarisRisingWar/Math_Word_Problem_Collection&Date)
